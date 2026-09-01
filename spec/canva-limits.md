@@ -524,3 +524,23 @@ per line**, newest last. One line per call.
 3. A call requiring the operator's approval is logged **with** the `approval` field holding their verbatim words, on the same line as the call it authorised.
 4. `index` reads this file to reconstruct `canva_design_id`, page ids and locators into each slide MD, so it must stay machine-parseable: one object per line, no trailing commas, no comments.
 5. Non-MCP actions (a Chrome checklist step, the emergency PPTX hand-off) get a line too, with `tool` prefixed `chrome:` or set to `manual-upload-pptx`, so the log tells the whole story of how a design reached its current state.
+
+
+## 6. Probe results (2026-09-02, first pass)
+
+Probe designs created in the operator's Canva account (kept for inspection; no edits committed):
+
+| Layout | Design id | edit_url | Import |
+|---|---|---|---|
+| `L046-three-column` (Barlow + JetBrains Mono) | `DAHT_1qMeZ4` | https://www.canva.com/d/sQkkkv3ufv6Qj2g | `import-design-from-url` from `raw.githubusercontent.com/.../build/html/L046.html`, `intended_design_type: presentation`, job success, 1 page |
+| `L037-table-insight` (Inter) | `DAHT_w99T-8` | https://www.canva.com/d/ZM5sYvB39gRSzmi | same, 1 page |
+
+| Q | Result | Evidence | Decision |
+|---|---|---|---|
+| **P1** Does annotated HTML import as an editable presentation? | **Yes.** `design_types: ["presentation"]`, page `type: "fixed"`, 1920x1080. Every text run became a `text` element with `left/top/width` **exactly** as authored (96 / 683 / 1269; widths 1728 / 555 / 491), `fontSize` exact, `lineHeight` exact, `textAlign: start`, weight mapped 700→`bold`, 600→`semibold`, 400→`normal`, 500→`medium`. `div` with fill → `rect`; `div` with `border-radius` → `shape` with a rounded path; `data-label` → page `title`; `data-speaker-notes` → page `notes`. A full-page white `rect` is added as background. Heights are recomputed by Canva (83.59 for a 76px title). | `read-design` transactions on both designs | **Route A is the primary import route for masters AND for filled decks whose content may be hosted publicly.** Route C remains the path for private content (Decision 16). |
+| **P2** Do non-native fonts survive? | **Preserved in this account.** Distinct `fontRef`s per family (`YAFdJsyuOPM` Barlow, `YAFdJksXcAk` JetBrains Mono, `YAFdJvSyp_k` Inter); thumbnail renders Barlow headings and a monospace source line. Whether these are Canva-library fonts or Brand-Kit uploads is not distinguishable via the API; the operator can confirm in the editor. Gradients and inline SVG were not in this pass. | `read-design` formatting.fontRef; thumbnails | Tag Barlow `canva_native: yes` (already), JetBrains Mono → `yes (observed)` pending editor confirmation. Add a gradient + inline-SVG probe layout in the next pass. |
+| **P3** HTML export? | **No.** `get-export-formats` on `DAHT4uBPl_o` → pdf, jpg, png, pptx, gif, mp4 only. | tool output | Canva → repo round trip is `read-design` JSON + PNG/PDF only. |
+| **P7** (partial) `edit-design` field names and behaviour | All four applied: `find_and_replace_text`, `insert_shape` (`path`, `view_box_width/height`, `color`, `corner_rounding`), `add_text` (`page_id, text, top, left, width`), `replace_speaker_notes` (`notes`). Observed: **`find_and_replace_text` shrank the text box to the new text's natural width** (555 → 150.45 for "Option A"); `add_text` landed as 16px black in the default font (`YACgEZ1cb1Q`) with lineHeight 1.4; `insert_shape` produced a `shape` with `cornerRounding: 16`. Transaction was cancelled; nothing committed. | `edit-design` response document | Route C fill sequence must follow every text replacement with `resize_element {width}` (text: width only) and, when needed, `format_text`; `build-canva-ops.mjs` to emit that pair. Ops-per-call ceiling and transaction lifetime still untested. |
+| P4, P5, P6, P8 | not run | — | P4 needs the operator to select the browser; P5 needs a new Claude Design project; P6 needs a family master; P8 needs a 15-page file. |
+
+Hosting note: the probe files are placeholder layouts in the public repo, so Route A was possible without exposing content. Filled decks may use Route A only when `content_public: true` (Decision 4).

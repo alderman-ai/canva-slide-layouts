@@ -60,3 +60,8 @@ Key schema facts read directly:
 - `git init -b main` in `C:\Users\alder\Desktop\Canva templates`; `.gitignore` blocks vendor design files, `presentations/*`, `bundles/**/canva/`, `node_modules/`.
 - Directory tree created: `docs research spec layouts presentations bundles bases build manifest assets scripts/lib components intake .claude/skills`.
 - `docs/PLAN.md` is the verbatim approved plan with a status header.
+
+## Addendum 2026-09-02 · step-2 probe designs
+
+- `DAHT_1qMeZ4` "PROBE L046 three-column" (edit https://www.canva.com/d/sQkkkv3ufv6Qj2g), `DAHT_w99T-8` "PROBE L037 table-insight" (edit https://www.canva.com/d/ZM5sYvB39gRSzmi). Both imported via `import-design-from-url` from the public repo's `build/html/`. Full element JSON observed; see `spec/canva-limits.md` §6.
+- Font refs observed: Barlow `YAFdJsyuOPM`, JetBrains Mono `YAFdJksXcAk`, Inter `YAFdJvSyp_k`, Canva default (from `add_text`) `YACgEZ1cb1Q`.

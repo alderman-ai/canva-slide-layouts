@@ -1,6 +1,6 @@
 # Canva Slide System — Plan (approved 2026-09-02)
 
-> status: in execution · steps 0-1 complete (handover, foundation) · next: step 2 probe
+> status: in execution · steps 0-1 complete, step 2 (probe) partly done: P1 yes, P3 no · Decision 16 (Route A primary)
 > superseded source: ~/.claude/plans/this-directory-will-be-modular-beacon.md
 
 ## Changelog

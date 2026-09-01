@@ -22,3 +22,12 @@ Append one dated entry per working session: what was done, what was verified, wh
 - Deviations: none from the plan; model policy followed (all subagents `model: opus`, high effort).
 - Next: **step 2, probe** per `spec/canva-limits.md` section 4 (P1-P8) using the three probe layouts; Route A needs the pushed raw URLs, Route B/C use the ops files, Route D needs a `.dc.html` deck written to a new Claude Design project.
 - Post-commit fix: the `an empty repo scan is clean` test scanned the real layouts against the fixture spec once layouts existed; it now scans a temporary empty root. Suite back to 25/25.
+
+## 2026-09-02 · Execution step 2, probe (first pass)
+
+- Imported `L046` and `L037` from the public raw URLs (`DAHT_1qMeZ4`, `DAHT_w99T-8`): both `presentation`, fixed 1920x1080 pages, all text editable at exact authored geometry, weights incl. semibold preserved, shapes and rounded panels native, notes and page titles imported. Barlow and JetBrains Mono preserved (distinct fontRefs).
+- `get-export-formats` → no HTML export (P3 answered no).
+- `edit-design` field names confirmed live for `find_and_replace_text`, `insert_shape`, `add_text`, `replace_speaker_notes`; observed width collapse after text replacement (S9). Transactions cancelled; no probe edits committed.
+- Decision 16 recorded (Route A primary where content may be public). Results in `spec/canva-limits.md` §6; questions updated in `docs/OPEN-QUESTIONS.md`.
+- Not run yet: P4 (needs operator to pick the browser), P5 (new Claude Design project), P6 (needs a family master), P8 (15-page file), P2 gradient/SVG pass, P7 ceiling/lifetime.
+- Next: finish P7/P8 with a multi-page probe file; add `resize_element` after fills in `build-canva-ops.mjs`; then step 3 (library authoring and harvest).

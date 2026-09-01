@@ -58,8 +58,9 @@ node 24.15 · npm 11 · python 3.14 · git 2.54 · gh 2.91 (logged in as `alderm
 
 ## Status block
 
-- **Execution step**: 1 complete (foundation). Next: **step 2, probe** - run `spec/canva-limits.md` section 4 (P1-P8) with `layouts/L001, L037, L046`; inputs already built under `build/html/`, `build/canva-ops/`, `build/dc/library/`. Raw URLs: `https://raw.githubusercontent.com/alderman-ai/canva-slide-layouts/main/build/html/<file>`.
-- **Verified**: everything in `research/09`; toolchain green (`npm test` 25/25, `validate` 0 errors, `check-vocab` OK). **Assumed**: everything in `docs/OPEN-QUESTIONS.md` (P1-P8, S1-S8).
-- **Public repo**: https://github.com/alderman-ai/canva-slide-layouts (origin), branch `main`.
-- **Operator attention**: OPEN-QUESTIONS S1 (site repo dirty tree, staged brand-asset deletions).
-- **Last session**: 2026-09-02, planning + steps 0-1. See `docs/WORKLOG.md`.
+- **Execution step**: 2 in progress (probe). Done: P1 yes, P3 no, P2 and P7 partly (`spec/canva-limits.md` §6). Remaining: P2 gradient/SVG pass, P4 (operator picks browser), P5 (new Claude Design project), P6 (needs a family master), P7 ceiling/lifetime, P8 (15-page file). Then step 3: library authoring and harvest (clone-first five from `spec/taxonomy.md` § Sources / `research/05`).
+- **Route decision**: Route A primary for public-content decks and masters (Decision 16); Route C for private content, with `resize_element {width}` after each text fill (S9).
+- **Verified**: `research/09`, probe results §6; toolchain green (`npm test` 25/25, `validate` 0 errors, `check-vocab` OK). **Assumed**: remaining items in `docs/OPEN-QUESTIONS.md`.
+- **Public repo**: https://github.com/alderman-ai/canva-slide-layouts (origin), branch `main`. Probe designs in Canva: `DAHT_1qMeZ4`, `DAHT_w99T-8` (not in any folder).
+- **Operator attention**: OPEN-QUESTIONS S1 (site repo dirty tree); S10 (confirm Barlow / JetBrains Mono source in the Canva editor).
+- **Last session**: 2026-09-02, planning + steps 0-2 (partial). See `docs/WORKLOG.md`.
