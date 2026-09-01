@@ -1,0 +1,359 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://alderman.ai/canva-slide-layouts/spec/schema/accepts.template.json",
+  "title": "Per-layout accepts schema",
+  "description": "Meta-schema for spec/schema/layouts/<id>.json. Each layout ships one such file: an LLM-facing description plus formal role cardinalities, accepted unit types and per-role character ranges. match.mjs validates a unit-to-layout binding against it before scoring.",
+  "$comment": "Shape copied from Presenton, the only public system with formal per-layout JSON Schema constraints (research/06 §c). Role names come from spec/vocab/element_role.json (research/06 §a); unit types from spec/vocab/unit_type.json (research/06 §b).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$id",
+    "description",
+    "requires",
+    "optional",
+    "accepts_unit_types",
+    "items",
+    "chars"
+  ],
+  "properties": {
+    "$id": {
+      "type": "string",
+      "pattern": "^L[0-9]{3}$",
+      "description": "The layout id this accepts file belongs to."
+    },
+    "description": {
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 240,
+      "description": "One-liner written for the planner LLM: what this layout is for and when to pick it."
+    },
+    "requires": {
+      "type": "object",
+      "description": "Roles that must be filled, with their cardinality. A binding missing any of these is invalid.",
+      "propertyNames": {
+        "enum": [
+          "title",
+          "subtitle",
+          "body",
+          "column",
+          "caption",
+          "number",
+          "label",
+          "eyebrow",
+          "quote",
+          "attribution",
+          "picture",
+          "chart",
+          "table",
+          "diagram",
+          "media",
+          "icon",
+          "object",
+          "shape",
+          "divider",
+          "footer",
+          "slide_number",
+          "date",
+          "header",
+          "notes"
+        ],
+        "$comment": "Closed enum. Source of truth: spec/vocab/element_role.json. JSON Schema cannot load the vocab at runtime, so validate.mjs injects the enum from that file; keep this array in sync with it. Group concepts (broader \"\") are not valid role keys."
+      },
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "min",
+          "max"
+        ],
+        "properties": {
+          "min": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 60
+          },
+          "max": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 60
+          }
+        }
+      }
+    },
+    "optional": {
+      "type": "object",
+      "description": "Roles that may be filled. Unfilled optional roles are removed from the Canva page with delete_element.",
+      "propertyNames": {
+        "enum": [
+          "title",
+          "subtitle",
+          "body",
+          "column",
+          "caption",
+          "number",
+          "label",
+          "eyebrow",
+          "quote",
+          "attribution",
+          "picture",
+          "chart",
+          "table",
+          "diagram",
+          "media",
+          "icon",
+          "object",
+          "shape",
+          "divider",
+          "footer",
+          "slide_number",
+          "date",
+          "header",
+          "notes"
+        ],
+        "$comment": "Closed enum. Source of truth: spec/vocab/element_role.json. JSON Schema cannot load the vocab at runtime, so validate.mjs injects the enum from that file; keep this array in sync with it. Group concepts (broader \"\") are not valid role keys."
+      },
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "min",
+          "max"
+        ],
+        "properties": {
+          "min": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 60
+          },
+          "max": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 60
+          }
+        }
+      }
+    },
+    "accepts_unit_types": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "claim",
+          "evidence",
+          "statistic",
+          "comparison",
+          "process",
+          "definition",
+          "problem",
+          "solution",
+          "example",
+          "quote",
+          "cause_effect",
+          "concession",
+          "enumeration",
+          "summary",
+          "call_to_action",
+          "figure",
+          "table",
+          "chart_data"
+        ]
+      },
+      "uniqueItems": true,
+      "minItems": 1,
+      "description": "Content unit types this layout can carry.",
+      "$comment": "Closed enum. Source of truth: spec/vocab/unit_type.json. JSON Schema cannot load the vocab at runtime, so validate.mjs injects the enum from that file; keep this array in sync with it."
+    },
+    "items": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "min",
+        "max"
+      ],
+      "properties": {
+        "min": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 60
+        },
+        "max": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 60
+        }
+      },
+      "description": "Cardinality of the repeated role, mirroring the layout min_items and max_items. Presenton minItems/maxItems."
+    },
+    "chars": {
+      "type": "object",
+      "description": "Character range per role. max must equal the maxChars of that role in the layout element table.",
+      "propertyNames": {
+        "enum": [
+          "title",
+          "subtitle",
+          "body",
+          "column",
+          "caption",
+          "number",
+          "label",
+          "eyebrow",
+          "quote",
+          "attribution",
+          "picture",
+          "chart",
+          "table",
+          "diagram",
+          "media",
+          "icon",
+          "object",
+          "shape",
+          "divider",
+          "footer",
+          "slide_number",
+          "date",
+          "header",
+          "notes"
+        ],
+        "$comment": "Closed enum. Source of truth: spec/vocab/element_role.json. JSON Schema cannot load the vocab at runtime, so validate.mjs injects the enum from that file; keep this array in sync with it. Group concepts (broader \"\") are not valid role keys."
+      },
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "min",
+          "max"
+        ],
+        "properties": {
+          "min": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "max": {
+            "type": "integer",
+            "minimum": 1
+          }
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "$id": "L028",
+      "description": "KPI grid: four to six metric tiles, each a number with a short label. Use for a block of statistics that share a period or a theme.",
+      "requires": {
+        "title": {
+          "min": 1,
+          "max": 1
+        },
+        "number": {
+          "min": 4,
+          "max": 6
+        },
+        "label": {
+          "min": 4,
+          "max": 6
+        }
+      },
+      "optional": {
+        "eyebrow": {
+          "min": 0,
+          "max": 1
+        },
+        "caption": {
+          "min": 0,
+          "max": 1
+        }
+      },
+      "accepts_unit_types": [
+        "statistic",
+        "evidence",
+        "chart_data"
+      ],
+      "items": {
+        "min": 4,
+        "max": 6
+      },
+      "chars": {
+        "title": {
+          "min": 8,
+          "max": 40
+        },
+        "number": {
+          "min": 1,
+          "max": 6
+        },
+        "label": {
+          "min": 3,
+          "max": 20
+        },
+        "eyebrow": {
+          "min": 0,
+          "max": 20
+        },
+        "caption": {
+          "min": 0,
+          "max": 80
+        }
+      },
+      "$comment": "Tile count 4-6 from research/03 §(c) level 4 (dashboard 4-6 tiles) and research/02 #23 (2x2, 2x3, 3x2). title max 40 and number max 6 and label max 20 from research/02 §Grid and type conventions (Mck character budgets); title min 8 from Presenton title-and-bullets (research/06 §c)."
+    },
+    {
+      "$id": "L043",
+      "description": "Two-column comparison: one action title over two parallel columns. Use for option A against option B, cause against effect, or problem against solution.",
+      "requires": {
+        "title": {
+          "min": 1,
+          "max": 1
+        },
+        "column": {
+          "min": 2,
+          "max": 2
+        }
+      },
+      "optional": {
+        "label": {
+          "min": 0,
+          "max": 2
+        },
+        "caption": {
+          "min": 0,
+          "max": 1
+        },
+        "divider": {
+          "min": 0,
+          "max": 1
+        }
+      },
+      "accepts_unit_types": [
+        "comparison",
+        "cause_effect",
+        "problem",
+        "solution",
+        "concession"
+      ],
+      "items": {
+        "min": 2,
+        "max": 2
+      },
+      "chars": {
+        "title": {
+          "min": 8,
+          "max": 40
+        },
+        "column": {
+          "min": 20,
+          "max": 200
+        },
+        "label": {
+          "min": 3,
+          "max": 20
+        },
+        "caption": {
+          "min": 0,
+          "max": 80
+        }
+      },
+      "$comment": "Roles and accepted unit types from research/06 §(c) two_column (requires title x1 and column x2; accepts comparison, cause_effect, problem+solution, concession). column max 200 = at most 4 bullets (research/03 §(c) level 3, Kosslyn rule of four) x at most 50 characters per bullet (research/02 §Grid and type conventions)."
+    }
+  ]
+}

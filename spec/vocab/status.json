@@ -1,0 +1,253 @@
+[
+  {
+    "value": "layout_status",
+    "prefLabel": "Layout status (group)",
+    "altLabels": [],
+    "definition": "Grouping concept: the lifecycle of a layout file in layouts/.",
+    "broader": "",
+    "inScheme": "status",
+    "examples": [
+      "draft -> built -> imported -> verified"
+    ],
+    "sources": [
+      "docs/PLAN.md §Layout-library pipeline"
+    ]
+  },
+  {
+    "value": "slide_status",
+    "prefLabel": "Slide fill status (group)",
+    "altLabels": [
+      "fill_status"
+    ],
+    "definition": "Grouping concept: how a slide instance got its copy.",
+    "broader": "",
+    "inScheme": "status",
+    "examples": [
+      "auto -> edited -> approved"
+    ],
+    "sources": [
+      "docs/PLAN.md §Hybrid MD formats"
+    ]
+  },
+  {
+    "value": "intake_status",
+    "prefLabel": "Intake status (group)",
+    "altLabels": [],
+    "definition": "Grouping concept: the lifecycle of an intake contract in intake/.",
+    "broader": "",
+    "inScheme": "status",
+    "examples": [
+      "draft -> confirmed -> catalogued -> uploaded"
+    ],
+    "sources": [
+      "docs/PLAN.md §Skill specifications, Skill 4"
+    ]
+  },
+  {
+    "value": "redline_status",
+    "prefLabel": "Redline status (group)",
+    "altLabels": [],
+    "definition": "Grouping concept: the state of redline threads synced onto a slide.",
+    "broader": "",
+    "inScheme": "status",
+    "examples": [
+      "none -> open -> applied -> resolved"
+    ],
+    "sources": [
+      "docs/PLAN.md §Pipeline step 8",
+      "docs/PLAN.md §Skill specifications, Skill 3"
+    ]
+  },
+  {
+    "value": "draft",
+    "prefLabel": "Draft",
+    "altLabels": [
+      "new"
+    ],
+    "definition": "Written but not yet rendered or confirmed. Initial state for both a layout and an intake contract.",
+    "broader": "layout_status",
+    "inScheme": "status",
+    "examples": [
+      "also in: intake_status",
+      "layout: frontmatter and element table exist, no HTML built",
+      "intake: detection written, operator has not confirmed it"
+    ],
+    "sources": [
+      "docs/PLAN.md §Layout-library pipeline",
+      "docs/PLAN.md §Skill 4"
+    ]
+  },
+  {
+    "value": "built",
+    "prefLabel": "Built",
+    "altLabels": [],
+    "definition": "Layout HTML and Canva ops have been generated and preview successfully.",
+    "broader": "layout_status",
+    "inScheme": "status",
+    "examples": [],
+    "sources": [
+      "docs/PLAN.md §Layout-library pipeline step 1"
+    ]
+  },
+  {
+    "value": "imported",
+    "prefLabel": "Imported",
+    "altLabels": [],
+    "definition": "The layout exists as a page in a Canva family master.",
+    "broader": "layout_status",
+    "inScheme": "status",
+    "examples": [
+      "family_deck and family_page are set"
+    ],
+    "sources": [
+      "docs/PLAN.md §Layout-library pipeline step 4"
+    ]
+  },
+  {
+    "value": "verified",
+    "prefLabel": "Verified",
+    "altLabels": [],
+    "definition": "read-design returns text for every text element and the fonts match the registry or its recorded fallback.",
+    "broader": "layout_status",
+    "inScheme": "status",
+    "examples": [
+      "canva_locators populated; round-trips through ingest-html"
+    ],
+    "sources": [
+      "docs/PLAN.md §HTML authoring rules confirmed by import evidence"
+    ]
+  },
+  {
+    "value": "auto",
+    "prefLabel": "Auto",
+    "altLabels": [
+      "generated"
+    ],
+    "definition": "Copy was written by the fill step and has not been touched by a human.",
+    "broader": "slide_status",
+    "inScheme": "status",
+    "examples": [],
+    "sources": [
+      "docs/PLAN.md §Hybrid MD formats"
+    ]
+  },
+  {
+    "value": "edited",
+    "prefLabel": "Edited",
+    "altLabels": [],
+    "definition": "A human has changed the copy or the element table.",
+    "broader": "slide_status",
+    "inScheme": "status",
+    "examples": [
+      "also the state of a redline fork that has not been accepted"
+    ],
+    "sources": [
+      "docs/PLAN.md §Hybrid MD formats"
+    ]
+  },
+  {
+    "value": "approved",
+    "prefLabel": "Approved",
+    "altLabels": [
+      "final"
+    ],
+    "definition": "The operator has accepted this slide as final.",
+    "broader": "slide_status",
+    "inScheme": "status",
+    "examples": [
+      "a promoted redline fork carries approved with its parent archived"
+    ],
+    "sources": [
+      "docs/PLAN.md §Hybrid MD formats",
+      "docs/PLAN.md §Skill 3 step 7"
+    ]
+  },
+  {
+    "value": "confirmed",
+    "prefLabel": "Confirmed",
+    "altLabels": [],
+    "definition": "The operator has answered the open questions and accepted the detected element table.",
+    "broader": "intake_status",
+    "inScheme": "status",
+    "examples": [],
+    "sources": [
+      "docs/PLAN.md §Skill 4 step 1"
+    ]
+  },
+  {
+    "value": "catalogued",
+    "prefLabel": "Catalogued",
+    "altLabels": [
+      "catalogued layout"
+    ],
+    "definition": "The intake has become a layout file with an id, accepts schema and char budgets.",
+    "broader": "intake_status",
+    "inScheme": "status",
+    "examples": [],
+    "sources": [
+      "docs/PLAN.md §Skill 4 step 3"
+    ]
+  },
+  {
+    "value": "uploaded",
+    "prefLabel": "Uploaded",
+    "altLabels": [],
+    "definition": "The catalogued layout has been pushed to Canva and carries a page id and locators.",
+    "broader": "intake_status",
+    "inScheme": "status",
+    "examples": [],
+    "sources": [
+      "docs/PLAN.md §Skill 4 step 4"
+    ]
+  },
+  {
+    "value": "none",
+    "prefLabel": "None",
+    "altLabels": [],
+    "definition": "No redline threads exist on this slide.",
+    "broader": "redline_status",
+    "inScheme": "status",
+    "examples": [],
+    "sources": [
+      "docs/PLAN.md §Pipeline step 8"
+    ]
+  },
+  {
+    "value": "open",
+    "prefLabel": "Open",
+    "altLabels": [],
+    "definition": "Redline threads are synced and at least one is unaddressed.",
+    "broader": "redline_status",
+    "inScheme": "status",
+    "examples": [],
+    "sources": [
+      "docs/PLAN.md §Pipeline step 8"
+    ]
+  },
+  {
+    "value": "applied",
+    "prefLabel": "Applied",
+    "altLabels": [],
+    "definition": "The requested changes have been made and pushed to Canva; the threads await the operator sign-off.",
+    "broader": "redline_status",
+    "inScheme": "status",
+    "examples": [],
+    "sources": [
+      "docs/PLAN.md §Skill 3"
+    ]
+  },
+  {
+    "value": "resolved",
+    "prefLabel": "Resolved",
+    "altLabels": [
+      "closed"
+    ],
+    "definition": "Every thread on this slide is closed.",
+    "broader": "redline_status",
+    "inScheme": "status",
+    "examples": [],
+    "sources": [
+      "docs/PLAN.md §Pipeline step 8"
+    ]
+  }
+]

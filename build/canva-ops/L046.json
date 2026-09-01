@@ -1,0 +1,343 @@
+{
+  "page": {
+    "width": 1920,
+    "height": 1080,
+    "title": "Three Column"
+  },
+  "operations": [
+    {
+      "type": "add_text",
+      "page_id": "$PAGE",
+      "text": "Action title states the comparison",
+      "top": 96,
+      "left": 96,
+      "width": 1728
+    },
+    {
+      "type": "format_text",
+      "locator_id": "$LOC[1]",
+      "formatting": {
+        "font_size": 76,
+        "font_weight": "bold",
+        "line_height": 1.1,
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "insert_shape",
+      "page_id": "$PAGE",
+      "$ref": "$LOC[2]",
+      "left": 96,
+      "top": 216,
+      "width": 1728,
+      "height": 2,
+      "path": "M0 0H1728V2H0Z",
+      "view_box_width": 1728,
+      "view_box_height": 2,
+      "color": "#E5E5E5",
+      "stroke_color": "#999999",
+      "stroke_weight": 1,
+      "corner_rounding": 0
+    },
+    {
+      "type": "add_text",
+      "page_id": "$PAGE",
+      "text": "Column one heading",
+      "top": 264,
+      "left": 96,
+      "width": 555
+    },
+    {
+      "type": "format_text",
+      "locator_id": "$LOC[3]",
+      "formatting": {
+        "font_size": 40,
+        "font_weight": "bold",
+        "line_height": 1.15,
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "add_text",
+      "page_id": "$PAGE",
+      "text": "Column one supporting text, three to five short lines.",
+      "top": 340,
+      "left": 96,
+      "width": 555
+    },
+    {
+      "type": "format_text",
+      "locator_id": "$LOC[4]",
+      "formatting": {
+        "font_size": 32,
+        "font_weight": "normal",
+        "line_height": 1.4,
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "add_text",
+      "page_id": "$PAGE",
+      "text": "Column two heading",
+      "top": 264,
+      "left": 683,
+      "width": 555
+    },
+    {
+      "type": "format_text",
+      "locator_id": "$LOC[5]",
+      "formatting": {
+        "font_size": 40,
+        "font_weight": "bold",
+        "line_height": 1.15,
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "add_text",
+      "page_id": "$PAGE",
+      "text": "Column two supporting text, three to five short lines.",
+      "top": 340,
+      "left": 683,
+      "width": 555
+    },
+    {
+      "type": "format_text",
+      "locator_id": "$LOC[6]",
+      "formatting": {
+        "font_size": 32,
+        "font_weight": "normal",
+        "line_height": 1.4,
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "add_text",
+      "page_id": "$PAGE",
+      "text": "Column three heading",
+      "top": 264,
+      "left": 1269,
+      "width": 555
+    },
+    {
+      "type": "format_text",
+      "locator_id": "$LOC[7]",
+      "formatting": {
+        "font_size": 40,
+        "font_weight": "bold",
+        "line_height": 1.15,
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "add_text",
+      "page_id": "$PAGE",
+      "text": "Column three supporting text, three to five short lines.",
+      "top": 340,
+      "left": 1269,
+      "width": 555
+    },
+    {
+      "type": "format_text",
+      "locator_id": "$LOC[8]",
+      "formatting": {
+        "font_size": 32,
+        "font_weight": "normal",
+        "line_height": 1.4,
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "add_text",
+      "page_id": "$PAGE",
+      "text": "source: where these three come from",
+      "top": 1000,
+      "left": 96,
+      "width": 1728
+    },
+    {
+      "type": "format_text",
+      "locator_id": "$LOC[9]",
+      "formatting": {
+        "font_size": 22,
+        "font_weight": "normal",
+        "line_height": 1.3,
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_speaker_notes",
+      "page_id": "$PAGE",
+      "notes": "Walk the columns left to right; state the difference that matters before the audience reads it."
+    }
+  ],
+  "chunks": [
+    [
+      {
+        "type": "add_text",
+        "page_id": "$PAGE",
+        "text": "Action title states the comparison",
+        "top": 96,
+        "left": 96,
+        "width": 1728
+      },
+      {
+        "type": "format_text",
+        "locator_id": "$LOC[1]",
+        "formatting": {
+          "font_size": 76,
+          "font_weight": "bold",
+          "line_height": 1.1,
+          "text_align": "start"
+        }
+      },
+      {
+        "type": "insert_shape",
+        "page_id": "$PAGE",
+        "$ref": "$LOC[2]",
+        "left": 96,
+        "top": 216,
+        "width": 1728,
+        "height": 2,
+        "path": "M0 0H1728V2H0Z",
+        "view_box_width": 1728,
+        "view_box_height": 2,
+        "color": "#E5E5E5",
+        "stroke_color": "#999999",
+        "stroke_weight": 1,
+        "corner_rounding": 0
+      },
+      {
+        "type": "add_text",
+        "page_id": "$PAGE",
+        "text": "Column one heading",
+        "top": 264,
+        "left": 96,
+        "width": 555
+      },
+      {
+        "type": "format_text",
+        "locator_id": "$LOC[3]",
+        "formatting": {
+          "font_size": 40,
+          "font_weight": "bold",
+          "line_height": 1.15,
+          "text_align": "start"
+        }
+      },
+      {
+        "type": "add_text",
+        "page_id": "$PAGE",
+        "text": "Column one supporting text, three to five short lines.",
+        "top": 340,
+        "left": 96,
+        "width": 555
+      },
+      {
+        "type": "format_text",
+        "locator_id": "$LOC[4]",
+        "formatting": {
+          "font_size": 32,
+          "font_weight": "normal",
+          "line_height": 1.4,
+          "text_align": "start"
+        }
+      },
+      {
+        "type": "add_text",
+        "page_id": "$PAGE",
+        "text": "Column two heading",
+        "top": 264,
+        "left": 683,
+        "width": 555
+      },
+      {
+        "type": "format_text",
+        "locator_id": "$LOC[5]",
+        "formatting": {
+          "font_size": 40,
+          "font_weight": "bold",
+          "line_height": 1.15,
+          "text_align": "start"
+        }
+      },
+      {
+        "type": "add_text",
+        "page_id": "$PAGE",
+        "text": "Column two supporting text, three to five short lines.",
+        "top": 340,
+        "left": 683,
+        "width": 555
+      },
+      {
+        "type": "format_text",
+        "locator_id": "$LOC[6]",
+        "formatting": {
+          "font_size": 32,
+          "font_weight": "normal",
+          "line_height": 1.4,
+          "text_align": "start"
+        }
+      },
+      {
+        "type": "add_text",
+        "page_id": "$PAGE",
+        "text": "Column three heading",
+        "top": 264,
+        "left": 1269,
+        "width": 555
+      },
+      {
+        "type": "format_text",
+        "locator_id": "$LOC[7]",
+        "formatting": {
+          "font_size": 40,
+          "font_weight": "bold",
+          "line_height": 1.15,
+          "text_align": "start"
+        }
+      },
+      {
+        "type": "add_text",
+        "page_id": "$PAGE",
+        "text": "Column three supporting text, three to five short lines.",
+        "top": 340,
+        "left": 1269,
+        "width": 555
+      },
+      {
+        "type": "format_text",
+        "locator_id": "$LOC[8]",
+        "formatting": {
+          "font_size": 32,
+          "font_weight": "normal",
+          "line_height": 1.4,
+          "text_align": "start"
+        }
+      },
+      {
+        "type": "add_text",
+        "page_id": "$PAGE",
+        "text": "source: where these three come from",
+        "top": 1000,
+        "left": 96,
+        "width": 1728
+      },
+      {
+        "type": "format_text",
+        "locator_id": "$LOC[9]",
+        "formatting": {
+          "font_size": 22,
+          "font_weight": "normal",
+          "line_height": 1.3,
+          "text_align": "start"
+        }
+      },
+      {
+        "type": "replace_speaker_notes",
+        "page_id": "$PAGE",
+        "notes": "Walk the columns left to right; state the difference that matters before the audience reads it."
+      }
+    ]
+  ]
+}

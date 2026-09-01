@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://alderman.ai/canva-slide-layouts/spec/schema/asset.schema.json",
+  "title": "Asset registry",
+  "description": "manifest/assets.json: an array of asset records covering placeholders shipped with layouts and real images bound into slides.",
+  "type": "array",
+  "items": {
+    "title": "Asset",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "id",
+      "path",
+      "kind",
+      "w",
+      "h",
+      "alt",
+      "source",
+      "license",
+      "canva_asset_id",
+      "used_by"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+        "description": "Stable asset id, used by element spec strings and by bundle manifests."
+      },
+      "path": {
+        "type": "string",
+        "description": "Repo-relative path under assets/."
+      },
+      "kind": {
+        "type": "string",
+        "enum": [
+          "placeholder",
+          "photo",
+          "icon",
+          "logo",
+          "screenshot",
+          "chart_png",
+          "video"
+        ],
+        "description": "What the asset is. Placeholders are the grey stand-ins shipped with layouts.",
+        "$comment": "No vocab file: asset kinds are manifest-internal and never appear in frontmatter."
+      },
+      "w": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 4096,
+        "description": "Intrinsic width in px."
+      },
+      "h": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 4096,
+        "description": "Intrinsic height in px."
+      },
+      "alt": {
+        "type": "string",
+        "description": "Alt text; also the caption default."
+      },
+      "source": {
+        "type": "string",
+        "description": "Where the asset came from, or \"-\" for repo-generated placeholders."
+      },
+      "license": {
+        "type": "string",
+        "description": "License or usage note. Public-repo assets must be redistributable (Decision 4)."
+      },
+      "canva_asset_id": {
+        "type": "string",
+        "description": "Asset id returned by upload-asset-from-url. Quoted string so PowerShell never coerces it to Int64 (research/06 §e). \"-\" when not uploaded."
+      },
+      "used_by": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Layout ids and slide paths that reference this asset."
+      }
+    }
+  }
+}

@@ -1,0 +1,97 @@
+[
+  {
+    "value": "typography_only",
+    "prefLabel": "Level 1 - Typography only",
+    "altLabels": [
+      "1",
+      "level 1"
+    ],
+    "definition": "Looks finished with nothing but the type scale and spacing. No assets, no rendering engine.",
+    "broader": "",
+    "inScheme": "polish",
+    "examples": [
+      "polish_cost: 1",
+      "family defaults: structural and text",
+      "inside the quick, standard and premium dials"
+    ],
+    "sources": [
+      "research/03 §(d) (24Slides fix-up tier)"
+    ]
+  },
+  {
+    "value": "type_primitives",
+    "prefLabel": "Level 2 - Type plus primitives",
+    "altLabels": [
+      "2",
+      "level 2"
+    ],
+    "definition": "Typography plus drawn primitives: icons, rules, cards, RAG dots.",
+    "broader": "",
+    "inScheme": "polish",
+    "examples": [
+      "polish_cost: 2",
+      "family defaults: comparison tables, icon rows, pricing, Harvey ball, executive summary, simple chevrons",
+      "the quick dial caps here"
+    ],
+    "sources": [
+      "research/03 §(d)"
+    ]
+  },
+  {
+    "value": "chart_or_photo",
+    "prefLabel": "Level 3 - Chart engine or supplied photo",
+    "altLabels": [
+      "3",
+      "level 3"
+    ],
+    "definition": "Needs a real chart engine or a supplied photograph, and is alignment-sensitive.",
+    "broader": "",
+    "inScheme": "polish",
+    "examples": [
+      "polish_cost: 3",
+      "family defaults: numbers (bar, line, pie, waterfall, scatter), timeline, Gantt, image and text, team grid, logo grid",
+      "the standard dial caps here"
+    ],
+    "sources": [
+      "research/03 §(d) (data-viz slides cost 30-60% more)"
+    ]
+  },
+  {
+    "value": "curated_imagery",
+    "prefLabel": "Level 4 - Curated imagery or multi-element diagram",
+    "altLabels": [
+      "4",
+      "level 4"
+    ],
+    "definition": "Needs curated high-resolution imagery or a hand-composed multi-element diagram.",
+    "broader": "",
+    "inScheme": "polish",
+    "examples": [
+      "polish_cost: 4",
+      "family defaults: full-bleed photo, photo 3-up, device mockups, maps, org chart, trees, journey map, Marimekko, dashboards",
+      "premium dial only"
+    ],
+    "sources": [
+      "research/03 §(d) (24Slides redesign tier)"
+    ]
+  },
+  {
+    "value": "bespoke",
+    "prefLabel": "Level 5 - Bespoke illustration or motion",
+    "altLabels": [
+      "5",
+      "level 5"
+    ],
+    "definition": "Bespoke illustration or infographic, animation, video, or a live embed.",
+    "broader": "",
+    "inScheme": "polish",
+    "examples": [
+      "polish_cost: 5",
+      "family defaults: infographic, pictograph, word cloud, full video, webview, ROI calculator, iceberg and onion metaphors",
+      "premium dial only"
+    ],
+    "sources": [
+      "research/03 §(d) (24Slides redraw tier; custom illustration +20-50%)"
+    ]
+  }
+]

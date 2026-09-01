@@ -1,0 +1,182 @@
+[
+  {
+    "value": "statistic",
+    "prefLabel": "Statistic",
+    "altLabels": [
+      "metric",
+      "number"
+    ],
+    "definition": "A measured quantity offered as proof.",
+    "broader": "",
+    "inScheme": "evidence_kind",
+    "examples": [
+      "pairs with unit_type evidence and shape number"
+    ],
+    "sources": [
+      "research/06 §(b) (statistic; Stab & Gurevych premise)"
+    ]
+  },
+  {
+    "value": "benchmark",
+    "prefLabel": "Benchmark",
+    "altLabels": [
+      "comparable"
+    ],
+    "definition": "A comparison against a peer, a market or a prior period.",
+    "broader": "",
+    "inScheme": "evidence_kind",
+    "examples": [
+      "pairs with unit_type comparison"
+    ],
+    "sources": [
+      "research/06 §(b) (RST Contrast)"
+    ]
+  },
+  {
+    "value": "case_study",
+    "prefLabel": "Case study",
+    "altLabels": [
+      "case"
+    ],
+    "definition": "A named instance described in enough detail to generalise from.",
+    "broader": "",
+    "inScheme": "evidence_kind",
+    "examples": [
+      "pairs with unit_type example"
+    ],
+    "sources": [
+      "research/06 §(b) (RST Elaboration)",
+      "research/03 §(b) 4"
+    ]
+  },
+  {
+    "value": "testimonial",
+    "prefLabel": "Testimonial",
+    "altLabels": [
+      "quote",
+      "endorsement"
+    ],
+    "definition": "An attributed endorsement in the source subject own words.",
+    "broader": "",
+    "inScheme": "evidence_kind",
+    "examples": [
+      "pairs with unit_type quote"
+    ],
+    "sources": [
+      "research/06 §(b) (quote)"
+    ]
+  },
+  {
+    "value": "expert_source",
+    "prefLabel": "Expert source",
+    "altLabels": [
+      "authority",
+      "analyst"
+    ],
+    "definition": "An authority cited by name.",
+    "broader": "",
+    "inScheme": "evidence_kind",
+    "examples": [],
+    "sources": [
+      "research/06 §(b) (Stab & Gurevych premise)"
+    ]
+  },
+  {
+    "value": "experiment_result",
+    "prefLabel": "Experiment result",
+    "altLabels": [
+      "trial",
+      "pilot",
+      "ab test"
+    ],
+    "definition": "An outcome produced by a test, trial or pilot.",
+    "broader": "",
+    "inScheme": "evidence_kind",
+    "examples": [],
+    "sources": [
+      "research/06 §(d) (DOC2PPT/Paper2Poster scientific corpora)"
+    ]
+  },
+  {
+    "value": "financial",
+    "prefLabel": "Financial",
+    "altLabels": [
+      "unit economics",
+      "p&l"
+    ],
+    "definition": "Revenue, cost, margin or cash evidence.",
+    "broader": "",
+    "inScheme": "evidence_kind",
+    "examples": [
+      "pairs with archetype waterfall, chart_dominant, data_table"
+    ],
+    "sources": [
+      "research/03 §(b) 2",
+      "research/03 §(b) 4"
+    ]
+  },
+  {
+    "value": "survey",
+    "prefLabel": "Survey",
+    "altLabels": [
+      "poll",
+      "research"
+    ],
+    "definition": "Aggregated responses from a sampled population.",
+    "broader": "",
+    "inScheme": "evidence_kind",
+    "examples": [],
+    "sources": [
+      "research/06 §(b) (statistic)"
+    ]
+  },
+  {
+    "value": "demo",
+    "prefLabel": "Demo",
+    "altLabels": [
+      "product demo"
+    ],
+    "definition": "The product itself shown working.",
+    "broader": "",
+    "inScheme": "evidence_kind",
+    "examples": [
+      "pairs with archetype device_frame, embed_view, video_full"
+    ],
+    "sources": [
+      "research/03 §(b) 3 (underlying magic)"
+    ]
+  },
+  {
+    "value": "citation",
+    "prefLabel": "Citation",
+    "altLabels": [
+      "reference",
+      "source"
+    ],
+    "definition": "A reference to a published document, standard or dataset.",
+    "broader": "",
+    "inScheme": "evidence_kind",
+    "examples": [
+      "recorded in the unit source field as file#anchor"
+    ],
+    "sources": [
+      "research/06 §(d) (Paper2Poster asset library keyed by caption)"
+    ]
+  },
+  {
+    "value": "anecdote",
+    "prefLabel": "Anecdote",
+    "altLabels": [
+      "story"
+    ],
+    "definition": "A single unverified story used for illustration, not proof.",
+    "broader": "",
+    "inScheme": "evidence_kind",
+    "examples": [
+      "weakest kind; the planner should prefer any other kind for an evidence slot"
+    ],
+    "sources": [
+      "research/06 §(b) (RST Elaboration)"
+    ]
+  }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "value": "standard",
+    "prefLabel": "Standard",
+    "altLabels": [
+      "default",
+      "base"
+    ],
+    "definition": "The default cut of an archetype at its family default density.",
+    "broader": "",
+    "inScheme": "variant",
+    "examples": [
+      "the variant every archetype ships first"
+    ],
+    "sources": [
+      "docs/PLAN.md §Layout-library pipeline step 3"
+    ]
+  },
+  {
+    "value": "dense",
+    "prefLabel": "Dense",
+    "altLabels": [
+      "tight",
+      "packed"
+    ],
+    "definition": "More items and smaller type than the standard cut; used when the deck density dial is 4 or 5.",
+    "broader": "",
+    "inScheme": "variant",
+    "examples": [
+      "a KPI grid at dense carries 6 tiles rather than 4 (research/03 §(c) level 4)"
+    ],
+    "sources": [
+      "research/03 §(c) levels 4-5",
+      "docs/PLAN.md §Skill 3 (try the dense variant)"
+    ]
+  },
+  {
+    "value": "sparse",
+    "prefLabel": "Sparse",
+    "altLabels": [
+      "airy",
+      "cinematic cut"
+    ],
+    "definition": "Fewer items and larger type than the standard cut; used when the deck density dial is 1 or 2.",
+    "broader": "",
+    "inScheme": "variant",
+    "examples": [
+      "a KPI grid at sparse carries 2-3 tiles and no sparklines (research/03 §(c) levels 1-2)"
+    ],
+    "sources": [
+      "research/03 §(c) levels 1-2"
+    ]
+  }
+]

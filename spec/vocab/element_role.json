@@ -1,0 +1,469 @@
+[
+  {
+    "value": "text_role",
+    "prefLabel": "Text role (group)",
+    "altLabels": [
+      "copy role"
+    ],
+    "definition": "Grouping concept: roles whose payload is characters on the canvas. Only these roles contribute to text_capacity_chars.",
+    "broader": "",
+    "inScheme": "element_role",
+    "examples": [
+      "text_capacity_chars = sum of maxChars over elements whose role has broader text_role"
+    ],
+    "sources": [
+      "research/06 §(a)"
+    ]
+  },
+  {
+    "value": "visual_role",
+    "prefLabel": "Visual role (group)",
+    "altLabels": [],
+    "definition": "Grouping concept: roles whose payload is a picture, chart, table, diagram or media object. Their table cell carries a spec string, not copy.",
+    "broader": "",
+    "inScheme": "element_role",
+    "examples": [
+      "maxChars is \"-\" for these roles"
+    ],
+    "sources": [
+      "research/06 §(a)"
+    ]
+  },
+  {
+    "value": "decor_role",
+    "prefLabel": "Decor role (group)",
+    "altLabels": [],
+    "definition": "Grouping concept: non-semantic shapes and rules used for structure and emphasis.",
+    "broader": "",
+    "inScheme": "element_role",
+    "examples": [],
+    "sources": [
+      "research/06 §(a) (Presenton Shapes/Lines element kind)"
+    ]
+  },
+  {
+    "value": "chrome_role",
+    "prefLabel": "Chrome role (group)",
+    "altLabels": [
+      "furniture"
+    ],
+    "definition": "Grouping concept: repeating page furniture. Excluded from planning and from text_capacity_chars.",
+    "broader": "",
+    "inScheme": "element_role",
+    "examples": [
+      "excluded from the planner (research/06 §(a))"
+    ],
+    "sources": [
+      "research/06 §(a)"
+    ]
+  },
+  {
+    "value": "offstage_role",
+    "prefLabel": "Offstage role (group)",
+    "altLabels": [],
+    "definition": "Grouping concept: content that exists on the slide record but not on the canvas.",
+    "broader": "",
+    "inScheme": "element_role",
+    "examples": [],
+    "sources": [
+      "research/06 §(a) (Google notes page)"
+    ]
+  },
+  {
+    "value": "title",
+    "prefLabel": "Title",
+    "altLabels": [
+      "ctrTitle",
+      "CENTERED_TITLE",
+      "headline"
+    ],
+    "definition": "The slide title; at density 4 it states the takeaway as a full sentence.",
+    "broader": "text_role",
+    "inScheme": "element_role",
+    "examples": [
+      "maxChars 40 (research/02 §Grid and type conventions); 8-80 in Presenton (research/06 §(c))"
+    ],
+    "sources": [
+      "research/06 §(a) (OOXML title/ctrTitle; Google TITLE/CENTERED_TITLE)"
+    ]
+  },
+  {
+    "value": "subtitle",
+    "prefLabel": "Subtitle",
+    "altLabels": [
+      "subTitle",
+      "SUBTITLE",
+      "deck"
+    ],
+    "definition": "A secondary line under the title.",
+    "broader": "text_role",
+    "inScheme": "element_role",
+    "examples": [
+      "maxChars 70 (research/02 §Specs carried over via docs/PLAN.md)"
+    ],
+    "sources": [
+      "research/06 §(a)"
+    ]
+  },
+  {
+    "value": "body",
+    "prefLabel": "Body",
+    "altLabels": [
+      "BODY",
+      "content"
+    ],
+    "definition": "The main text block; bullets or prose, recorded by the layout as body_kind.",
+    "broader": "text_role",
+    "inScheme": "element_role",
+    "examples": [
+      "2-5 bullets, at most 6 elements on the slide (research/06 §(c))"
+    ],
+    "sources": [
+      "research/06 §(a) (OOXML body; Google BODY)"
+    ]
+  },
+  {
+    "value": "column",
+    "prefLabel": "Column",
+    "altLabels": [
+      "body idx n",
+      "panel"
+    ],
+    "definition": "One of several repeated body blocks set side by side.",
+    "broader": "text_role",
+    "inScheme": "element_role",
+    "examples": [
+      "2 columns for two_column (research/06 §(c))"
+    ],
+    "sources": [
+      "research/06 §(a) (repeated body distinguished only by index)"
+    ]
+  },
+  {
+    "value": "caption",
+    "prefLabel": "Caption",
+    "altLabels": [
+      "CAPTION_ONLY"
+    ],
+    "definition": "Explanatory text bound to a picture, chart or table.",
+    "broader": "text_role",
+    "inScheme": "element_role",
+    "examples": [],
+    "sources": [
+      "research/06 §(a) (Google exposes caption as a layout, not a placeholder)"
+    ]
+  },
+  {
+    "value": "number",
+    "prefLabel": "Number",
+    "altLabels": [
+      "BIG_NUMBER",
+      "fact",
+      "kpi value"
+    ],
+    "definition": "A quantity set at display size.",
+    "broader": "text_role",
+    "inScheme": "element_role",
+    "examples": [
+      "maxChars 6 (research/02 §Grid and type conventions)"
+    ],
+    "sources": [
+      "research/06 §(a) (product-only role: Google BIG_NUMBER, Beautiful.ai Big Number, Slidev fact)"
+    ]
+  },
+  {
+    "value": "label",
+    "prefLabel": "Label",
+    "altLabels": [
+      "kpi label"
+    ],
+    "definition": "A short name attached to a number, tile, node or axis.",
+    "broader": "text_role",
+    "inScheme": "element_role",
+    "examples": [
+      "maxChars 20 for a KPI label, 8 for a timeline milestone (research/02 §Grid and type conventions)"
+    ],
+    "sources": [
+      "docs/PLAN.md §Ontology",
+      "research/06 §(a)"
+    ]
+  },
+  {
+    "value": "eyebrow",
+    "prefLabel": "Eyebrow",
+    "altLabels": [
+      "kicker",
+      "overline"
+    ],
+    "definition": "A small capitalised kicker above the title.",
+    "broader": "text_role",
+    "inScheme": "element_role",
+    "examples": [
+      "20-24px, +0.08em tracking (docs/PLAN.md §Specs carried over)"
+    ],
+    "sources": [
+      "docs/PLAN.md §Ontology"
+    ]
+  },
+  {
+    "value": "quote",
+    "prefLabel": "Quote",
+    "altLabels": [
+      "pull quote"
+    ],
+    "definition": "Verbatim attributed speech set as a display block.",
+    "broader": "text_role",
+    "inScheme": "element_role",
+    "examples": [],
+    "sources": [
+      "research/06 §(a) (Slidev quote; Keynote/Spectacle Quote)"
+    ]
+  },
+  {
+    "value": "attribution",
+    "prefLabel": "Attribution",
+    "altLabels": [
+      "byline",
+      "credit"
+    ],
+    "definition": "The speaker name, role and organisation under a quote.",
+    "broader": "text_role",
+    "inScheme": "element_role",
+    "examples": [],
+    "sources": [
+      "research/06 §(a)"
+    ]
+  },
+  {
+    "value": "picture",
+    "prefLabel": "Picture",
+    "altLabels": [
+      "pic",
+      "PICTURE",
+      "clipArt",
+      "CLIP_ART"
+    ],
+    "definition": "A photograph, screenshot, logo or clip art.",
+    "broader": "visual_role",
+    "inScheme": "element_role",
+    "examples": [
+      "spec string in the text cell, for example \"photo 16:9, placeholder assets/ph-16x9.svg\""
+    ],
+    "sources": [
+      "research/06 §(a) (OOXML pic/clipArt merged; Google PICTURE/CLIP_ART)"
+    ]
+  },
+  {
+    "value": "chart",
+    "prefLabel": "Chart",
+    "altLabels": [
+      "CHART"
+    ],
+    "definition": "A plotted data graphic.",
+    "broader": "visual_role",
+    "inScheme": "element_role",
+    "examples": [
+      "spec string in the text cell, for example \"bar, 5 series, y=revenue\""
+    ],
+    "sources": [
+      "research/06 §(a)"
+    ]
+  },
+  {
+    "value": "table",
+    "prefLabel": "Table",
+    "altLabels": [
+      "tbl",
+      "TABLE"
+    ],
+    "definition": "A grid of rows and columns.",
+    "broader": "visual_role",
+    "inScheme": "element_role",
+    "examples": [
+      "spec string in the text cell, for example \"table 5x4, header row\""
+    ],
+    "sources": [
+      "research/06 §(a)"
+    ]
+  },
+  {
+    "value": "diagram",
+    "prefLabel": "Diagram",
+    "altLabels": [
+      "dgm",
+      "DIAGRAM",
+      "smartart"
+    ],
+    "definition": "A composed figure of shapes and connectors; SmartArt, process, flow.",
+    "broader": "visual_role",
+    "inScheme": "element_role",
+    "examples": [
+      "3-6 steps for a process diagram (research/06 §(c))"
+    ],
+    "sources": [
+      "research/06 §(a)"
+    ]
+  },
+  {
+    "value": "media",
+    "prefLabel": "Media",
+    "altLabels": [
+      "MEDIA"
+    ],
+    "definition": "Video or audio.",
+    "broader": "visual_role",
+    "inScheme": "element_role",
+    "examples": [],
+    "sources": [
+      "research/06 §(a)"
+    ]
+  },
+  {
+    "value": "icon",
+    "prefLabel": "Icon",
+    "altLabels": [],
+    "definition": "A small pictogram paired with a label or body line.",
+    "broader": "visual_role",
+    "inScheme": "element_role",
+    "examples": [
+      "2-3 icon and body pairs in cards_n (research/06 §(c))"
+    ],
+    "sources": [
+      "research/06 §(a) (Anthropic pptx skill icon+text rows; Beautiful.ai)"
+    ]
+  },
+  {
+    "value": "object",
+    "prefLabel": "Object",
+    "altLabels": [
+      "obj",
+      "OBJECT"
+    ],
+    "definition": "Any-content wildcard. Escape hatch only; never emitted by the planner.",
+    "broader": "visual_role",
+    "inScheme": "element_role",
+    "examples": [
+      "excluded from planning (research/06 §(a))"
+    ],
+    "sources": [
+      "research/06 §(a)"
+    ]
+  },
+  {
+    "value": "shape",
+    "prefLabel": "Shape",
+    "altLabels": [
+      "rect",
+      "container"
+    ],
+    "definition": "A rectangle, rule, badge or container drawn for structure or emphasis.",
+    "broader": "decor_role",
+    "inScheme": "element_role",
+    "examples": [
+      "spec string in the text cell, for example \"rect r=16 fill=token.surface\""
+    ],
+    "sources": [
+      "docs/PLAN.md §Ontology",
+      "research/06 §(a) (Presenton Shapes/Lines)"
+    ]
+  },
+  {
+    "value": "divider",
+    "prefLabel": "Divider",
+    "altLabels": [
+      "rule",
+      "line"
+    ],
+    "definition": "A hairline rule separating regions of the slide.",
+    "broader": "decor_role",
+    "inScheme": "element_role",
+    "examples": [],
+    "sources": [
+      "docs/PLAN.md §Ontology"
+    ]
+  },
+  {
+    "value": "footer",
+    "prefLabel": "Footer",
+    "altLabels": [
+      "ftr",
+      "FOOTER"
+    ],
+    "definition": "Repeating footer text.",
+    "broader": "chrome_role",
+    "inScheme": "element_role",
+    "examples": [
+      "excluded from planning (research/06 §(a))"
+    ],
+    "sources": [
+      "research/06 §(a)"
+    ]
+  },
+  {
+    "value": "slide_number",
+    "prefLabel": "Slide number",
+    "altLabels": [
+      "sldNum",
+      "SLIDE_NUMBER"
+    ],
+    "definition": "The page number field.",
+    "broader": "chrome_role",
+    "inScheme": "element_role",
+    "examples": [
+      "excluded from planning (research/06 §(a))"
+    ],
+    "sources": [
+      "research/06 §(a)"
+    ]
+  },
+  {
+    "value": "date",
+    "prefLabel": "Date",
+    "altLabels": [
+      "dt",
+      "DATE_AND_TIME"
+    ],
+    "definition": "The date field.",
+    "broader": "chrome_role",
+    "inScheme": "element_role",
+    "examples": [
+      "excluded from planning (research/06 §(a))"
+    ],
+    "sources": [
+      "research/06 §(a)"
+    ]
+  },
+  {
+    "value": "header",
+    "prefLabel": "Header",
+    "altLabels": [
+      "hdr",
+      "HEADER"
+    ],
+    "definition": "Repeating header text. Present in OOXML only; Google has no header on a slide.",
+    "broader": "chrome_role",
+    "inScheme": "element_role",
+    "examples": [
+      "excluded from planning (research/06 §(a))"
+    ],
+    "sources": [
+      "research/06 §(a)"
+    ]
+  },
+  {
+    "value": "notes",
+    "prefLabel": "Speaker notes",
+    "altLabels": [
+      "notes page body"
+    ],
+    "definition": "The speaker notes body; travels to Canva through replace_speaker_notes, never onto the canvas.",
+    "broader": "offstage_role",
+    "inScheme": "element_role",
+    "examples": [
+      "written into the ## Notes section of a slide file, not into the element table"
+    ],
+    "sources": [
+      "research/06 §(a) (Google notes page)"
+    ]
+  }
+]

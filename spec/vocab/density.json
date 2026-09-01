@@ -1,0 +1,93 @@
+[
+  {
+    "value": "cinematic",
+    "prefLabel": "Level 1 - Cinematic",
+    "altLabels": [
+      "1",
+      "level 1",
+      "ted"
+    ],
+    "definition": "One idea; one visual plus at most one line. At most 6 words, at most 2 lines, type no smaller than 42pt. Pace 2-5 slides per minute.",
+    "broader": "",
+    "inScheme": "density",
+    "examples": [
+      "density: 1",
+      "default for delivery_mode live-talk at its most spare, and for takahashi_lessig"
+    ],
+    "sources": [
+      "research/03 §(c) level 1 (TED/TEDx guidance; Takahashi/Lessig)"
+    ]
+  },
+  {
+    "value": "talk",
+    "prefLabel": "Level 2 - Talk",
+    "altLabels": [
+      "2",
+      "level 2"
+    ],
+    "definition": "One idea in at most 3 chunks. At most 6 lines and 25 words, type no smaller than 30pt. Pace 1-2 slides per minute.",
+    "broader": "",
+    "inScheme": "density",
+    "examples": [
+      "density: 2",
+      "default for delivery_mode live-talk and pitch"
+    ],
+    "sources": [
+      "research/03 §(c) level 2 (TEDx six lines; Kawasaki 30pt; Duarte glance test 3s)"
+    ]
+  },
+  {
+    "value": "briefing",
+    "prefLabel": "Level 3 - Briefing",
+    "altLabels": [
+      "3",
+      "level 3"
+    ],
+    "definition": "One message in at most 4 bullets of at most 4 information units each, at most 2 lines per bullet, at most 4 items per tree level. Roughly 40-60 words, body type no smaller than 20pt. Pace 1 slide per 1-2 minutes.",
+    "broader": "",
+    "inScheme": "density",
+    "examples": [
+      "density: 3",
+      "default for delivery_mode briefing, teaching and workshop"
+    ],
+    "sources": [
+      "research/03 §(c) level 3 (Kosslyn et al. 2012 rule of four and 20pt minimum; Cowan 2001)"
+    ]
+  },
+  {
+    "value": "consulting",
+    "prefLabel": "Level 4 - Consulting",
+    "altLabels": [
+      "4",
+      "level 4"
+    ],
+    "definition": "One action title of at most 15 words (at most 8 in McKinsey house style) over 2-4 supporting points. Roughly 60-100 words, body 14-16pt. Executive summary 3 columns of 4-5 lines; dashboard 4-6 tiles; Harvey ball scorecard 3-4 options by 6-7 criteria; process at most 4-5 steps. Read, or 60 seconds per slide presented.",
+    "broader": "",
+    "inScheme": "density",
+    "examples": [
+      "density: 4",
+      "default for delivery_mode consulting"
+    ],
+    "sources": [
+      "research/03 §(c) level 4"
+    ]
+  },
+  {
+    "value": "slidedoc",
+    "prefLabel": "Level 5 - Slidedoc",
+    "altLabels": [
+      "5",
+      "level 5"
+    ],
+    "definition": "Multi-paragraph pages with several figures. 100 words per page target, 250 maximum; beyond 250 write a document instead. Not presented.",
+    "broader": "",
+    "inScheme": "density",
+    "examples": [
+      "density: 5",
+      "default for delivery_mode read-deck"
+    ],
+    "sources": [
+      "research/03 §(c) level 5 (Duarte slidedocs)"
+    ]
+  }
+]

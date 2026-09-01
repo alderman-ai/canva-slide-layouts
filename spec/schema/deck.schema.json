@@ -1,0 +1,298 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://alderman.ai/canva-slide-layouts/spec/schema/deck.schema.json",
+  "title": "Deck frontmatter (brief and plan)",
+  "description": "Two documents make a Deck: presentations/<slug>/brief.md carries the dials, presentations/<slug>/plan.md carries the planner output. A file validates against exactly one of them.",
+  "$comment": "brief.md body is free-text brief plus optional per-section instructions. plan.md body is the table \"slide | layout | units | fit | note\" followed by the fit report.",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/brief"
+    },
+    {
+      "$ref": "#/$defs/plan"
+    }
+  ],
+  "$defs": {
+    "brief": {
+      "title": "Brief frontmatter",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "deck",
+        "title",
+        "audience",
+        "purpose",
+        "delivery_mode",
+        "flow_template",
+        "length_minutes",
+        "target_slides",
+        "density",
+        "polish",
+        "verbosity",
+        "content_generation",
+        "style_hint",
+        "pairing",
+        "brand",
+        "brand_kit_id",
+        "fonts_native_required",
+        "content_public"
+      ],
+      "properties": {
+        "deck": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+          "description": "Deck slug; matches the directory name."
+        },
+        "title": {
+          "type": "string",
+          "description": "Human deck title; becomes the Canva design name."
+        },
+        "audience": {
+          "type": "string",
+          "enum": [
+            "executive",
+            "board",
+            "investor",
+            "customer",
+            "prospect",
+            "team_internal",
+            "technical",
+            "students",
+            "partner",
+            "general_public",
+            "regulator"
+          ],
+          "$comment": "Closed enum. Source of truth: spec/vocab/audience.json. JSON Schema cannot load the vocab at runtime, so validate.mjs injects the enum from that file; keep this array in sync with it.",
+          "description": "Who is in the room."
+        },
+        "purpose": {
+          "type": "string",
+          "enum": [
+            "recommend",
+            "fundraise",
+            "pitch_short",
+            "sell",
+            "inspire",
+            "teach",
+            "report_status",
+            "facilitate",
+            "document",
+            "inform",
+            "launch",
+            "provoke",
+            "perform"
+          ],
+          "$comment": "Closed enum. Source of truth: spec/vocab/purpose.json. JSON Schema cannot load the vocab at runtime, so validate.mjs injects the enum from that file; keep this array in sync with it.",
+          "description": "What the deck is for; selects the default flow_template (see examples in spec/vocab/purpose.json)."
+        },
+        "delivery_mode": {
+          "type": "string",
+          "enum": [
+            "live-talk",
+            "briefing",
+            "teaching",
+            "consulting",
+            "read-deck",
+            "workshop",
+            "pitch"
+          ],
+          "$comment": "Closed enum. Source of truth: spec/vocab/delivery_mode.json. JSON Schema cannot load the vocab at runtime, so validate.mjs injects the enum from that file; keep this array in sync with it.",
+          "description": "How the deck is delivered; sets the default density (research/03 §c script rule)."
+        },
+        "flow_template": {
+          "type": "string",
+          "enum": [
+            "scqa_pyramid",
+            "sequoia_pitch",
+            "kawasaki_10_20_30",
+            "slidebean_3act",
+            "duarte_sparkline",
+            "gagne_teaching",
+            "status_update",
+            "workshop",
+            "slidedoc",
+            "takahashi_lessig",
+            "auto"
+          ],
+          "$comment": "Closed enum. Source of truth: spec/vocab/flow_template.json. JSON Schema cannot load the vocab at runtime, so validate.mjs injects the enum from that file; keep this array in sync with it.",
+          "description": "Explicit flow override, or \"auto\" to take the purpose default."
+        },
+        "length_minutes": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 480,
+          "description": "Speaking time. 0 for a read-deck. With target_slides 0, the budget comes from this and the pace norms (research/03 §c)."
+        },
+        "target_slides": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 350,
+          "description": "Explicit slide count, or 0 to derive it from length_minutes."
+        },
+        "density": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5,
+          "description": "0 means auto (take the delivery_mode default); otherwise 1-5.",
+          "$comment": "Levels 1-5 map in order onto spec/vocab/density.json (cinematic, talk, briefing, consulting, slidedoc)."
+        },
+        "polish": {
+          "type": "string",
+          "enum": [
+            "quick",
+            "standard",
+            "premium"
+          ],
+          "description": "Effort dial capping layout polish_cost: quick <= 2, standard <= 3, premium any.",
+          "$comment": "No separate vocab file: the three dial values are defined by the caps recorded in the examples of spec/vocab/polish.json."
+        },
+        "verbosity": {
+          "type": "string",
+          "enum": [
+            "concise",
+            "standard",
+            "text-heavy"
+          ],
+          "description": "Deck-level wordiness knob.",
+          "$comment": "Presenton outline API (research/06 §b). No vocab file yet; enum is inline pending one."
+        },
+        "content_generation": {
+          "type": "string",
+          "enum": [
+            "preserve",
+            "enhance",
+            "condense"
+          ],
+          "description": "How far the fill step may depart from the source wording.",
+          "$comment": "Presenton outline API (research/06 §b). No vocab file yet; enum is inline pending one."
+        },
+        "style_hint": {
+          "type": "string",
+          "description": "Free-text steer for tone and look. Never parsed by the planner."
+        },
+        "pairing": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+          "description": "Named font pairing from spec/pairings.md."
+        },
+        "brand": {
+          "type": "string",
+          "enum": [
+            "alderman-ai",
+            "neutral"
+          ],
+          "$comment": "Closed enum. Source of truth: spec/vocab/brand.json. JSON Schema cannot load the vocab at runtime, so validate.mjs injects the enum from that file; keep this array in sync with it.",
+          "description": "Brand the deck is built in."
+        },
+        "brand_kit_id": {
+          "type": "string",
+          "description": "Canva Brand Kit id; kAHHTmdCWzo is the alderman.ai kit. Quoted string so PowerShell never coerces it to Int64 (research/06 §e). \"-\" when not uploaded."
+        },
+        "fonts_native_required": {
+          "type": "boolean",
+          "description": "When true the planner rejects any layout with fonts_native false."
+        },
+        "content_public": {
+          "type": "boolean",
+          "description": "Decision 4: export-bundle refuses to publish unless this is explicitly true."
+        }
+      }
+    },
+    "plan": {
+      "title": "Plan frontmatter",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "deck",
+        "flow_template",
+        "target_slides",
+        "density",
+        "polish",
+        "layout_sequence",
+        "route",
+        "unplaced_units",
+        "overflow_count"
+      ],
+      "properties": {
+        "deck": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+          "description": "Deck slug."
+        },
+        "flow_template": {
+          "type": "string",
+          "enum": [
+            "scqa_pyramid",
+            "sequoia_pitch",
+            "kawasaki_10_20_30",
+            "slidebean_3act",
+            "duarte_sparkline",
+            "gagne_teaching",
+            "status_update",
+            "workshop",
+            "slidedoc",
+            "takahashi_lessig"
+          ],
+          "$comment": "Closed enum. Source of truth: spec/vocab/flow_template.json. JSON Schema cannot load the vocab at runtime, so validate.mjs injects the enum from that file; keep this array in sync with it.",
+          "description": "The flow the planner actually used."
+        },
+        "target_slides": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 350,
+          "description": "Slide budget the planner worked to."
+        },
+        "density": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5,
+          "description": "Resolved density level.",
+          "$comment": "Levels 1-5 map in order onto spec/vocab/density.json (cinematic, talk, briefing, consulting, slidedoc)."
+        },
+        "polish": {
+          "type": "string",
+          "enum": [
+            "quick",
+            "standard",
+            "premium"
+          ],
+          "description": "Resolved polish dial."
+        },
+        "layout_sequence": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^L[0-9]{3}$"
+          },
+          "minItems": 1,
+          "description": "Ordered layout ids, one per planned slide. Length must equal the row count of the plan table."
+        },
+        "route": {
+          "type": "string",
+          "enum": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ],
+          "$comment": "Closed enum. Source of truth: spec/vocab/route.json. JSON Schema cannot load the vocab at runtime, so validate.mjs injects the enum from that file; keep this array in sync with it.",
+          "description": "Upload route chosen for this deck (Decision 3)."
+        },
+        "unplaced_units": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^u[0-9]{3}$"
+          },
+          "uniqueItems": true,
+          "description": "Unit ids the budget could not fit. Any unit with must_include true appearing here fails acceptance."
+        },
+        "overflow_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Rows in the fit report with unresolved overflow. Must be 0 before fill."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,124 @@
+# Obsidian Bases view over layouts/*.md (flat frontmatter). Syntax per Obsidian Bases docs (research/06 §e).
+filters:
+  and:
+    - file.inFolder("layouts")
+    - file.ext == "md"
+formulas:
+  capacity: note.text_capacity_chars
+  slots: note.slots_image + note.slots_chart + note.slots_table
+  native: if(note.fonts_native, "native", "needs font install")
+properties:
+  note.id:
+    displayName: ID
+  note.title:
+    displayName: Layout
+  note.family:
+    displayName: Family
+  note.archetype:
+    displayName: Archetype
+  note.variant:
+    displayName: Variant
+  note.density:
+    displayName: Density
+  note.polish_cost:
+    displayName: Polish
+  note.flow_role:
+    displayName: Flow role
+  note.content_shape:
+    displayName: Shapes
+  note.min_items:
+    displayName: Min
+  note.max_items:
+    displayName: Max
+  note.status:
+    displayName: Status
+  note.canva_page_id:
+    displayName: Canva page
+  formula.capacity:
+    displayName: Chars
+  formula.slots:
+    displayName: Slots
+  formula.native:
+    displayName: Fonts
+views:
+  - type: table
+    name: All layouts
+    order:
+      - note.id
+      - note.title
+      - note.family
+      - note.archetype
+      - note.variant
+      - note.density
+      - note.polish_cost
+      - note.flow_role
+      - formula.capacity
+      - note.status
+  - type: cards
+    name: Family board
+    groupBy: note.family
+    order:
+      - note.id
+      - note.title
+      - note.density
+      - note.polish_cost
+  - type: table
+    name: Quick polish (cost <= 2)
+    filters:
+      and:
+        - note.polish_cost <= 2
+    order:
+      - note.id
+      - note.title
+      - note.family
+      - note.density
+      - formula.capacity
+  - type: table
+    name: By density
+    groupBy: note.density
+    order:
+      - note.id
+      - note.title
+      - note.family
+      - note.polish_cost
+      - formula.capacity
+  - type: table
+    name: Flow roles
+    groupBy: note.flow_role
+    order:
+      - note.id
+      - note.title
+      - note.family
+      - note.content_shape
+  - type: table
+    name: Comparison shapes
+    filters:
+      and:
+        - list(note.content_shape).contains("comparison")
+    order:
+      - note.id
+      - note.title
+      - note.min_items
+      - note.max_items
+      - note.density
+  - type: table
+    name: Not yet in Canva
+    filters:
+      and:
+        - note.status != "imported"
+        - note.status != "verified"
+    order:
+      - note.id
+      - note.title
+      - note.family
+      - note.status
+  - type: table
+    name: Needs font install
+    filters:
+      and:
+        - note.fonts_native == false
+    order:
+      - note.id
+      - note.title
+      - note.fonts
+      - note.pairing

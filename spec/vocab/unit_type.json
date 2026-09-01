@@ -1,0 +1,293 @@
+[
+  {
+    "value": "claim",
+    "prefLabel": "Claim",
+    "altLabels": [
+      "major claim",
+      "message",
+      "assertion"
+    ],
+    "definition": "An assertion the author wants the audience to accept; the message of a slide.",
+    "broader": "",
+    "inScheme": "unit_type",
+    "examples": [
+      "a full-sentence takeaway title (research/06 §(d), PLOS rule 3)"
+    ],
+    "sources": [
+      "research/06 §(b) (Stab & Gurevych claim; Minto governing thought; PLOS rule 3)"
+    ]
+  },
+  {
+    "value": "evidence",
+    "prefLabel": "Evidence / premise",
+    "altLabels": [
+      "premise",
+      "support",
+      "proof"
+    ],
+    "definition": "A reason or datum offered to raise belief in a claim.",
+    "broader": "",
+    "inScheme": "unit_type",
+    "examples": [],
+    "sources": [
+      "research/06 §(b) (Stab & Gurevych premise; RST Evidence)"
+    ]
+  },
+  {
+    "value": "statistic",
+    "prefLabel": "Statistic",
+    "altLabels": [
+      "stat",
+      "metric",
+      "kpi"
+    ],
+    "definition": "A single quantified fact.",
+    "broader": "",
+    "inScheme": "unit_type",
+    "examples": [
+      "fills big_number, stat_row, kpi_grid"
+    ],
+    "sources": [
+      "research/06 §(b) (Google BIG_NUMBER, Slidev fact, Beautiful.ai Big Number)"
+    ]
+  },
+  {
+    "value": "comparison",
+    "prefLabel": "Comparison",
+    "altLabels": [
+      "contrast"
+    ],
+    "definition": "Two or more items alike in most respects and differing in specified ones.",
+    "broader": "",
+    "inScheme": "unit_type",
+    "examples": [
+      "fills two_column, comparison_table, harvey_ball_scorecard"
+    ],
+    "sources": [
+      "research/06 §(b) (RST Contrast; Beautiful.ai Comparison)"
+    ]
+  },
+  {
+    "value": "process",
+    "prefLabel": "Process / sequence",
+    "altLabels": [
+      "sequence",
+      "steps",
+      "timeline"
+    ],
+    "definition": "Ordered steps or stages.",
+    "broader": "",
+    "inScheme": "unit_type",
+    "examples": [
+      "3-6 steps (research/06 §(c))"
+    ],
+    "sources": [
+      "research/06 §(b) (RST Sequence; Gamma /process, /timeline)"
+    ]
+  },
+  {
+    "value": "definition",
+    "prefLabel": "Definition / background",
+    "altLabels": [
+      "background",
+      "situation",
+      "context"
+    ],
+    "definition": "Context or terminology the audience needs before the argument can land.",
+    "broader": "",
+    "inScheme": "unit_type",
+    "examples": [],
+    "sources": [
+      "research/06 §(b) (RST Background, Preparation; Minto Situation)"
+    ]
+  },
+  {
+    "value": "problem",
+    "prefLabel": "Problem",
+    "altLabels": [
+      "complication",
+      "pain"
+    ],
+    "definition": "What is wrong or changing; the complication.",
+    "broader": "",
+    "inScheme": "unit_type",
+    "examples": [],
+    "sources": [
+      "research/06 §(b) (Minto Complication; RST Solutionhood satellite)"
+    ]
+  },
+  {
+    "value": "solution",
+    "prefLabel": "Solution / recommendation",
+    "altLabels": [
+      "recommendation",
+      "answer",
+      "ask"
+    ],
+    "definition": "The answer to the complication.",
+    "broader": "",
+    "inScheme": "unit_type",
+    "examples": [],
+    "sources": [
+      "research/06 §(b) (Minto Answer; RST Solutionhood nucleus)"
+    ]
+  },
+  {
+    "value": "example",
+    "prefLabel": "Example / elaboration",
+    "altLabels": [
+      "elaboration",
+      "case",
+      "anecdote"
+    ],
+    "definition": "A detail or instance that elaborates a claim.",
+    "broader": "",
+    "inScheme": "unit_type",
+    "examples": [],
+    "sources": [
+      "research/06 §(b) (RST Elaboration)"
+    ]
+  },
+  {
+    "value": "quote",
+    "prefLabel": "Quote",
+    "altLabels": [
+      "testimonial"
+    ],
+    "definition": "Attributed verbatim speech.",
+    "broader": "",
+    "inScheme": "unit_type",
+    "examples": [],
+    "sources": [
+      "research/06 §(b) (Slidev quote; Keynote/Spectacle Quote)"
+    ]
+  },
+  {
+    "value": "cause_effect",
+    "prefLabel": "Cause and effect",
+    "altLabels": [
+      "causation",
+      "result"
+    ],
+    "definition": "A statement that X produced Y.",
+    "broader": "",
+    "inScheme": "unit_type",
+    "examples": [],
+    "sources": [
+      "research/06 §(b) (RST Volitional/Non-volitional Cause/Result)"
+    ]
+  },
+  {
+    "value": "concession",
+    "prefLabel": "Concession / counterpoint",
+    "altLabels": [
+      "counterpoint",
+      "antithesis",
+      "risk"
+    ],
+    "definition": "An acknowledged incompatibility or objection.",
+    "broader": "",
+    "inScheme": "unit_type",
+    "examples": [],
+    "sources": [
+      "research/06 §(b) (RST Concession, Antithesis; Stab & Gurevych attack)"
+    ]
+  },
+  {
+    "value": "enumeration",
+    "prefLabel": "Enumeration / list",
+    "altLabels": [
+      "list",
+      "joint"
+    ],
+    "definition": "Comparable items in series with no inherent ordering.",
+    "broader": "",
+    "inScheme": "unit_type",
+    "examples": [
+      "2-5 bullets (research/06 §(c))"
+    ],
+    "sources": [
+      "research/06 §(b) (RST List, Joint)"
+    ]
+  },
+  {
+    "value": "summary",
+    "prefLabel": "Summary / restatement",
+    "altLabels": [
+      "restatement",
+      "recap"
+    ],
+    "definition": "A shorter restatement of a multi-unit nucleus.",
+    "broader": "",
+    "inScheme": "unit_type",
+    "examples": [],
+    "sources": [
+      "research/06 §(b) (RST Summary, Restatement)"
+    ]
+  },
+  {
+    "value": "call_to_action",
+    "prefLabel": "Call to action",
+    "altLabels": [
+      "cta",
+      "next step",
+      "decision"
+    ],
+    "definition": "What the audience should do next.",
+    "broader": "",
+    "inScheme": "unit_type",
+    "examples": [
+      "1-4 items (research/03 §(a) 6)"
+    ],
+    "sources": [
+      "research/06 §(b) (RST Motivation, Enablement)"
+    ]
+  },
+  {
+    "value": "figure",
+    "prefLabel": "Figure",
+    "altLabels": [
+      "image_ref",
+      "photo",
+      "illustration"
+    ],
+    "definition": "A visual asset with a caption.",
+    "broader": "",
+    "inScheme": "unit_type",
+    "examples": [
+      "2.5 figures per deck in the DOC2PPT corpus (research/06 §(d))"
+    ],
+    "sources": [
+      "research/06 §(b) (DOC2PPT first-class objects; Paper2Poster asset library)"
+    ]
+  },
+  {
+    "value": "table",
+    "prefLabel": "Table",
+    "altLabels": [],
+    "definition": "Tabular data with a caption.",
+    "broader": "",
+    "inScheme": "unit_type",
+    "examples": [
+      "3-7 rows (research/03 §(a) 16)"
+    ],
+    "sources": [
+      "research/06 §(b) (DOC2PPT)"
+    ]
+  },
+  {
+    "value": "chart_data",
+    "prefLabel": "Chart data",
+    "altLabels": [
+      "series",
+      "dataset"
+    ],
+    "definition": "A series of numbers meant to be plotted.",
+    "broader": "",
+    "inScheme": "unit_type",
+    "examples": [],
+    "sources": [
+      "research/06 §(b) (DOC2PPT; Paper2Poster)"
+    ]
+  }
+]

@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://alderman.ai/canva-slide-layouts/spec/schema/font.schema.json",
+  "title": "Font registry",
+  "description": "spec/fonts.json: an array of registry entries. A registry, not an allowlist (Decision 5).",
+  "type": "array",
+  "items": {
+    "title": "Font",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "family",
+      "weights_used",
+      "category",
+      "source",
+      "license",
+      "canva_native",
+      "canva_fallback",
+      "fallback_weight_map",
+      "optical_size_note"
+    ],
+    "properties": {
+      "family": {
+        "type": "string",
+        "description": "Family name spelled exactly as Canva font library spells it."
+      },
+      "weights_used": {
+        "type": "array",
+        "items": {
+          "type": "integer",
+          "minimum": 100,
+          "maximum": 900,
+          "multipleOf": 100
+        },
+        "uniqueItems": true,
+        "minItems": 1,
+        "description": "CSS weights the library actually uses from this family."
+      },
+      "category": {
+        "type": "string",
+        "enum": [
+          "grotesk",
+          "geometric",
+          "humanist",
+          "serif",
+          "slab",
+          "mono",
+          "display",
+          "system"
+        ],
+        "description": "Broad classification used by pairing rules.",
+        "$comment": "No vocab file: font classification is registry-internal, not frontmatter vocabulary."
+      },
+      "source": {
+        "type": "string",
+        "description": "Where the family comes from: google, fontshare, adobe, foundry name, or system."
+      },
+      "license": {
+        "type": "string",
+        "description": "License string, for example OFL-1.1 or a commercial licence reference."
+      },
+      "canva_native": {
+        "type": "string",
+        "enum": [
+          "yes",
+          "no",
+          "unverified"
+        ],
+        "description": "Whether Canva ships the family. Decision 5: validate warns, never fails, on no or unverified."
+      },
+      "canva_fallback": {
+        "type": "string",
+        "description": "Family Canva substitutes when this one is absent. Wrap widths are computed against Inter metrics regardless."
+      },
+      "fallback_weight_map": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^[1-9]00:[1-9]00$"
+        },
+        "description": "Flat weight remapping as \"<source>:<fallback>\" strings, for example \"350:400\". Flat list, not a map (Decision 2)."
+      },
+      "optical_size_note": {
+        "type": "string",
+        "description": "Optical-size caveats, for example a separate Display cut above a size threshold. \"-\" when none."
+      }
+    }
+  }
+}

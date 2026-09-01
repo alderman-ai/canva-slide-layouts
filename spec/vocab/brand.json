@@ -1,0 +1,39 @@
+[
+  {
+    "value": "alderman-ai",
+    "prefLabel": "alderman.ai",
+    "altLabels": [
+      "alderman",
+      "house"
+    ],
+    "definition": "Uses the alderman.ai brand: the Barlow and JetBrains Mono pairing, the design-system tokens extracted into spec/tokens.md, and components from components/slides/.",
+    "broader": "",
+    "inScheme": "brand",
+    "examples": [
+      "pairing defaults to barlow-jetbrains-mono",
+      "brand_kit_id kAHHTmdCWzo"
+    ],
+    "sources": [
+      "docs/PLAN.md §Brand source of truth: alderman.ai",
+      "docs/PLAN.md §Claude Design project"
+    ]
+  },
+  {
+    "value": "neutral",
+    "prefLabel": "Neutral",
+    "altLabels": [
+      "unbranded",
+      "generic"
+    ],
+    "definition": "Carries no brand: the layout is safe to publish in the public layout repo and to reuse in any account.",
+    "broader": "",
+    "inScheme": "brand",
+    "examples": [
+      "the default for library layouts pushed to the public repo"
+    ],
+    "sources": [
+      "docs/DECISIONS.md #4",
+      "docs/PLAN.md §Brand source of truth: alderman.ai"
+    ]
+  }
+]

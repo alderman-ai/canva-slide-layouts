@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://alderman.ai/canva-slide-layouts/spec/schema/bundle.schema.json",
+  "title": "Portable bundle frontmatter",
+  "description": "Flat frontmatter of bundles/<slug>/bundle.md (Skill 5). Body is the human README: what it is, how to upload, what the operator still does by hand.",
+  "$comment": "Account state never appears here; it lives in bundles/<slug>/canva/<account-id>.md, which is git-ignored (Decision 11).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "bundle_id",
+    "title",
+    "created",
+    "library_version",
+    "layout_ids",
+    "slide_count",
+    "fonts",
+    "fonts_native",
+    "routes_supported",
+    "brand",
+    "pairing",
+    "content_public",
+    "license"
+  ],
+  "properties": {
+    "bundle_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Bundle slug; the bundles/<bundle_id> directory name."
+    },
+    "title": {
+      "type": "string",
+      "description": "Human title of the bundled deck."
+    },
+    "created": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+      "description": "ISO date of export."
+    },
+    "library_version": {
+      "type": "string",
+      "description": "Commit sha of the library the bundle was exported from; also recorded in bundle-manifest.json."
+    },
+    "layout_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^L[0-9]{3}$"
+      },
+      "uniqueItems": true,
+      "minItems": 1,
+      "description": "Layouts vendored into the bundle. The bundle must not reference any layout outside this list."
+    },
+    "slide_count": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 350,
+      "description": "Number of slides; must equal the page count created in Canva (acceptance)."
+    },
+    "fonts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Every family used across the bundled slides."
+    },
+    "fonts_native": {
+      "type": "boolean",
+      "description": "True when every family is Canva-native, so a foreign account needs no font upload."
+    },
+    "routes_supported": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ]
+      },
+      "uniqueItems": true,
+      "$comment": "Closed enum. Source of truth: spec/vocab/route.json. JSON Schema cannot load the vocab at runtime, so validate.mjs injects the enum from that file; keep this array in sync with it.",
+      "description": "Upload routes this bundle ships the artefacts for."
+    },
+    "brand": {
+      "type": "string",
+      "enum": [
+        "alderman-ai",
+        "neutral"
+      ],
+      "$comment": "Closed enum. Source of truth: spec/vocab/brand.json. JSON Schema cannot load the vocab at runtime, so validate.mjs injects the enum from that file; keep this array in sync with it.",
+      "description": "Brand of the bundled deck. A public bundle is normally neutral."
+    },
+    "pairing": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Named font pairing carried by the bundled slides."
+    },
+    "content_public": {
+      "type": "boolean",
+      "description": "Decision 4: export refuses unless this is true or -Public was passed. Never inferred."
+    },
+    "license": {
+      "type": "string",
+      "description": "License the bundle is published under, or \"all-rights-reserved\"."
+    }
+  }
+}

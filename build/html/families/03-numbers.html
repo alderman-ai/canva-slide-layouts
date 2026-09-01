@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>numbers family master</title>
+<style>
+/* templates/_base.css — reset + grid/type tokens, inlined into every built page.
+   Grid and type numbers come from docs/PLAN.md § Specs carried over
+   (spec/grid.md and spec/type-scale.md are the canonical write-ups). */
+
+:root {
+  /* page */
+  --page-w: 1920px;
+  --page-h: 1080px;
+  --page-bg: #ffffff;
+
+  /* grid: 96px margins -> 1728x888 content box, 12 columns, 32px gutters */
+  --margin: 96px;
+  --content-w: 1728px;
+  --content-h: 888px;
+  --cols: 12;
+  --gutter: 32px;
+  --col-w: 114.6667px; /* (1728 - 11*32) / 12 */
+  --footer-safe: 40px;
+
+  /* type scale: 1pt = 2px at 1920x1080; ratio 1.333, base 32px.
+     Mode A = read-deck (default), mode B = live-talk (--live-*). */
+  --display: 128px;   --display-lh: 1.0;  --display-ls: -0.03em;
+  --title: 76px;      --title-lh: 1.1;    --title-ls: -0.02em;
+  --subtitle: 56px;   --subtitle-lh: 1.2;
+  --lead: 42px;       --lead-lh: 1.3;
+  --body: 32px;       --body-lh: 1.4;
+  --caption: 24px;    --caption-lh: 1.35;
+  --eyebrow: 20px;    --eyebrow-lh: 1.2;  --eyebrow-ls: 0.08em;
+
+  --live-display: 160px;
+  --live-title: 96px;
+  --live-subtitle: 64px;
+  --live-lead: 48px;
+  --live-body: 40px;
+  --live-caption: 28px;
+  --live-eyebrow: 24px;
+
+  /* neutral placeholders (brand/color styling is out of scope for layouts) */
+  --placeholder-fill: #e5e5e5;
+  --placeholder-ink: #666666;
+  --rule: #999999;
+  --ink: #111111;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #f2f2f2;
+}
+
+body {
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+body > section {
+  /* the page box; the import marker itself stays an inline attribute, never a CSS hook */
+  position: relative;
+  width: var(--page-w);
+  height: var(--page-h);
+  overflow: hidden;
+  background: var(--page-bg);
+  margin: 0 auto 24px;
+}
+
+h1, h2, h3, p, ul, ol, li, figure, blockquote {
+  margin: 0;
+  padding: 0;
+  font-weight: inherit;
+}
+
+ul { list-style-position: outside; }
+img { display: block; max-width: 100%; }
+</style>
+</head>
+<body>
+<section data-document-role="page" data-label="Table Insight" data-speaker-notes="Point at the row you want them to see before you explain the callout." style="position:relative;width:1920px;height:1080px;overflow:hidden;background:#fff">
+  <h1 style="position:absolute;left:96px;top:96px;width:1728px;font-family:'Inter', sans-serif;font-weight:700;font-size:76px;line-height:1.1;text-align:left;margin:0">Action title says what the table proves</h1>
+  <div style="position:absolute;left:96px;top:240px;width:1141px;height:720px;background:#E5E5E5;display:flex;align-items:center;justify-content:center">
+    <span style="font-family:'Inter', sans-serif;font-weight:500;font-size:28px;line-height:1.2;color:#666666;margin:0">rows:6 cols:4 header:true</span>
+  </div>
+  <div style="position:absolute;left:1269px;top:240px;width:555px;height:720px;background:#F5F5F5;border-radius:16px"></div>
+  <p style="position:absolute;left:1301px;top:280px;width:491px;font-family:'Inter', sans-serif;font-weight:600;font-size:20px;line-height:1.2;text-align:left;margin:0">SO WHAT</p>
+  <p style="position:absolute;left:1301px;top:328px;width:491px;font-family:'Inter', sans-serif;font-weight:400;font-size:32px;line-height:1.4;text-align:left;margin:0">The read-out in two or three sentences, pointing at the row that matters.</p>
+  <p style="position:absolute;left:96px;top:992px;width:1141px;font-family:'Inter', sans-serif;font-weight:400;font-size:22px;line-height:1.3;text-align:left;margin:0">Source: dataset, date, method</p>
+</section>
+</body>
+</html>

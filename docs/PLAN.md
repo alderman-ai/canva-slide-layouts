@@ -1,11 +1,12 @@
 # Canva Slide System — Plan (approved 2026-09-02)
 
-> status: approved · execution step: 0 (handover persistence)
+> status: in execution · steps 0-1 complete (handover, foundation) · next: step 2 probe
 > superseded source: ~/.claude/plans/this-directory-will-be-modular-beacon.md
 
 ## Changelog
 
 - 2026-09-02 · plan approved after five research passes and four scope refinements; copied here verbatim.
+- 2026-09-02 · step 0 (handover) and step 1 (foundation) executed; see docs/WORKLOG.md. Naming convention added as Decision 15.
 
 ---
 

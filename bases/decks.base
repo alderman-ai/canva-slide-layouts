@@ -1,0 +1,52 @@
+# Obsidian Bases view over presentation briefs and deck plans (presentations/*/brief.md, presentations/*/plan.md)
+filters:
+  or:
+    - file.name == "brief"
+    - file.name == "plan"
+properties:
+  note.title:
+    displayName: Deck
+  note.purpose:
+    displayName: Purpose
+  note.delivery_mode:
+    displayName: Mode
+  note.target_slides:
+    displayName: Slides
+  note.density:
+    displayName: Density
+  note.polish:
+    displayName: Polish
+  note.flow_template:
+    displayName: Flow
+  note.status:
+    displayName: Status
+  note.canva_design_id:
+    displayName: Canva design
+  note.content_public:
+    displayName: Public
+views:
+  - type: table
+    name: Decks
+    filters:
+      and:
+        - file.name == "brief"
+    order:
+      - note.title
+      - note.purpose
+      - note.delivery_mode
+      - note.target_slides
+      - note.density
+      - note.polish
+      - note.status
+      - note.content_public
+  - type: table
+    name: Plans
+    filters:
+      and:
+        - file.name == "plan"
+    order:
+      - note.deck
+      - note.flow_template
+      - note.target_slides
+      - note.layout_sequence
+      - note.canva_design_id

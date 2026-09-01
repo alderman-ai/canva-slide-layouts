@@ -1,0 +1,27 @@
+{
+  "name": "canva-slide-system",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Markdown-first slide layout library: validation, HTML/.dc.html/Canva-ops emitters, manifests and previews.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "build": "node scripts/build-html.mjs",
+    "build:dc": "node scripts/build-dc.mjs",
+    "build:ops": "node scripts/build-canva-ops.mjs",
+    "preview": "node scripts/preview.mjs",
+    "manifest": "node scripts/manifest.mjs",
+    "test": "node --test \"scripts/test/*.test.mjs\""
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "cheerio": "^1.1.2",
+    "gray-matter": "^4.0.3",
+    "playwright": "^1.56.1",
+    "yaml": "^2.8.1"
+  }
+}

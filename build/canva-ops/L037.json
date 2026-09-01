@@ -1,0 +1,219 @@
+{
+  "page": {
+    "width": 1920,
+    "height": 1080,
+    "title": "Table Insight"
+  },
+  "operations": [
+    {
+      "type": "add_text",
+      "page_id": "$PAGE",
+      "text": "Action title says what the table proves",
+      "top": 96,
+      "left": 96,
+      "width": 1728
+    },
+    {
+      "type": "format_text",
+      "locator_id": "$LOC[1]",
+      "formatting": {
+        "font_size": 76,
+        "font_weight": "bold",
+        "line_height": 1.1,
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "insert_fill",
+      "page_id": "$PAGE",
+      "asset_type": "image",
+      "asset_id": "$ASSET[2]",
+      "alt_text": "rows:6 cols:4 header:true",
+      "$ref": "$LOC[2]",
+      "left": 96,
+      "top": 240,
+      "width": 1141,
+      "height": 720
+    },
+    {
+      "type": "insert_shape",
+      "page_id": "$PAGE",
+      "$ref": "$LOC[3]",
+      "left": 1269,
+      "top": 240,
+      "width": 555,
+      "height": 720,
+      "path": "M0 0H555V720H0Z",
+      "view_box_width": 555,
+      "view_box_height": 720,
+      "color": "#F5F5F5",
+      "corner_rounding": 16
+    },
+    {
+      "type": "add_text",
+      "page_id": "$PAGE",
+      "text": "SO WHAT",
+      "top": 280,
+      "left": 1301,
+      "width": 491
+    },
+    {
+      "type": "format_text",
+      "locator_id": "$LOC[4]",
+      "formatting": {
+        "font_size": 20,
+        "font_weight": "bold",
+        "line_height": 1.2,
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "add_text",
+      "page_id": "$PAGE",
+      "text": "The read-out in two or three sentences, pointing at the row that matters.",
+      "top": 328,
+      "left": 1301,
+      "width": 491
+    },
+    {
+      "type": "format_text",
+      "locator_id": "$LOC[5]",
+      "formatting": {
+        "font_size": 32,
+        "font_weight": "normal",
+        "line_height": 1.4,
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "add_text",
+      "page_id": "$PAGE",
+      "text": "Source: dataset, date, method",
+      "top": 992,
+      "left": 96,
+      "width": 1141
+    },
+    {
+      "type": "format_text",
+      "locator_id": "$LOC[6]",
+      "formatting": {
+        "font_size": 22,
+        "font_weight": "normal",
+        "line_height": 1.3,
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_speaker_notes",
+      "page_id": "$PAGE",
+      "notes": "Point at the row you want them to see before you explain the callout."
+    }
+  ],
+  "chunks": [
+    [
+      {
+        "type": "add_text",
+        "page_id": "$PAGE",
+        "text": "Action title says what the table proves",
+        "top": 96,
+        "left": 96,
+        "width": 1728
+      },
+      {
+        "type": "format_text",
+        "locator_id": "$LOC[1]",
+        "formatting": {
+          "font_size": 76,
+          "font_weight": "bold",
+          "line_height": 1.1,
+          "text_align": "start"
+        }
+      },
+      {
+        "type": "insert_fill",
+        "page_id": "$PAGE",
+        "asset_type": "image",
+        "asset_id": "$ASSET[2]",
+        "alt_text": "rows:6 cols:4 header:true",
+        "$ref": "$LOC[2]",
+        "left": 96,
+        "top": 240,
+        "width": 1141,
+        "height": 720
+      },
+      {
+        "type": "insert_shape",
+        "page_id": "$PAGE",
+        "$ref": "$LOC[3]",
+        "left": 1269,
+        "top": 240,
+        "width": 555,
+        "height": 720,
+        "path": "M0 0H555V720H0Z",
+        "view_box_width": 555,
+        "view_box_height": 720,
+        "color": "#F5F5F5",
+        "corner_rounding": 16
+      },
+      {
+        "type": "add_text",
+        "page_id": "$PAGE",
+        "text": "SO WHAT",
+        "top": 280,
+        "left": 1301,
+        "width": 491
+      },
+      {
+        "type": "format_text",
+        "locator_id": "$LOC[4]",
+        "formatting": {
+          "font_size": 20,
+          "font_weight": "bold",
+          "line_height": 1.2,
+          "text_align": "start"
+        }
+      },
+      {
+        "type": "add_text",
+        "page_id": "$PAGE",
+        "text": "The read-out in two or three sentences, pointing at the row that matters.",
+        "top": 328,
+        "left": 1301,
+        "width": 491
+      },
+      {
+        "type": "format_text",
+        "locator_id": "$LOC[5]",
+        "formatting": {
+          "font_size": 32,
+          "font_weight": "normal",
+          "line_height": 1.4,
+          "text_align": "start"
+        }
+      },
+      {
+        "type": "add_text",
+        "page_id": "$PAGE",
+        "text": "Source: dataset, date, method",
+        "top": 992,
+        "left": 96,
+        "width": 1141
+      },
+      {
+        "type": "format_text",
+        "locator_id": "$LOC[6]",
+        "formatting": {
+          "font_size": 22,
+          "font_weight": "normal",
+          "line_height": 1.3,
+          "text_align": "start"
+        }
+      },
+      {
+        "type": "replace_speaker_notes",
+        "page_id": "$PAGE",
+        "notes": "Point at the row you want them to see before you explain the callout."
+      }
+    ]
+  ]
+}

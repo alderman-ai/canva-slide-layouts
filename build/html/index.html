@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Layout contact sheet</title>
+<style>
+body{margin:0;padding:24px;background:#f2f2f2;font:14px/1.4 Inter,Helvetica Neue,Arial,sans-serif;color:#111}
+h1{font-size:20px;margin:0 0 16px}
+.grid{display:flex;flex-wrap:wrap;gap:16px}
+.card{display:block;text-decoration:none;color:inherit;width:480px}
+.frame{display:block;width:480px;height:270px;overflow:hidden;background:#fff;border:1px solid #ddd}
+.frame iframe{width:1920px;height:1080px;border:0;transform:scale(0.25);transform-origin:top left;pointer-events:none}
+.meta{display:block;padding:6px 2px;font-size:13px;color:#444}
+</style>
+</head>
+<body>
+<h1>Layout contact sheet — 3 layouts</h1>
+<div class="grid">
+  <a class="card" href="L001.html">
+    <span class="frame"><iframe src="L001.html" scrolling="no" loading="lazy"></iframe></span>
+    <span class="meta"><b>L001</b> Title Cover</span>
+  </a>
+  <a class="card" href="L037.html">
+    <span class="frame"><iframe src="L037.html" scrolling="no" loading="lazy"></iframe></span>
+    <span class="meta"><b>L037</b> Table Insight</span>
+  </a>
+  <a class="card" href="L046.html">
+    <span class="frame"><iframe src="L046.html" scrolling="no" loading="lazy"></iframe></span>
+    <span class="meta"><b>L046</b> Three Column</span>
+  </a>
+</div>
+</body>
+</html>

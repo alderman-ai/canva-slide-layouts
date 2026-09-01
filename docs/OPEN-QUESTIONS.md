@@ -27,6 +27,21 @@ Each entry: what is unknown, why it matters, how to test it, status. Close an en
 | DM Sans, Manrope, Space Grotesk, IBM Plex are in Canva's library | third-party lists (research/04) | verify in the editor before tagging `canva_native: yes` |
 | Chrome extension can drive Canva's editor reliably | no field reports (research/08) | P4 |
 
+## Added during execution step 1 (2026-09-02)
+
+| # | Item | Why it matters | How to test / resolve | Status |
+|---|---|---|---|---|
+| S1 | The site repo `alderman-ai` at `78f20ed` has a **dirty tree**: six staged deletions under `public/brand-assets/` (`alderman-ai-wordmark-v2.svg`, `alderman-ai-mark-transparent-v1.svg`, `alex-portrait-still-human-v1.png`, `scribbles/*`). The site's own check #2 treats this as a stop condition. | Logo assets referenced by tokens are not on disk; this project must not restore them | Operator decides in the site repo; re-run `brand-extract` afterwards | **operator** |
+| S2 | Twelve conflicts between the site's design docs and its code (e.g. h2 weight 600 vs 700, mark PNG 1000 vs 1181 px, three breakpoint systems, `tailwind.config.js` pointing at a missing `lib/tokens.ts`). | Which value elements should follow | Code wins per order of authority; listed in `spec/tokens.md` "Notes on drift" | recorded |
+| S3 | `move-item-to-folder` and `create-folder` parameter shapes were never schema-loaded in-session. | Upload step uses them | Load with ToolSearch before first use and append to `spec/canva-edit-ops.md` | open |
+| S4 | Locator stability across a transaction commit (do `locator_id`s survive commit and re-open?). | `slide-redline` relies on stored locators | Probe P7 extension: read → commit → re-open → compare ids | open |
+| S5 | Whether Canva's font picker has a "Change All" affordance at all (no help page found). | Post-import font fix for masters | P4 state 5 | open |
+| S6 | Whether applying Brand Kit Styles in Canva is destructive to layout geometry. | Chrome checklist 6.3 in `spec/stack.md` | Try on a copy of a probe design | open |
+| S7 | The `maxChars` constant k = 0.55 em for Inter is derived, not published. | Wrap-width accuracy | Re-derive from the rendered probe deck (measure actual line breaks) | open |
+| S8 | Six archetypes have no published item range; density level 5 has no published min body px. | Rubric completeness | Set from probe rendering; mark as project values | open |
+
+Resolved in step 1: the 27 `edit-design` operation parameter shapes are now fully recorded in `spec/canva-edit-ops.md` (was: only names captured for 19 of them).
+
 ## Product questions for the operator (non-blocking; defaults in force)
 
 | Question | Default in force |

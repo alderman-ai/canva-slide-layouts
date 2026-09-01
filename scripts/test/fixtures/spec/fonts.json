@@ -1,0 +1,23 @@
+{
+  "$comment": "Hermetic font registry for the script tests only. The real registry is spec/fonts.json.",
+  "fonts": [
+    {
+      "family": "Inter",
+      "weights_used": [400, 500, 600, 700],
+      "category": "grotesk",
+      "source": "google",
+      "license": "OFL-1.1",
+      "canva_native": "yes",
+      "canva_fallback": "Helvetica Neue, Arial"
+    },
+    {
+      "family": "Open Sans",
+      "weights_used": [400, 600],
+      "category": "humanist",
+      "source": "google",
+      "license": "OFL-1.1",
+      "canva_native": "yes",
+      "canva_fallback": "Helvetica Neue, Arial"
+    }
+  ]
+}

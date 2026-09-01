@@ -39,28 +39,33 @@ See `research/README.md` for the per-report routing table. Short form:
 | `research/09-session-probes.md` | Account ids, exact MCP tool surface and schema facts, local tool versions (highest trust) |
 | `research/10-brand-source-notes.md` | alderman.ai codebase location, visitor rules, order of authority, extraction targets |
 
-## spec/ — the system's contracts (created in execution step 1)
+## spec/ — the system's contracts
 
 | File | What | Read when |
 |---|---|---|
-| `spec/ontology.md` | Entities, relations, cardinalities; cites research/06 | Designing or changing any schema |
-| `spec/schema.md` | Frontmatter key sets per entity and element-table columns | Authoring any hybrid MD |
-| `spec/schema/*.json` | JSON Schemas per entity and per-layout `accepts` | Writing `validate`/`match`; adding a layout |
-| `spec/vocab/*.json` | Controlled vocabularies (SKOS-style flat JSON) | Choosing any frontmatter value |
-| `spec/taxonomy.md` | Archetype tree with families, item ranges, accepts summaries | Picking or naming a layout |
-| `spec/flows.md` | Flow templates with slots and target lengths | Planning a deck |
-| `spec/rubrics.md` | Density 1–5, polish 1–5, pace norms, decomposition priors | Planner rules; setting a layout's density/polish |
-| `spec/grid.md`, `spec/type-scale.md` | 1920x1080 grid; type scale in two modes; char budgets | Authoring layouts |
-| `spec/fonts.json`, `spec/pairings.md` | Font registry; named pairings | Any font choice; validate warnings |
-| `spec/tokens.md`, `spec/brand-sources.md` | Brand values extracted read-only with citations | Element work for alderman.ai |
-| `spec/canva-limits.md` | Limits, probe results, route decisions | Before any upload |
-| `spec/stack.md` | Capability matrix and Chrome checklists | Deciding which surface performs a step |
+| `spec/ontology.md` | 12 entities, relations with cardinalities, 10 invariants, planner rules, ER diagram, how retrieval works | Designing or changing any schema, vocab, or planner rule |
+| `spec/schema.md` | Authoritative frontmatter key sets per entity, element-table columns and `binds` grammar, required body headings, validate invariants | Authoring or parsing any hybrid MD |
+| `spec/schema/*.schema.json` | JSON Schema 2020-12 for layout, slide, unit, deck (brief+plan), intake, bundle, font, asset; `accepts.template.json` with worked examples | Writing or extending `validate`/`match`; adding a layout's accepts file |
+| `spec/schema/layouts/L###.json` | Per-layout accepts files (roles with min/max, unit types, item and char ranges) | Adding or planning against a layout |
+| `spec/vocab/*.json`, `spec/vocab/README.md` | 19 controlled vocabularies (SKOS-style flat JSON): family, archetype, content_shape, unit_type, slide_function, shape, element_role, flow_role, flow_template, density, polish, audience, purpose, delivery_mode, evidence_kind, status, variant, brand, route; README routes each to its keys; `check-vocab.mjs` cross-checks prose and schemas | Choosing any frontmatter value; adding a term |
+| `spec/taxonomy.md` | Archetype tree: 7 families, 104 archetypes with id, items, density, polish, flow role, shapes, accepts, follows/precedes, variants; conflicts resolved | Picking, naming, authoring, or substituting a layout |
+| `spec/flows.md` | 10 flow templates as slot tables, budgeting algorithm, purpose → flow map | Planning a deck |
+| `spec/rubrics.md` | Density 1–5 with numeric limits, delivery-mode defaults, polish 1–5 with family defaults, pace norms, decomposition priors, overflow rule | Planner rules; setting a layout's density or polish |
+| `spec/grid.md` | 1920x1080 geometry: margins, 12-column span and offset tables, standard splits, safe zones, 8px rhythm | Any layout geometry; `build-html` |
+| `spec/type-scale.md` | 1pt = 2px; ratio 1.333 base 32; two-mode token table; char budgets; `maxChars` formula (derived k for Inter) | Filling size and maxChars columns |
+| `spec/fonts.json` | 60-family font registry (weights, source, license, canva_native, canva_fallback, weight map) | Setting `fonts[]`; resolving Canva fallbacks; validate warnings |
+| `spec/pairings.md` | 13 named pairings incl. `alderman-ai` and `neutral-default`, with Canva degrade and per-weight roles | Setting `pairing`; planning Brand Kit font uploads |
+| `spec/tokens.md` | alderman.ai brand tokens extracted read-only with `path:line` citations at commit `78f20ed`, ending in a machine-readable JSON block | Element work, pairings, anything brand-specific |
+| `spec/brand-sources.md` | Provenance table, order of authority, drift rule, visitor rules for the site repo | Before trusting any token; before any brand work |
+| `spec/canva-limits.md` | 53-row constraint table with confidence and source, Routes A–D with call budgets and recovery, the 15-rule HTML checklist, probe protocol P1–P8, `canva.md` call-log schema | Before any Canva call; running the step-2 probe |
+| `spec/canva-edit-ops.md` | Full parameter reference for all 27 `edit-design` operations plus the other tool shapes, read from the live schema | Authoring Route B/C operation batches; Skills 2 and 3 |
+| `spec/stack.md` | Capability matrix across Claude Code, Claude Design, Canva MCP, Chrome; division of labor; handoff formats; Design System project contract; `.dc.html` deck shape; six Chrome checklists (unverified) | Deciding which surface performs a step |
 
 ## layouts/ · presentations/ · bundles/ · intake/ · components/
 
 | Path | What | Read when |
 |---|---|---|
-| `layouts/L###-<archetype>.md` | Layout classes (source of truth) | Retrieval, authoring, porting |
+| `layouts/L###-<archetype>.md` | Layout classes (source of truth). Present: `L001-title-cover`, `L037-table-insight`, `L046-three-column` (the step-2 probe set) | Retrieval, authoring, porting |
 | `presentations/README.md` | Deck directory contract; privacy rule | Creating or working a deck |
 | `presentations/<slug>/` | Private deck projects (git-ignored) | Working that deck |
 | `bundles/<slug>/` | Portable bundles (Skill 5) | Exporting or receiving a deck |
@@ -71,11 +76,22 @@ See `research/README.md` for the per-report routing table. Short form:
 
 | Path | What | Read when |
 |---|---|---|
-| `build/html/`, `build/canva-ops/`, `build/previews/` | Generated HTML, edit-operation batches, PNG previews (committed; markup and images only) | Reviewing output; Route A/B inputs |
+| `build/html/`, `build/canva-ops/`, `build/dc/`, `build/previews/` | Generated import HTML (per layout, per family, contact-sheet `index.html`), edit-operation batches, Claude Design `.dc.html` deck, PNG previews (committed; markup and images only) | Reviewing output; Route A/B/D inputs |
 | `manifest/layouts.json`, `manifest/canva-index.json`, `manifest/assets.json`, `manifest/components.json` | Derived caches from frontmatter and Canva dumps | Scripted retrieval; never hand-edit |
 | `assets/` | Gray placeholder images and icons (SVG/PNG) | Asset uploads |
-| `bases/*.base` | Obsidian Bases views (layouts, units, decks, redlines) | Browsing in Obsidian |
-| `scripts/slides.ps1`, `scripts/*.mjs`, `scripts/lib/md.mjs` | PowerShell front door and node tooling | Running or extending the toolchain |
+| `bases/layouts.base`, `bases/decks.base`, `bases/README.md` | Obsidian Bases views: layouts (8 views incl. family board, quick polish, needs font install) and decks/plans | Browsing or picking layouts in Obsidian |
+| `scripts/README.md` | Per-script routing table, `slides.ps1` verb table, authoring conventions, how to test | Running or changing the toolchain |
+| `scripts/slides.ps1` | Operator front door (Windows PowerShell 5.1): `validate build build-dc ops manifest preview find show new-deck hygiene help` | Every operator action |
+| `scripts/lib/md.mjs` | Hybrid-MD library: `parseHybrid`/`serializeHybrid`, tolerant GFM tables, `loadVocab`/`loadSchemas`/`loadFonts`, element helpers | Before changing the MD contract or writing a script |
+| `scripts/validate.mjs` | The gate: hygiene, flat frontmatter, Ajv schemas with vocab enums, geometry, capacity, fonts, unique ids; `--json --hygiene-only --type --spec` | Session start; after editing any MD |
+| `scripts/build-html.mjs` | MD → annotated import HTML per layout, family, or deck, plus a 25% contact sheet | Before an HTML import or previews |
+| `scripts/build-dc.mjs` | MD → `build/dc/<name>/Main.dc.html` + `canvas.json` in the Claude Design deck shape (experimental) | Before a Design Sync push (Route D) |
+| `scripts/build-canva-ops.mjs` | MD → `edit-design` operation batches (≤25 ops per chunk) and Route C find-and-replace blocks | Before a Route B/C upload |
+| `scripts/manifest.mjs` | Builds `manifest/layouts.json` and `manifest/components.json` | After editing layouts |
+| `scripts/preview.mjs` | Playwright PNG previews and per-family contact sheets | After `build` |
+| `scripts/test/*.test.mjs`, `scripts/test/fixtures/` | 25 node tests and fixtures (valid `L999`, broken `L998`) | Before committing a script change |
+| `templates/_base.css`, `templates/_page.html.tpl` | Reset plus grid and type tokens; the page wrapper | When the page shell changes |
+| `package.json`, `package-lock.json` | Private ESM package; npm scripts `validate build build:dc build:ops preview manifest test` | Adding a script or dependency |
 | `.claude/skills/<name>/SKILL.md` | Operator skills: deck-decompose, element-mockup, slide-redline, slide-intake, bundle-upload | Running that skill |
 
 Entries for files not yet created describe their intended content; `docs/PLAN.md` is authoritative until they exist.

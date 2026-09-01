@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "experimental": true,
+  "artboards": [
+    {
+      "id": "library",
+      "name": "library",
+      "file": "Main.dc.html",
+      "x": 0,
+      "y": 0,
+      "width": 1920,
+      "height": 1080,
+      "pages": 3
+    }
+  ]
+}

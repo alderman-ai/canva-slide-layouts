@@ -1,0 +1,128 @@
+[
+  {
+    "value": "structural",
+    "prefLabel": "Structural",
+    "altLabels": [
+      "meta"
+    ],
+    "definition": "Slides that organise the deck rather than argue: covers, agendas, dividers, summaries, closings.",
+    "broader": "",
+    "inScheme": "family",
+    "examples": [
+      "polish_cost default 1"
+    ],
+    "sources": [
+      "research/02 §Consolidated layout archetypes",
+      "research/03 §(d)"
+    ]
+  },
+  {
+    "value": "text",
+    "prefLabel": "Single-idea text",
+    "altLabels": [
+      "single-idea text",
+      "copy"
+    ],
+    "definition": "Slides whose payload is words: a statement, a quote, a definition, a bulleted claim.",
+    "broader": "",
+    "inScheme": "family",
+    "examples": [
+      "polish_cost default 1"
+    ],
+    "sources": [
+      "research/02 §Consolidated layout archetypes",
+      "research/03 §(d)"
+    ]
+  },
+  {
+    "value": "numbers",
+    "prefLabel": "Numbers",
+    "altLabels": [
+      "data",
+      "data & chart"
+    ],
+    "definition": "Slides whose payload is quantities: big numbers, KPI tiles, charts, data tables.",
+    "broader": "",
+    "inScheme": "family",
+    "examples": [
+      "polish_cost default 3"
+    ],
+    "sources": [
+      "research/02 §Consolidated layout archetypes",
+      "research/03 §(d)",
+      "research/03 §(e) Beautiful.ai \"Data & Chart\""
+    ]
+  },
+  {
+    "value": "comparison",
+    "prefLabel": "Comparison & evaluation",
+    "altLabels": [
+      "evaluation"
+    ],
+    "definition": "Slides that set two or more items against each other on stated criteria.",
+    "broader": "",
+    "inScheme": "family",
+    "examples": [
+      "polish_cost default 2"
+    ],
+    "sources": [
+      "research/02 §Consolidated layout archetypes",
+      "research/03 §(d)"
+    ]
+  },
+  {
+    "value": "frameworks",
+    "prefLabel": "Frameworks",
+    "altLabels": [
+      "structure",
+      "diagram"
+    ],
+    "definition": "Slides that impose a named structure on ideas: matrices, pyramids, trees, rings, sets.",
+    "broader": "",
+    "inScheme": "family",
+    "examples": [
+      "polish_cost default 4 for multi-element diagrams"
+    ],
+    "sources": [
+      "research/02 §Consolidated layout archetypes",
+      "research/03 §(e) Duarte Diagrammer families"
+    ]
+  },
+  {
+    "value": "process",
+    "prefLabel": "Process & time",
+    "altLabels": [
+      "time",
+      "sequence"
+    ],
+    "definition": "Slides that order things in time or sequence: steps, timelines, roadmaps, boards.",
+    "broader": "",
+    "inScheme": "family",
+    "examples": [
+      "polish_cost default 3"
+    ],
+    "sources": [
+      "research/02 §Consolidated layout archetypes",
+      "research/03 §(d)"
+    ]
+  },
+  {
+    "value": "image_people",
+    "prefLabel": "Image & people",
+    "altLabels": [
+      "image",
+      "people",
+      "product & customer"
+    ],
+    "definition": "Slides whose payload is imagery or people: photographs, device frames, logos, teams, maps.",
+    "broader": "",
+    "inScheme": "family",
+    "examples": [
+      "polish_cost default 4"
+    ],
+    "sources": [
+      "research/02 §Consolidated layout archetypes",
+      "research/03 §(d)"
+    ]
+  }
+]

@@ -1,0 +1,78 @@
+[
+  {
+    "value": "a",
+    "prefLabel": "Route A - annotated HTML import",
+    "altLabels": [
+      "A",
+      "import-design-from-url",
+      "html import"
+    ],
+    "definition": "Publish annotated 1920x1080 HTML to a public URL and call import-design-from-url. Used to build family masters and previews, and for whole decks whose content may be public. 3-4 calls; accepts font substitution.",
+    "broader": "",
+    "inScheme": "route",
+    "examples": [
+      "risk: a silent fallback to a Canva \"Code design\" that is viewable but not element-editable"
+    ],
+    "sources": [
+      "docs/DECISIONS.md #3",
+      "docs/PLAN.md §Pipeline step 7"
+    ]
+  },
+  {
+    "value": "b",
+    "prefLabel": "Route B - edit-design ops",
+    "altLabels": [
+      "B",
+      "edit-design",
+      "ops"
+    ],
+    "definition": "Build or repair page content with insert_shape, add_text and insert_fill operations against an existing page. Elements and repairs only.",
+    "broader": "",
+    "inScheme": "route",
+    "examples": [
+      "never for whole decks: default font, black 16px text, roughly 100 calls per deck"
+    ],
+    "sources": [
+      "docs/DECISIONS.md #3",
+      "docs/PLAN.md §Pipeline step 7"
+    ]
+  },
+  {
+    "value": "c",
+    "prefLabel": "Route C - masters plus merge-designs",
+    "altLabels": [
+      "C",
+      "merge-designs",
+      "master fill"
+    ],
+    "definition": "merge-designs pulls master pages in order, read-design returns locators inside a transaction, then one edit-design call per page fills text by locator. The default for filled decks because fonts and geometry are inherited from the masters.",
+    "broader": "",
+    "inScheme": "route",
+    "examples": [
+      "roughly 45 calls for a 40-slide deck; merge-designs is capped at 500 operations and 350 pages"
+    ],
+    "sources": [
+      "docs/DECISIONS.md #3",
+      "docs/PLAN.md §Pipeline step 7"
+    ]
+  },
+  {
+    "value": "d",
+    "prefLabel": "Route D - Claude Design Send to Canva",
+    "altLabels": [
+      "D",
+      "dc.html",
+      "send to canva"
+    ],
+    "definition": "Write a .dc.html deck into a Claude Design project and use Send to Canva. The only path Canva documents as producing an editable presentation from HTML.",
+    "broader": "",
+    "inScheme": "route",
+    "examples": [
+      "probe question 1: whether Canva detection keys on markup or on origin"
+    ],
+    "sources": [
+      "docs/DECISIONS.md #3",
+      "docs/PLAN.md §Stack roles"
+    ]
+  }
+]

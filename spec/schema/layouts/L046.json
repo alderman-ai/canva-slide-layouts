@@ -1,0 +1,9 @@
+{
+  "$id": "L046",
+  "description": "Three equal columns for a comparison or enumeration of exactly three items, each with a short heading and up to five lines of body. Pick when three options, pillars or phases must be read side by side.",
+  "requires": { "title": { "min": 1, "max": 1 }, "label": { "min": 3, "max": 3 }, "body": { "min": 3, "max": 3 } },
+  "optional": { "caption": { "min": 0, "max": 1 }, "divider": { "min": 0, "max": 1 } },
+  "accepts_unit_types": ["claim", "comparison", "enumeration", "evidence"],
+  "items": { "min": 3, "max": 3 },
+  "chars": { "title": { "min": 8, "max": 40 }, "label": { "min": 2, "max": 24 }, "body": { "min": 20, "max": 200 }, "caption": { "min": 0, "max": 80 } }
+}

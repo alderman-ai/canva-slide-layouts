@@ -26,7 +26,7 @@ The approved plan is `docs/PLAN.md`. Decisions are numbered in `docs/DECISIONS.m
 
 1. Read `docs/PLAN.md` header (status line) and the **Status block** at the bottom of this file.
 2. Read `docs/DECISIONS.md` (all rows; it is short) and `docs/OPEN-QUESTIONS.md` (probe status).
-3. Run `git status --short` and, once it exists, `.\scripts\slides.ps1 validate`.
+3. Run `git status --short`, `.\scripts\slides.ps1 validate`, `node spec/vocab/check-vocab.mjs`, and `npm test`.
 4. Check the Canva MCP is connected: call `list-brand-kits`; note which account you are in (expected brand kit `kAHHTmdCWzo` "alderman.ai").
 5. Read `INDEX.md`, then `research/README.md`, and open only the research files your task needs.
 6. If the task uses a skill, read its `SKILL.md` under `.claude/skills/`.
@@ -58,7 +58,8 @@ node 24.15 · npm 11 · python 3.14 · git 2.54 · gh 2.91 (logged in as `alderm
 
 ## Status block
 
-- **Execution step**: 0 complete (handover persistence). Next: **step 1, foundation** (`spec/*`, `lib/md.mjs`, `validate`, `build-html`, `build-dc`, `build-canva-ops`, `slides.ps1`, `bases/*.base`, three probe layouts, public repo push).
-- **Verified**: everything in `research/09`. **Assumed**: everything in `docs/OPEN-QUESTIONS.md`.
-- **Public repo**: not yet created (`gh repo create alderman-ai/canva-slide-layouts --public` is part of step 1).
-- **Last session**: 2026-09-02, planning + step 0. See `docs/WORKLOG.md`.
+- **Execution step**: 1 complete (foundation). Next: **step 2, probe** - run `spec/canva-limits.md` section 4 (P1-P8) with `layouts/L001, L037, L046`; inputs already built under `build/html/`, `build/canva-ops/`, `build/dc/library/`. Raw URLs: `https://raw.githubusercontent.com/alderman-ai/canva-slide-layouts/main/build/html/<file>`.
+- **Verified**: everything in `research/09`; toolchain green (`npm test` 25/25, `validate` 0 errors, `check-vocab` OK). **Assumed**: everything in `docs/OPEN-QUESTIONS.md` (P1-P8, S1-S8).
+- **Public repo**: https://github.com/alderman-ai/canva-slide-layouts (origin), branch `main`.
+- **Operator attention**: OPEN-QUESTIONS S1 (site repo dirty tree, staged brand-asset deletions).
+- **Last session**: 2026-09-02, planning + steps 0-1. See `docs/WORKLOG.md`.

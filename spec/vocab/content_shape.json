@@ -1,0 +1,129 @@
+[
+  {
+    "value": "text",
+    "prefLabel": "Text",
+    "altLabels": [
+      "prose",
+      "paragraph"
+    ],
+    "definition": "Continuous prose: a sentence or short paragraph the layout can host.",
+    "broader": "",
+    "inScheme": "content_shape",
+    "examples": [],
+    "sources": [
+      "research/06 §(b) Layer 3"
+    ]
+  },
+  {
+    "value": "bullets",
+    "prefLabel": "Bullets",
+    "altLabels": [
+      "list"
+    ],
+    "definition": "A list of short parallel lines the layout can host.",
+    "broader": "",
+    "inScheme": "content_shape",
+    "examples": [
+      "2-5 bullets (research/06 §(c) title_body)"
+    ],
+    "sources": [
+      "research/06 §(b) Layer 3",
+      "research/06 §(c)"
+    ]
+  },
+  {
+    "value": "number",
+    "prefLabel": "Number",
+    "altLabels": [
+      "stat",
+      "metric"
+    ],
+    "definition": "A single quantity with a unit and a label the layout can host.",
+    "broader": "",
+    "inScheme": "content_shape",
+    "examples": [
+      "at most 6 characters for the numeral (research/02 §Grid and type conventions)"
+    ],
+    "sources": [
+      "research/06 §(b) Layer 3"
+    ]
+  },
+  {
+    "value": "image",
+    "prefLabel": "Image",
+    "altLabels": [
+      "picture",
+      "photo"
+    ],
+    "definition": "A photograph, screenshot, logo or illustration the layout can host.",
+    "broader": "",
+    "inScheme": "content_shape",
+    "examples": [],
+    "sources": [
+      "research/06 §(b) Layer 3",
+      "research/06 §(a)"
+    ]
+  },
+  {
+    "value": "chart",
+    "prefLabel": "Chart",
+    "altLabels": [
+      "graph"
+    ],
+    "definition": "A plotted data graphic the layout can host.",
+    "broader": "",
+    "inScheme": "content_shape",
+    "examples": [],
+    "sources": [
+      "research/06 §(b) Layer 3",
+      "research/06 §(a)"
+    ]
+  },
+  {
+    "value": "table",
+    "prefLabel": "Table",
+    "altLabels": [],
+    "definition": "A grid of rows and columns the layout can host.",
+    "broader": "",
+    "inScheme": "content_shape",
+    "examples": [
+      "3-7 rows (research/03 §(a) 16)"
+    ],
+    "sources": [
+      "research/06 §(b) Layer 3",
+      "research/06 §(a)"
+    ]
+  },
+  {
+    "value": "diagram",
+    "prefLabel": "Diagram",
+    "altLabels": [
+      "smartart",
+      "figure"
+    ],
+    "definition": "A composed figure of shapes and connectors the layout can host.",
+    "broader": "",
+    "inScheme": "content_shape",
+    "examples": [
+      "3-6 steps for a process diagram (research/06 §(c))"
+    ],
+    "sources": [
+      "research/06 §(b) Layer 3",
+      "research/06 §(a)"
+    ]
+  },
+  {
+    "value": "quote",
+    "prefLabel": "Quote",
+    "altLabels": [
+      "pull quote"
+    ],
+    "definition": "Verbatim attributed speech the layout can host.",
+    "broader": "",
+    "inScheme": "content_shape",
+    "examples": [],
+    "sources": [
+      "research/06 §(b) Layer 3"
+    ]
+  }
+]

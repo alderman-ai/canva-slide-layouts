@@ -1,0 +1,225 @@
+[
+  {
+    "value": "recommend",
+    "prefLabel": "Recommend",
+    "altLabels": [
+      "advise",
+      "decide"
+    ],
+    "definition": "Land a recommendation and get it agreed.",
+    "broader": "",
+    "inScheme": "purpose",
+    "examples": [
+      "default flow_template: scqa_pyramid"
+    ],
+    "sources": [
+      "research/03 §(b) 1"
+    ]
+  },
+  {
+    "value": "fundraise",
+    "prefLabel": "Fundraise",
+    "altLabels": [
+      "raise"
+    ],
+    "definition": "Raise capital from investors.",
+    "broader": "",
+    "inScheme": "purpose",
+    "examples": [
+      "default flow_template: sequoia_pitch"
+    ],
+    "sources": [
+      "research/03 §(b) 2"
+    ]
+  },
+  {
+    "value": "pitch_short",
+    "prefLabel": "Short pitch",
+    "altLabels": [
+      "demo day"
+    ],
+    "definition": "Pitch the company or idea in a strict short slot.",
+    "broader": "",
+    "inScheme": "purpose",
+    "examples": [
+      "default flow_template: kawasaki_10_20_30"
+    ],
+    "sources": [
+      "research/03 §(b) 3"
+    ]
+  },
+  {
+    "value": "sell",
+    "prefLabel": "Sell",
+    "altLabels": [
+      "sales"
+    ],
+    "definition": "Move a prospect toward buying.",
+    "broader": "",
+    "inScheme": "purpose",
+    "examples": [
+      "default flow_template: slidebean_3act"
+    ],
+    "sources": [
+      "research/03 §(b) 4"
+    ]
+  },
+  {
+    "value": "inspire",
+    "prefLabel": "Inspire",
+    "altLabels": [
+      "keynote",
+      "motivate"
+    ],
+    "definition": "Change how the audience feels and what they are willing to do.",
+    "broader": "",
+    "inScheme": "purpose",
+    "examples": [
+      "default flow_template: duarte_sparkline"
+    ],
+    "sources": [
+      "research/03 §(b) 5"
+    ]
+  },
+  {
+    "value": "teach",
+    "prefLabel": "Teach",
+    "altLabels": [
+      "train",
+      "educate"
+    ],
+    "definition": "Transfer a skill or concept and check that it landed.",
+    "broader": "",
+    "inScheme": "purpose",
+    "examples": [
+      "default flow_template: gagne_teaching"
+    ],
+    "sources": [
+      "research/03 §(b) 6"
+    ]
+  },
+  {
+    "value": "report_status",
+    "prefLabel": "Report status",
+    "altLabels": [
+      "update",
+      "steerco"
+    ],
+    "definition": "Report progress, risks and the decisions needed.",
+    "broader": "",
+    "inScheme": "purpose",
+    "examples": [
+      "default flow_template: status_update"
+    ],
+    "sources": [
+      "research/03 §(b) 7"
+    ]
+  },
+  {
+    "value": "facilitate",
+    "prefLabel": "Facilitate",
+    "altLabels": [
+      "workshop",
+      "offsite"
+    ],
+    "definition": "Run a session in which the audience does the work.",
+    "broader": "",
+    "inScheme": "purpose",
+    "examples": [
+      "default flow_template: workshop"
+    ],
+    "sources": [
+      "research/03 §(b) 8"
+    ]
+  },
+  {
+    "value": "document",
+    "prefLabel": "Document",
+    "altLabels": [
+      "leave behind",
+      "report"
+    ],
+    "definition": "Produce a self-explaining artefact to be read without a presenter.",
+    "broader": "",
+    "inScheme": "purpose",
+    "examples": [
+      "default flow_template: slidedoc"
+    ],
+    "sources": [
+      "research/03 §(b) 9"
+    ]
+  },
+  {
+    "value": "inform",
+    "prefLabel": "Inform",
+    "altLabels": [
+      "brief",
+      "explain"
+    ],
+    "definition": "Convey a body of information accurately, without asking for a decision.",
+    "broader": "",
+    "inScheme": "purpose",
+    "examples": [
+      "default flow_template: slidedoc"
+    ],
+    "sources": [
+      "research/03 §(b) 9",
+      "research/03 §(c) level 3"
+    ]
+  },
+  {
+    "value": "launch",
+    "prefLabel": "Launch",
+    "altLabels": [
+      "announce",
+      "go-to-market"
+    ],
+    "definition": "Announce a product, programme or change and drive adoption.",
+    "broader": "",
+    "inScheme": "purpose",
+    "examples": [
+      "default flow_template: slidebean_3act"
+    ],
+    "sources": [
+      "research/03 §(b) 4"
+    ]
+  },
+  {
+    "value": "provoke",
+    "prefLabel": "Provoke",
+    "altLabels": [
+      "ignite"
+    ],
+    "definition": "Deliver a rapid, high-tempo argument that lands as performance.",
+    "broader": "",
+    "inScheme": "purpose",
+    "examples": [
+      "default flow_template: takahashi_lessig"
+    ],
+    "sources": [
+      "research/03 §(b) 10"
+    ]
+  },
+  {
+    "value": "perform",
+    "prefLabel": "Perform",
+    "altLabels": [
+      "rapid talk",
+      "pecha kucha",
+      "ignite talk"
+    ],
+    "definition": "Deliver the deck as performance: the slides are timed scenery for a spoken piece rather than a document that can be read on its own.",
+    "broader": "",
+    "inScheme": "purpose",
+    "examples": [
+      "default flow_template: takahashi_lessig",
+      "alternate flow_template: duarte_sparkline",
+      "pairs with density 1 (cinematic) and 3-5 slides per minute"
+    ],
+    "sources": [
+      "research/03 §(b) 10",
+      "research/03 §(c) level 1",
+      "spec/flows.md §10 takahashi_lessig"
+    ]
+  }
+]

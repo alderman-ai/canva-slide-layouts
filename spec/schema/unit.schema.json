@@ -1,0 +1,167 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://alderman.ai/canva-slide-layouts/spec/schema/unit.schema.json",
+  "title": "Content unit set frontmatter",
+  "description": "Frontmatter of presentations/<slug>/units.md. The body carries one ## u### section per unit, each opening with a flat key/value list validated against $defs/unit.",
+  "$comment": "Per-unit keys live in the body, not in frontmatter, because Decision 2 forbids maps in frontmatter. validate.mjs parses each ## u### block and validates it against $defs/unit.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "deck",
+    "extracted_from",
+    "unit_count"
+  ],
+  "properties": {
+    "deck": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Deck slug."
+    },
+    "extracted_from": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Context files the units were decomposed from, repo-relative."
+    },
+    "unit_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of ## u### sections in the body. validate.mjs checks the count."
+    }
+  },
+  "$defs": {
+    "unit": {
+      "title": "ContentUnit",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "uid",
+        "slide_function",
+        "unit_type",
+        "shape",
+        "items",
+        "chars",
+        "has_number",
+        "evidence_kind",
+        "importance",
+        "must_include",
+        "source",
+        "section"
+      ],
+      "properties": {
+        "uid": {
+          "type": "string",
+          "pattern": "^u[0-9]{3}$",
+          "description": "Unit id, unique within the deck. The body heading is ## <uid>."
+        },
+        "slide_function": {
+          "type": "string",
+          "enum": [
+            "opening",
+            "agenda",
+            "section",
+            "content",
+            "summary",
+            "closing",
+            "appendix"
+          ],
+          "$comment": "Closed enum. Source of truth: spec/vocab/slide_function.json. JSON Schema cannot load the vocab at runtime, so validate.mjs injects the enum from that file; keep this array in sync with it.",
+          "description": "Layer 1 (research/06 §b): the structural role of the slide this unit belongs on."
+        },
+        "unit_type": {
+          "type": "string",
+          "enum": [
+            "claim",
+            "evidence",
+            "statistic",
+            "comparison",
+            "process",
+            "definition",
+            "problem",
+            "solution",
+            "example",
+            "quote",
+            "cause_effect",
+            "concession",
+            "enumeration",
+            "summary",
+            "call_to_action",
+            "figure",
+            "table",
+            "chart_data"
+          ],
+          "$comment": "Closed enum. Source of truth: spec/vocab/unit_type.json. JSON Schema cannot load the vocab at runtime, so validate.mjs injects the enum from that file; keep this array in sync with it.",
+          "description": "Layer 2 (research/06 §b): what the fragment rhetorically is."
+        },
+        "shape": {
+          "type": "string",
+          "enum": [
+            "text",
+            "bullets",
+            "number",
+            "image",
+            "chart",
+            "table",
+            "diagram",
+            "quote"
+          ],
+          "$comment": "Closed enum. Source of truth: spec/vocab/shape.json. JSON Schema cannot load the vocab at runtime, so validate.mjs injects the enum from that file; keep this array in sync with it.",
+          "description": "Layer 3 (research/06 §b): the modality the unit wants. Binds only to a layout whose content_shape contains it."
+        },
+        "items": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 60,
+          "description": "Count of repeated children (bullets, steps, tiles, rows). 0 for a single-part unit."
+        },
+        "chars": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Total characters of the unit text; compared against a layout text_capacity_chars."
+        },
+        "has_number": {
+          "type": "boolean",
+          "description": "True when the unit carries a quantity that could fill a number role."
+        },
+        "evidence_kind": {
+          "type": "string",
+          "enum": [
+            "statistic",
+            "benchmark",
+            "case_study",
+            "testimonial",
+            "expert_source",
+            "experiment_result",
+            "financial",
+            "survey",
+            "demo",
+            "citation",
+            "anecdote",
+            "none"
+          ],
+          "$comment": "Closed enum. Source of truth: spec/vocab/evidence_kind.json. JSON Schema cannot load the vocab at runtime, so validate.mjs injects the enum from that file; keep this array in sync with it.",
+          "description": "Kind of proof this unit offers. \"none\" when the unit is not evidence."
+        },
+        "importance": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5,
+          "description": "Operator or extractor priority, 1 lowest. Drives what gets dropped when the slide budget binds."
+        },
+        "must_include": {
+          "type": "boolean",
+          "description": "True when the deck fails acceptance if this unit is unplaced (Skill 1 acceptance)."
+        },
+        "source": {
+          "type": "string",
+          "description": "Provenance anchor as context/<file>#<anchor>."
+        },
+        "section": {
+          "type": "string",
+          "description": "Top-level source section this unit came from; section dividers are inserted at these boundaries (research/06 §d)."
+        }
+      }
+    }
+  }
+}

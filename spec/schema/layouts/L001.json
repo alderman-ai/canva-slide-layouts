@@ -1,0 +1,9 @@
+{
+  "$id": "L001",
+  "description": "Deck opening: one title claim, optional subtitle and presenter/date line. Pick for the first slide of any deck; sparse by design.",
+  "requires": { "title": { "min": 1, "max": 1 } },
+  "optional": { "eyebrow": { "min": 0, "max": 1 }, "subtitle": { "min": 0, "max": 1 }, "caption": { "min": 0, "max": 1 }, "divider": { "min": 0, "max": 1 } },
+  "accepts_unit_types": ["claim", "summary", "definition"],
+  "items": { "min": 1, "max": 3 },
+  "chars": { "eyebrow": { "min": 0, "max": 24 }, "title": { "min": 4, "max": 28 }, "subtitle": { "min": 0, "max": 70 }, "caption": { "min": 0, "max": 60 } }
+}

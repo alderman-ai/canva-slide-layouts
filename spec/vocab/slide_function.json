@@ -1,0 +1,116 @@
+[
+  {
+    "value": "opening",
+    "prefLabel": "Opening",
+    "altLabels": [
+      "cover",
+      "title"
+    ],
+    "definition": "Establishes what the deck is and who is speaking; the first slide of the deck.",
+    "broader": "",
+    "inScheme": "slide_function",
+    "examples": [
+      "maps to archetypes title_cover, intro"
+    ],
+    "sources": [
+      "research/06 §(b) Layer 1 (PPTAgent structural slides, Google TITLE)"
+    ]
+  },
+  {
+    "value": "agenda",
+    "prefLabel": "Agenda",
+    "altLabels": [
+      "toc"
+    ],
+    "definition": "Announces the sections that follow; inserted when the deck has 4 or more sections.",
+    "broader": "",
+    "inScheme": "slide_function",
+    "examples": [
+      "insert when the deck has >= 4 sections (research/06 §(d))"
+    ],
+    "sources": [
+      "research/06 §(b) Layer 1",
+      "research/06 §(d)"
+    ]
+  },
+  {
+    "value": "section",
+    "prefLabel": "Section",
+    "altLabels": [
+      "divider"
+    ],
+    "definition": "Marks a boundary between top-level parts of the argument.",
+    "broader": "",
+    "inScheme": "slide_function",
+    "examples": [
+      "insert at each top-level heading yielding >= 2 content slides, when the deck has >= 3 sections (research/06 §(d))"
+    ],
+    "sources": [
+      "research/06 §(b) Layer 1",
+      "research/06 §(d)"
+    ]
+  },
+  {
+    "value": "content",
+    "prefLabel": "Content",
+    "altLabels": [
+      "body"
+    ],
+    "definition": "Carries the substance: a claim with its evidence, a comparison, a process, a figure.",
+    "broader": "",
+    "inScheme": "slide_function",
+    "examples": [
+      "the default function; roughly 2.4 slides per section (research/06 §(d), DOC2PPT)"
+    ],
+    "sources": [
+      "research/06 §(b) Layer 1",
+      "research/06 §(d)"
+    ]
+  },
+  {
+    "value": "summary",
+    "prefLabel": "Summary",
+    "altLabels": [
+      "recap",
+      "takeaway"
+    ],
+    "definition": "Restates the argument of a section or of the whole deck in condensed form.",
+    "broader": "",
+    "inScheme": "slide_function",
+    "examples": [],
+    "sources": [
+      "research/06 §(b) Layer 1",
+      "research/06 §(b) summary/restatement"
+    ]
+  },
+  {
+    "value": "closing",
+    "prefLabel": "Closing",
+    "altLabels": [
+      "end"
+    ],
+    "definition": "Ends the deck: the ask, the next steps, the sign-off.",
+    "broader": "",
+    "inScheme": "slide_function",
+    "examples": [],
+    "sources": [
+      "research/06 §(b) Layer 1",
+      "research/06 §(c) closing"
+    ]
+  },
+  {
+    "value": "appendix",
+    "prefLabel": "Appendix",
+    "altLabels": [
+      "backup"
+    ],
+    "definition": "Back-up material kept out of the presented narrative.",
+    "broader": "",
+    "inScheme": "slide_function",
+    "examples": [],
+    "sources": [
+      "research/06 §(b) Layer 1",
+      "research/03 §(b) 1 (SCQA appendix)"
+    ]
+  }
+]

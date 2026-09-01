@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://alderman.ai/canva-slide-layouts/spec/schema/slide.schema.json",
+  "title": "Slide frontmatter",
+  "description": "Flat frontmatter of a slide instance at presentations/<slug>/slides/S##-<archetype>.md (forks add .v<n>). Body sections: ## Elements, ## Notes, ## Redlines.",
+  "$comment": "A fork is a Slide with parent set and version > 1; PLAN Skill 3 calls it status: candidate, which this schema expresses as parent != \"-\" with fill_status auto or edited.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "slide_no",
+    "deck",
+    "layout",
+    "units",
+    "fill_status",
+    "overflow",
+    "redline_status",
+    "canva_page_id",
+    "locators",
+    "canva_ops",
+    "brand",
+    "pairing",
+    "fonts_native",
+    "parent",
+    "version",
+    "change_request",
+    "changed_keys"
+  ],
+  "properties": {
+    "slide_no": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 350,
+      "description": "Position in the deck. Canva caps a design at 350 pages."
+    },
+    "deck": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Deck slug; the presentations/<slug> directory name."
+    },
+    "layout": {
+      "type": "string",
+      "pattern": "^L[0-9]{3}$",
+      "description": "Layout id this slide instantiates."
+    },
+    "units": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^u[0-9]{3}$"
+      },
+      "uniqueItems": true,
+      "description": "Content unit ids bound into this slide, in binding order."
+    },
+    "fill_status": {
+      "type": "string",
+      "enum": [
+        "auto",
+        "edited",
+        "approved"
+      ],
+      "$comment": "Closed enum. Source of truth: spec/vocab/status.json. JSON Schema cannot load the vocab at runtime, so validate.mjs injects the enum from that file; keep this array in sync with it.",
+      "description": "How the copy got here. Subset of spec/vocab/status.json with broader slide_status."
+    },
+    "overflow": {
+      "type": "boolean",
+      "description": "True when any element text exceeds its maxChars. Must be false before upload."
+    },
+    "redline_status": {
+      "type": "string",
+      "enum": [
+        "none",
+        "open",
+        "applied",
+        "resolved"
+      ],
+      "$comment": "Closed enum. Source of truth: spec/vocab/status.json. JSON Schema cannot load the vocab at runtime, so validate.mjs injects the enum from that file; keep this array in sync with it.",
+      "description": "State of synced Canva comment threads. Subset with broader redline_status."
+    },
+    "canva_page_id": {
+      "type": "string",
+      "description": "Canva page id for this slide. Quoted string so PowerShell never coerces it to Int64 (research/06 §e). \"-\" when not uploaded."
+    },
+    "locators": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Per-element Canva locator ids in element-table order."
+    },
+    "canva_ops": {
+      "type": "string",
+      "description": "Path to this slide generated ops file under build/canva-ops/. Repo-relative POSIX path, or \"-\" when not set."
+    },
+    "brand": {
+      "type": "string",
+      "enum": [
+        "alderman-ai",
+        "neutral"
+      ],
+      "$comment": "Closed enum. Source of truth: spec/vocab/brand.json. JSON Schema cannot load the vocab at runtime, so validate.mjs injects the enum from that file; keep this array in sync with it.",
+      "description": "Inherited from the deck brief; may differ from the layout when a neutral layout is branded at fill time."
+    },
+    "pairing": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Named pairing in force for this slide."
+    },
+    "fonts_native": {
+      "type": "boolean",
+      "description": "True when every family on this slide is Canva-native."
+    },
+    "parent": {
+      "type": "string",
+      "description": "Redline fork lineage: the slide filename this file was forked from, or \"-\" for a canonical slide."
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Fork version. 1 for a canonical slide; a fork written by slide-redline increments it."
+    },
+    "change_request": {
+      "type": "string",
+      "description": "The operator plain-language request, stored verbatim on a fork. \"-\" on a canonical slide."
+    },
+    "changed_keys": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Frontmatter keys and element-table cells the fork changed, as key or n.column. Must exactly explain the before/after pixel diff."
+    }
+  }
+}

@@ -1,0 +1,86 @@
+[
+  {
+    "value": "opener",
+    "prefLabel": "Opener",
+    "altLabels": [
+      "open"
+    ],
+    "definition": "Sets up the deck or a section: cover, agenda, section divider, hook.",
+    "broader": "",
+    "inScheme": "flow_role",
+    "examples": [
+      "title_cover, agenda, section_divider"
+    ],
+    "sources": [
+      "docs/PLAN.md §Ontology",
+      "research/06 §(b) Layer 1"
+    ]
+  },
+  {
+    "value": "bridge",
+    "prefLabel": "Bridge",
+    "altLabels": [
+      "transition"
+    ],
+    "definition": "Moves the argument from one part to the next: question, transition, progress tracker.",
+    "broader": "",
+    "inScheme": "flow_role",
+    "examples": [
+      "question, topic_agenda_tracker, section_title_description"
+    ],
+    "sources": [
+      "docs/PLAN.md §Ontology",
+      "research/03 §(b) 1 (Question/Agenda hinge)"
+    ]
+  },
+  {
+    "value": "body",
+    "prefLabel": "Body",
+    "altLabels": [
+      "content"
+    ],
+    "definition": "Carries a claim and its structure; the default role for content slides.",
+    "broader": "",
+    "inScheme": "flow_role",
+    "examples": [
+      "title_body, two_column_text, process_steps_horizontal"
+    ],
+    "sources": [
+      "docs/PLAN.md §Ontology"
+    ]
+  },
+  {
+    "value": "evidence",
+    "prefLabel": "Evidence",
+    "altLabels": [
+      "proof"
+    ],
+    "definition": "Proves a claim with data, figures, quotes or cases.",
+    "broader": "",
+    "inScheme": "flow_role",
+    "examples": [
+      "chart_insight_callout, kpi_grid, comparison_table, quote_evidence"
+    ],
+    "sources": [
+      "docs/PLAN.md §Ontology",
+      "research/06 §(b) evidence"
+    ]
+  },
+  {
+    "value": "closer",
+    "prefLabel": "Closer",
+    "altLabels": [
+      "close"
+    ],
+    "definition": "Lands the argument: summary, recommendation, ask, sign-off.",
+    "broader": "",
+    "inScheme": "flow_role",
+    "examples": [
+      "key_takeaway, cta_next_steps, decisions_needed, closing_thank_you"
+    ],
+    "sources": [
+      "docs/PLAN.md §Ontology",
+      "research/06 §(c) closing"
+    ]
+  }
+]

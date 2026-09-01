@@ -1,0 +1,135 @@
+[
+  {
+    "value": "live-talk",
+    "prefLabel": "Live talk",
+    "altLabels": [
+      "talk",
+      "conference",
+      "keynote"
+    ],
+    "definition": "Spoken from a stage to a listening audience; the slides support the speaker and are never read aloud.",
+    "broader": "",
+    "inScheme": "delivery_mode",
+    "examples": [
+      "default density: 2 (at most 2)",
+      "pace roughly 1 slide per minute; 1-3 for a sparkline talk"
+    ],
+    "sources": [
+      "research/03 §(c) script rule",
+      "research/03 §(c) pace norms"
+    ]
+  },
+  {
+    "value": "briefing",
+    "prefLabel": "Briefing",
+    "altLabels": [
+      "stand-up",
+      "review"
+    ],
+    "definition": "Presented to a small group who will discuss it in the room.",
+    "broader": "",
+    "inScheme": "delivery_mode",
+    "examples": [
+      "default density: 3",
+      "pace 1 slide per 1-2 minutes"
+    ],
+    "sources": [
+      "research/03 §(c) script rule"
+    ]
+  },
+  {
+    "value": "teaching",
+    "prefLabel": "Teaching",
+    "altLabels": [
+      "lecture",
+      "training"
+    ],
+    "definition": "Delivered as instruction with objectives, practice and checks.",
+    "broader": "",
+    "inScheme": "delivery_mode",
+    "examples": [
+      "default density: 3",
+      "lecture pace 20-45 slides per 45-90 minutes"
+    ],
+    "sources": [
+      "research/03 §(c) script rule",
+      "research/03 §(c) pace norms"
+    ]
+  },
+  {
+    "value": "consulting",
+    "prefLabel": "Consulting",
+    "altLabels": [
+      "board",
+      "exec"
+    ],
+    "definition": "Action-titled slides for an executive or board audience, presented or read.",
+    "broader": "",
+    "inScheme": "delivery_mode",
+    "examples": [
+      "default density: 4",
+      "roughly 60 seconds per slide presented"
+    ],
+    "sources": [
+      "research/03 §(c) script rule",
+      "research/03 §(c) level 4"
+    ]
+  },
+  {
+    "value": "read-deck",
+    "prefLabel": "Read deck",
+    "altLabels": [
+      "slidedoc",
+      "leave behind"
+    ],
+    "definition": "Never presented; distributed to be read alone.",
+    "broader": "",
+    "inScheme": "delivery_mode",
+    "examples": [
+      "default density: 5",
+      "no pace; governed by page count, 10-30 pages"
+    ],
+    "sources": [
+      "research/03 §(c) script rule",
+      "research/03 §(b) 9"
+    ]
+  },
+  {
+    "value": "workshop",
+    "prefLabel": "Workshop",
+    "altLabels": [
+      "facilitation",
+      "offsite"
+    ],
+    "definition": "Facilitated session in which participants do timed activities.",
+    "broader": "",
+    "inScheme": "delivery_mode",
+    "examples": [
+      "default density: 3",
+      "40-80 slides per 1-4 hours; an activity every 15-20 minutes"
+    ],
+    "sources": [
+      "research/03 §(c) pace norms",
+      "research/03 §(b) 8"
+    ]
+  },
+  {
+    "value": "pitch",
+    "prefLabel": "Pitch",
+    "altLabels": [
+      "demo day",
+      "sales pitch"
+    ],
+    "definition": "A short, high-stakes investor or sales pitch on a fixed clock.",
+    "broader": "",
+    "inScheme": "delivery_mode",
+    "examples": [
+      "default density: 2",
+      "10-15 slides per 10-20 minutes; minimum 30pt type under Kawasaki"
+    ],
+    "sources": [
+      "research/03 §(c) pace norms",
+      "research/03 §(b) 3"
+    ]
+  }
+]

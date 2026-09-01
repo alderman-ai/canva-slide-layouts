@@ -1,0 +1,1867 @@
+[
+  {
+    "value": "title-cover",
+    "prefLabel": "Title / cover",
+    "altLabels": [
+      "title_cover",
+      "cover",
+      "title slide",
+      "opening"
+    ],
+    "definition": "Deck opening carrying the deck title and, optionally, a subtitle, author or hero image.",
+    "broader": "structural",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 1-3"
+    ],
+    "sources": [
+      "research/02 #1",
+      "research/06 §(c) opening"
+    ]
+  },
+  {
+    "value": "intro-title-meta",
+    "prefLabel": "Intro",
+    "altLabels": [
+      "intro",
+      "title and meta"
+    ],
+    "definition": "Title with author, organisation and date, used when the cover carries no attribution.",
+    "broader": "structural",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 2-5"
+    ],
+    "sources": [
+      "research/02 #2"
+    ]
+  },
+  {
+    "value": "agenda-toc",
+    "prefLabel": "Agenda / table of contents",
+    "altLabels": [
+      "agenda",
+      "toc",
+      "contents"
+    ],
+    "definition": "Ordered list of the sections the deck will cover.",
+    "broader": "structural",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 3-8"
+    ],
+    "sources": [
+      "research/02 #3",
+      "research/03 §(a) 2",
+      "research/03 §(e) Beautiful.ai Agenda"
+    ]
+  },
+  {
+    "value": "topic-agenda-tracker",
+    "prefLabel": "Topic agenda / progress tracker",
+    "altLabels": [
+      "topic_agenda_tracker",
+      "progress tracker",
+      "topic agenda"
+    ],
+    "definition": "The agenda re-shown between sections with the current item highlighted.",
+    "broader": "structural",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 3-8"
+    ],
+    "sources": [
+      "research/03 §(a) 2",
+      "research/03 §(e) Keynote Topic Agenda"
+    ]
+  },
+  {
+    "value": "section-divider",
+    "prefLabel": "Section divider",
+    "altLabels": [
+      "section_divider",
+      "section header",
+      "section break"
+    ],
+    "definition": "Full-slide break announcing the next section of the argument.",
+    "broader": "structural",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 1-2"
+    ],
+    "sources": [
+      "research/02 #4",
+      "research/06 §(c) section"
+    ]
+  },
+  {
+    "value": "section-title-description",
+    "prefLabel": "Section title + description",
+    "altLabels": [
+      "section_title_description",
+      "section intro"
+    ],
+    "definition": "Section header set beside a short descriptive paragraph.",
+    "broader": "structural",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 2-3"
+    ],
+    "sources": [
+      "research/02 #5",
+      "research/03 §(a) 1",
+      "research/06 §(b) Google SECTION_TITLE_AND_DESCRIPTION"
+    ]
+  },
+  {
+    "value": "divider-question",
+    "prefLabel": "Divider question",
+    "altLabels": [
+      "scqa question",
+      "divider with question",
+      "question divider"
+    ],
+    "definition": "The SCQA \"Question\" slide: a single interrogative line standing alone as a section break, hinging the complication into the answer.",
+    "broader": "structural",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 1",
+      "split from the old `question` term, which the taxonomy divides into `divider-question` (structural hinge) and `question-slide` (a question posed to the room)"
+    ],
+    "sources": [
+      "research/03 §(a) 4",
+      "research/03 §(b) 1",
+      "spec/taxonomy.md §Family 1 — structural"
+    ]
+  },
+  {
+    "value": "executive-summary-3col",
+    "prefLabel": "Executive summary (3 columns)",
+    "altLabels": [
+      "executive_summary_3col",
+      "exec summary",
+      "scr summary"
+    ],
+    "definition": "Situation, findings and recommendation set as three parallel columns.",
+    "broader": "structural",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 3 (x 4-5 lines)"
+    ],
+    "sources": [
+      "research/03 §(a) 5",
+      "research/03 §(c) level 4"
+    ]
+  },
+  {
+    "value": "key-takeaway",
+    "prefLabel": "Key takeaway / summary",
+    "altLabels": [
+      "key_takeaway",
+      "summary",
+      "so what"
+    ],
+    "definition": "One consolidated message closing a section or the deck.",
+    "broader": "structural",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 1-3"
+    ],
+    "sources": [
+      "research/02 #7",
+      "research/06 §(b) summary"
+    ]
+  },
+  {
+    "value": "appendix-title",
+    "prefLabel": "Appendix title",
+    "altLabels": [
+      "appendix_title",
+      "backup divider"
+    ],
+    "definition": "Divider marking the start of back-up material excluded from the main narrative.",
+    "broader": "structural",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 1-2"
+    ],
+    "sources": [
+      "research/02 #8",
+      "research/06 §(b) Layer 1 appendix"
+    ]
+  },
+  {
+    "value": "closing-thank-you",
+    "prefLabel": "Closing / thank-you",
+    "altLabels": [
+      "closing_thank_you",
+      "end",
+      "thanks"
+    ],
+    "definition": "Final sign-off slide.",
+    "broader": "structural",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 1-2"
+    ],
+    "sources": [
+      "research/02 #9",
+      "research/06 §(c) closing"
+    ]
+  },
+  {
+    "value": "cta-next-steps",
+    "prefLabel": "CTA / next steps",
+    "altLabels": [
+      "cta_next_steps",
+      "next steps",
+      "call to action"
+    ],
+    "definition": "The action the audience should take, listed explicitly.",
+    "broader": "structural",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 2-5"
+    ],
+    "sources": [
+      "research/02 #10",
+      "research/03 §(a) 6",
+      "research/06 §(b) call_to_action"
+    ]
+  },
+  {
+    "value": "qa-slide",
+    "prefLabel": "Q&A slide",
+    "altLabels": [
+      "qa_contact",
+      "questions",
+      "q and a",
+      "q&a"
+    ],
+    "definition": "A slide held on screen while questions are taken; the contact details move to `contact-card`.",
+    "broader": "structural",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 1",
+      "merged in: the old `qa_contact` term; its contact half is `contact-card` and its thank-you half `closing-thank-you`"
+    ],
+    "sources": [
+      "research/02 #11",
+      "research/03 §(a) 3"
+    ]
+  },
+  {
+    "value": "contact-card",
+    "prefLabel": "Contact card",
+    "altLabels": [
+      "contact_card",
+      "contact"
+    ],
+    "definition": "Name, channels and QR code presented as a standalone card.",
+    "broader": "structural",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 1-5"
+    ],
+    "sources": [
+      "research/03 §(a) 3",
+      "research/03 §(e) Beautiful.ai Contact"
+    ]
+  },
+  {
+    "value": "statement",
+    "prefLabel": "Statement",
+    "altLabels": [
+      "main point",
+      "big idea"
+    ],
+    "definition": "One centred sentence carrying the entire message of the slide.",
+    "broader": "text",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 1"
+    ],
+    "sources": [
+      "research/02 #12",
+      "research/06 §(c) statement (Google MAIN_POINT)"
+    ]
+  },
+  {
+    "value": "question-slide",
+    "prefLabel": "Question slide",
+    "altLabels": [
+      "question"
+    ],
+    "definition": "A single question posed to the room as a discussion or teaching prompt.",
+    "broader": "text",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 1",
+      "split from the old `question` term; the SCQA hinge is `divider-question`"
+    ],
+    "sources": [
+      "research/02 #13",
+      "research/03 §(a) 4"
+    ]
+  },
+  {
+    "value": "quote",
+    "prefLabel": "Quote / testimonial",
+    "altLabels": [
+      "testimonial",
+      "pull quote"
+    ],
+    "definition": "Attributed verbatim speech with the speaker name and role.",
+    "broader": "text",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 1-2"
+    ],
+    "sources": [
+      "research/02 #14",
+      "research/06 §(a)",
+      "research/06 §(c) quote"
+    ]
+  },
+  {
+    "value": "quote-evidence",
+    "prefLabel": "Quote + evidence",
+    "altLabels": [
+      "quote_evidence"
+    ],
+    "definition": "A quote paired with a supporting statistic or chart.",
+    "broader": "text",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 2"
+    ],
+    "sources": [
+      "research/02 #15",
+      "research/03 §(a) 19"
+    ]
+  },
+  {
+    "value": "title-body",
+    "prefLabel": "Title + body",
+    "altLabels": [
+      "title_body",
+      "title and content",
+      "default"
+    ],
+    "definition": "Action title over a single body block of prose or bullets.",
+    "broader": "text",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 1-6"
+    ],
+    "sources": [
+      "research/06 §(c) title_body (Presenton 2-5)",
+      "research/03 §(c) PLOS rule 7"
+    ]
+  },
+  {
+    "value": "bullet-list",
+    "prefLabel": "Bullet list",
+    "altLabels": [
+      "bullet_list",
+      "bullets"
+    ],
+    "definition": "Title plus a flat list of parallel, unordered points.",
+    "broader": "text",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 2-6"
+    ],
+    "sources": [
+      "research/06 §(c) title_body",
+      "research/03 §(c) level 3 (Kosslyn rule of four)"
+    ]
+  },
+  {
+    "value": "numbered-list-panel",
+    "prefLabel": "Numbered list panel",
+    "altLabels": [
+      "numbered_list",
+      "ordered list"
+    ],
+    "definition": "Ordered list where sequence matters but no diagram is warranted.",
+    "broader": "text",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 3-6"
+    ],
+    "sources": [
+      "research/02 #18",
+      "research/06 §(c) title_body"
+    ]
+  },
+  {
+    "value": "two-column-text",
+    "prefLabel": "Two-column text",
+    "altLabels": [
+      "two_column_text",
+      "two cols",
+      "split text"
+    ],
+    "definition": "Two parallel text columns under a single title.",
+    "broader": "text",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 2 x 2-5"
+    ],
+    "sources": [
+      "research/02 #19",
+      "research/06 §(c) two_column"
+    ]
+  },
+  {
+    "value": "content-sidebar-callout",
+    "prefLabel": "Content + sidebar callout",
+    "altLabels": [
+      "content_sidebar",
+      "callout rail"
+    ],
+    "definition": "Main body with a narrow rail carrying the so-what.",
+    "broader": "text",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 2-6"
+    ],
+    "sources": [
+      "research/02 #20",
+      "research/03 §(a) 9"
+    ]
+  },
+  {
+    "value": "definition",
+    "prefLabel": "Definition",
+    "altLabels": [
+      "term"
+    ],
+    "definition": "A term set large with its definition beneath.",
+    "broader": "text",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 1-2"
+    ],
+    "sources": [
+      "research/03 §(a) 7",
+      "research/03 §(e) Keynote Definition"
+    ]
+  },
+  {
+    "value": "decisions-needed",
+    "prefLabel": "Decisions needed / the ask",
+    "altLabels": [
+      "decisions_needed",
+      "the ask",
+      "approvals"
+    ],
+    "definition": "The decisions or approvals being requested, stated explicitly.",
+    "broader": "text",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 1-4"
+    ],
+    "sources": [
+      "research/03 §(a) 6",
+      "research/03 §(b) 7"
+    ]
+  },
+  {
+    "value": "icon-label-row",
+    "prefLabel": "Icon + label row",
+    "altLabels": [
+      "icon_label_row",
+      "three things"
+    ],
+    "definition": "A single row of icons with labels; the \"three things\" slide.",
+    "broader": "text",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 2-4"
+    ],
+    "sources": [
+      "research/03 §(a) 48"
+    ]
+  },
+  {
+    "value": "word-cloud",
+    "prefLabel": "Word cloud",
+    "altLabels": [
+      "word_cloud"
+    ],
+    "definition": "Weighted cloud of terms sized by frequency or importance.",
+    "broader": "text",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 15-40"
+    ],
+    "sources": [
+      "research/03 §(a) 32"
+    ]
+  },
+  {
+    "value": "big-number",
+    "prefLabel": "Big number",
+    "altLabels": [
+      "big_number",
+      "fact",
+      "big fact",
+      "action number"
+    ],
+    "definition": "One quantified fact set at display size with a short label.",
+    "broader": "numbers",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 1"
+    ],
+    "sources": [
+      "research/06 §(c) big_number",
+      "research/02 #21"
+    ]
+  },
+  {
+    "value": "stat-row",
+    "prefLabel": "Two/three-stat row",
+    "altLabels": [
+      "stat_row",
+      "stat band"
+    ],
+    "definition": "Two or three statistics set as a row of equal weight.",
+    "broader": "numbers",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 2-3"
+    ],
+    "sources": [
+      "research/02 #22",
+      "research/06 §(c) big_number"
+    ]
+  },
+  {
+    "value": "kpi-grid",
+    "prefLabel": "KPI grid / metric cards",
+    "altLabels": [
+      "kpi_grid",
+      "metric cards",
+      "kpi cards"
+    ],
+    "definition": "A grid of metric cards, each a value with a label.",
+    "broader": "numbers",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 4-6"
+    ],
+    "sources": [
+      "research/02 #23",
+      "research/03 §(c) level 4"
+    ]
+  },
+  {
+    "value": "kpi-dashboard",
+    "prefLabel": "KPI dashboard",
+    "altLabels": [
+      "kpi_dashboard",
+      "metric dashboard",
+      "data dashboard"
+    ],
+    "definition": "Metric tiles each carrying a trend indicator or sparkline.",
+    "broader": "numbers",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 4-6"
+    ],
+    "sources": [
+      "research/03 §(a) 10",
+      "research/03 §(c) level 4"
+    ]
+  },
+  {
+    "value": "stacked-kpi-ledger",
+    "prefLabel": "Stacked KPI ledger",
+    "altLabels": [
+      "stacked_kpi_ledger",
+      "ledger"
+    ],
+    "definition": "Metric rows stacked vertically in ledger form.",
+    "broader": "numbers",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 3-8"
+    ],
+    "sources": [
+      "research/02 #25"
+    ]
+  },
+  {
+    "value": "progress-bars",
+    "prefLabel": "Progress bars",
+    "altLabels": [
+      "progress_bars"
+    ],
+    "definition": "Several metrics rendered as proportional horizontal bars.",
+    "broader": "numbers",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 2-6"
+    ],
+    "sources": [
+      "research/02 #26"
+    ]
+  },
+  {
+    "value": "chart-dominant",
+    "prefLabel": "Chart-dominant",
+    "altLabels": [
+      "chart_dominant",
+      "chart slide"
+    ],
+    "definition": "A single chart occupying 70-80% of the slide with a takeaway title.",
+    "broader": "numbers",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 1 chart (1-4 series)"
+    ],
+    "sources": [
+      "research/02 #27",
+      "research/06 §(c) chart"
+    ]
+  },
+  {
+    "value": "chart-insight-callout",
+    "prefLabel": "Chart + insight callout",
+    "altLabels": [
+      "chart_insight_callout",
+      "so-what box"
+    ],
+    "definition": "Chart in two thirds with a so-what callout in the remaining third, pointing at the datum.",
+    "broader": "numbers",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 1 chart + 1-3 callouts"
+    ],
+    "sources": [
+      "research/03 §(a) 9",
+      "research/02 #28"
+    ]
+  },
+  {
+    "value": "data-table",
+    "prefLabel": "Data table",
+    "altLabels": [
+      "data_table",
+      "table slide"
+    ],
+    "definition": "Tabular data with a header row.",
+    "broader": "numbers",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 3-10 rows x 2-6 cols"
+    ],
+    "sources": [
+      "research/03 §(a) 16",
+      "research/06 §(c) table"
+    ]
+  },
+  {
+    "value": "table-insight",
+    "prefLabel": "Table + insight",
+    "altLabels": [
+      "table_insight"
+    ],
+    "definition": "Table paired with a takeaway panel.",
+    "broader": "numbers",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 3-8 rows + 1-3 callouts"
+    ],
+    "sources": [
+      "research/02 #30"
+    ]
+  },
+  {
+    "value": "waterfall-bridge",
+    "prefLabel": "Waterfall / bridge",
+    "altLabels": [
+      "waterfall",
+      "bridge"
+    ],
+    "definition": "Bridge chart decomposing a change into its contributions.",
+    "broader": "numbers",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 3-8 bars"
+    ],
+    "sources": [
+      "research/03 §(a) 11"
+    ]
+  },
+  {
+    "value": "marimekko",
+    "prefLabel": "Marimekko",
+    "altLabels": [
+      "mekko"
+    ],
+    "definition": "Variable-width stacked columns showing share of share.",
+    "broader": "numbers",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 3-8 cols x 2-6 segments"
+    ],
+    "sources": [
+      "research/03 §(a) 12"
+    ]
+  },
+  {
+    "value": "thermometer-goal",
+    "prefLabel": "Thermometer / progress-to-goal",
+    "altLabels": [
+      "thermometer",
+      "progress to goal"
+    ],
+    "definition": "One metric measured against one target.",
+    "broader": "numbers",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 1 metric + 1 target"
+    ],
+    "sources": [
+      "research/03 §(a) 13"
+    ]
+  },
+  {
+    "value": "pictograph-unit-chart",
+    "prefLabel": "Pictograph / unit chart",
+    "altLabels": [
+      "pictograph",
+      "unit chart",
+      "isotype"
+    ],
+    "definition": "Counts rendered as repeated icons.",
+    "broader": "numbers",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 1-4 series"
+    ],
+    "sources": [
+      "research/03 §(a) 14"
+    ]
+  },
+  {
+    "value": "scatter-xy-plot",
+    "prefLabel": "Scatter / XY plot",
+    "altLabels": [
+      "scatter_plot",
+      "xy plot",
+      "scattergraph"
+    ],
+    "definition": "Two-variable correlation plot.",
+    "broader": "numbers",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 5-50 points"
+    ],
+    "sources": [
+      "research/03 §(a) 15",
+      "research/03 §(e) Zelazny correlation"
+    ]
+  },
+  {
+    "value": "status-table",
+    "prefLabel": "Data table with status glyphs",
+    "altLabels": [
+      "status_table",
+      "rag table"
+    ],
+    "definition": "Table whose cells carry red/amber/green dots or checkboxes.",
+    "broader": "numbers",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 3-7 rows"
+    ],
+    "sources": [
+      "research/03 §(a) 16"
+    ]
+  },
+  {
+    "value": "roi-calculator",
+    "prefLabel": "ROI / calculator inputs",
+    "altLabels": [
+      "roi_calculator",
+      "calculator"
+    ],
+    "definition": "Input variables shown with a computed result.",
+    "broader": "numbers",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 2-5 variables"
+    ],
+    "sources": [
+      "research/03 §(a) 17"
+    ]
+  },
+  {
+    "value": "side-by-side",
+    "prefLabel": "Side-by-side (A/B)",
+    "altLabels": [
+      "side_by_side",
+      "option a/b",
+      "duo compare"
+    ],
+    "definition": "Two options compared column against column.",
+    "broader": "comparison",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 2 x 2-5"
+    ],
+    "sources": [
+      "research/02 #31",
+      "research/06 §(c) two_column"
+    ]
+  },
+  {
+    "value": "three-column",
+    "prefLabel": "Three-column",
+    "altLabels": [
+      "three_column"
+    ],
+    "definition": "Three parallel options or themes.",
+    "broader": "comparison",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 3 x 2-5"
+    ],
+    "sources": [
+      "research/02 #32"
+    ]
+  },
+  {
+    "value": "four-card-grid",
+    "prefLabel": "Four-column / four cards",
+    "altLabels": [
+      "four_column_cards",
+      "four up"
+    ],
+    "definition": "Four parallel cards of equal weight.",
+    "broader": "comparison",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 4 x 1-4"
+    ],
+    "sources": [
+      "research/02 #33",
+      "research/03 §(c) level 3 (Kosslyn rule of four)"
+    ]
+  },
+  {
+    "value": "before-after",
+    "prefLabel": "Before / after",
+    "altLabels": [
+      "before_after",
+      "what is / what could be"
+    ],
+    "definition": "The same subject shown in two states.",
+    "broader": "comparison",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 2 x 1-4"
+    ],
+    "sources": [
+      "research/02 #34",
+      "research/03 §(b) 5 (what is / what could be)"
+    ]
+  },
+  {
+    "value": "pros-cons",
+    "prefLabel": "Pros / cons",
+    "altLabels": [
+      "pros_cons"
+    ],
+    "definition": "Advantages set against disadvantages.",
+    "broader": "comparison",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 2 x 2-6"
+    ],
+    "sources": [
+      "research/02 #35",
+      "research/03 §(c) level 3"
+    ]
+  },
+  {
+    "value": "comparison-table",
+    "prefLabel": "Comparison table / scorecard",
+    "altLabels": [
+      "comparison_table",
+      "scorecard",
+      "matrix"
+    ],
+    "definition": "Options against criteria in a scored grid.",
+    "broader": "comparison",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 2-5 cols x 3-8 rows"
+    ],
+    "sources": [
+      "research/03 §(a) 18",
+      "research/03 §(c) level 4",
+      "research/06 §(c) table"
+    ]
+  },
+  {
+    "value": "harvey-ball-scorecard",
+    "prefLabel": "Harvey ball scorecard",
+    "altLabels": [
+      "harvey_ball_scorecard",
+      "harvey balls"
+    ],
+    "definition": "Options against criteria scored with Harvey balls.",
+    "broader": "comparison",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 3-4 x 6-7"
+    ],
+    "sources": [
+      "research/03 §(a) 18",
+      "research/03 §(c) level 4"
+    ]
+  },
+  {
+    "value": "swot-grid",
+    "prefLabel": "SWOT",
+    "altLabels": [
+      "swot"
+    ],
+    "definition": "Strengths, weaknesses, opportunities and threats in a labelled 2x2.",
+    "broader": "comparison",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 4 x 2-5"
+    ],
+    "sources": [
+      "research/02 #37",
+      "research/03 §(e) Beautiful.ai SWOT"
+    ]
+  },
+  {
+    "value": "checklist-rag",
+    "prefLabel": "Checklist / RAG status",
+    "altLabels": [
+      "checklist_rag",
+      "rag list"
+    ],
+    "definition": "Items carrying red/amber/green or tick status.",
+    "broader": "comparison",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 3-8"
+    ],
+    "sources": [
+      "research/02 #38",
+      "research/03 §(a) 16"
+    ]
+  },
+  {
+    "value": "pricing-tiers",
+    "prefLabel": "Pricing tiers",
+    "altLabels": [
+      "pricing_tiers",
+      "plans"
+    ],
+    "definition": "Priced packages set side by side.",
+    "broader": "comparison",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 2-4"
+    ],
+    "sources": [
+      "research/03 §(a) 20",
+      "research/03 §(e) Pitch Pricing"
+    ]
+  },
+  {
+    "value": "venn",
+    "prefLabel": "Venn",
+    "altLabels": [],
+    "definition": "Overlapping sets with the intersection named.",
+    "broader": "comparison",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 2-4"
+    ],
+    "sources": [
+      "research/03 §(a) 21",
+      "research/02 #43"
+    ]
+  },
+  {
+    "value": "double-list-central-visual",
+    "prefLabel": "Double list with central visual",
+    "altLabels": [
+      "double_list_central_visual"
+    ],
+    "definition": "Two lists flanking a central image or diagram.",
+    "broader": "comparison",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 2 x 2-5"
+    ],
+    "sources": [
+      "research/03 §(a) 22"
+    ]
+  },
+  {
+    "value": "two-by-two-matrix",
+    "prefLabel": "2x2 matrix",
+    "altLabels": [
+      "matrix_2x2",
+      "quadrant",
+      "two by two"
+    ],
+    "definition": "Two labelled axes forming four quadrants with items plotted in them.",
+    "broader": "frameworks",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 2 axes + 2-8 items"
+    ],
+    "sources": [
+      "research/02 #39",
+      "research/03 §(e) Beautiful.ai Quadrant"
+    ]
+  },
+  {
+    "value": "risk-priority-matrix",
+    "prefLabel": "Risk / priority matrix",
+    "altLabels": [
+      "risk_matrix",
+      "priority matrix"
+    ],
+    "definition": "Likelihood against impact with risks plotted.",
+    "broader": "frameworks",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 3-10 risks"
+    ],
+    "sources": [
+      "research/02 #40",
+      "research/03 §(b) 7"
+    ]
+  },
+  {
+    "value": "pyramid",
+    "prefLabel": "Pyramid / temple",
+    "altLabels": [
+      "temple"
+    ],
+    "definition": "Tiered pyramid, base to apex, one idea per tier.",
+    "broader": "frameworks",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 3-5 tiers",
+      "split from the old `pyramid` term; the temple/pillars reading is `pillar-diagram`"
+    ],
+    "sources": [
+      "research/02 #41",
+      "research/03 §(a) 24"
+    ]
+  },
+  {
+    "value": "funnel",
+    "prefLabel": "Funnel",
+    "altLabels": [],
+    "definition": "Narrowing stages from a wide top to a narrow outcome.",
+    "broader": "frameworks",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 3-6 stages"
+    ],
+    "sources": [
+      "research/02 #42",
+      "research/03 §(e) Beautiful.ai Funnel"
+    ]
+  },
+  {
+    "value": "cycle-loop",
+    "prefLabel": "Cycle / loop",
+    "altLabels": [
+      "cycle_loop",
+      "loop",
+      "arrow cycle"
+    ],
+    "definition": "A closed repeating sequence.",
+    "broader": "frameworks",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 3-6"
+    ],
+    "sources": [
+      "research/02 #44",
+      "research/03 §(e) Duarte Flow (Loop)"
+    ]
+  },
+  {
+    "value": "onion-concentric",
+    "prefLabel": "Onion / concentric rings",
+    "altLabels": [
+      "concentric_system",
+      "onion"
+    ],
+    "definition": "Nested rings running from a core outward.",
+    "broader": "frameworks",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 3-5 rings",
+      "merged in: research/02 #45 \"Concentric system diagram\" and research/03 §(a) 25 \"Onion / concentric\""
+    ],
+    "sources": [
+      "research/03 §(a) 25",
+      "research/02 #45"
+    ]
+  },
+  {
+    "value": "value-chain",
+    "prefLabel": "Value chain",
+    "altLabels": [
+      "value_chain_chevrons",
+      "value chain"
+    ],
+    "definition": "A chevroned chain of value-adding activities, the named business structure.",
+    "broader": "frameworks",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 3-7 links",
+      "split from the old `value_chain_chevrons` term; the generic ordered form is `chevron-sequence`"
+    ],
+    "sources": [
+      "research/03 §(a) 33",
+      "research/02 #46"
+    ]
+  },
+  {
+    "value": "driver-tree",
+    "prefLabel": "Issue / hypothesis / driver tree",
+    "altLabels": [
+      "driver_tree",
+      "issue tree",
+      "hypothesis tree"
+    ],
+    "definition": "A root question broken into branches and leaves.",
+    "broader": "frameworks",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 1 root + 2-4 x 2-4 (max 4 per level)"
+    ],
+    "sources": [
+      "research/03 §(a) 23"
+    ]
+  },
+  {
+    "value": "pillar-diagram",
+    "prefLabel": "Pillar diagram",
+    "altLabels": [
+      "pillars",
+      "temple pillars"
+    ],
+    "definition": "Two to five pillars standing on a labelled base, one supporting idea per pillar.",
+    "broader": "frameworks",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 2-5 pillars",
+      "split from the old `pyramid` term, whose \"temple / pillars\" reading the taxonomy files here"
+    ],
+    "sources": [
+      "research/03 §(a) 24",
+      "spec/taxonomy.md §Family 5 — frameworks"
+    ]
+  },
+  {
+    "value": "iceberg",
+    "prefLabel": "Iceberg",
+    "altLabels": [],
+    "definition": "Visible surface facts above hidden causes.",
+    "broader": "frameworks",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 1-3 visible + 2-5 hidden"
+    ],
+    "sources": [
+      "research/03 §(a) 26"
+    ]
+  },
+  {
+    "value": "layer-stack",
+    "prefLabel": "Layer / stack",
+    "altLabels": [
+      "layer_stack",
+      "stack"
+    ],
+    "definition": "Horizontal layers stacked vertically.",
+    "broader": "frameworks",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 3-6 layers"
+    ],
+    "sources": [
+      "research/03 §(a) 27",
+      "research/03 §(e) Duarte Stack"
+    ]
+  },
+  {
+    "value": "target-bullseye",
+    "prefLabel": "Target / bullseye",
+    "altLabels": [
+      "bullseye",
+      "target"
+    ],
+    "definition": "Concentric target rings with the goal at the centre.",
+    "broader": "frameworks",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 3-4 rings"
+    ],
+    "sources": [
+      "research/03 §(a) 28"
+    ]
+  },
+  {
+    "value": "hub-and-spoke",
+    "prefLabel": "Hub and spoke / radiate",
+    "altLabels": [
+      "hub_spoke",
+      "radiate",
+      "flare"
+    ],
+    "definition": "One centre with radiating satellites.",
+    "broader": "frameworks",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 1 hub + 3-8 spokes"
+    ],
+    "sources": [
+      "research/03 §(a) 29",
+      "research/03 §(e) Duarte Network"
+    ]
+  },
+  {
+    "value": "segment-wheel",
+    "prefLabel": "Segment wheel",
+    "altLabels": [
+      "segment_wheel",
+      "donut of concepts"
+    ],
+    "definition": "A concept pie divided into named wedges.",
+    "broader": "frameworks",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 3-6 wedges"
+    ],
+    "sources": [
+      "research/03 §(a) 30",
+      "research/03 §(e) Duarte Segment"
+    ]
+  },
+  {
+    "value": "convergence-join",
+    "prefLabel": "Join / convergence",
+    "altLabels": [
+      "convergence",
+      "join",
+      "merge"
+    ],
+    "definition": "Several inputs merging into a single output.",
+    "broader": "frameworks",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 2-4 in + 1 out"
+    ],
+    "sources": [
+      "research/03 §(a) 31",
+      "research/03 §(e) Duarte Join"
+    ]
+  },
+  {
+    "value": "process-steps-horizontal",
+    "prefLabel": "Horizontal process steps",
+    "altLabels": [
+      "process_steps_horizontal",
+      "steps",
+      "process flow"
+    ],
+    "definition": "Ordered steps running left to right.",
+    "broader": "process",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 3-6"
+    ],
+    "sources": [
+      "research/06 §(c) process",
+      "research/03 §(c) level 4"
+    ]
+  },
+  {
+    "value": "process-steps-vertical",
+    "prefLabel": "Vertical process steps",
+    "altLabels": [
+      "process_steps_vertical"
+    ],
+    "definition": "Ordered steps running top to bottom.",
+    "broader": "process",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 3-6"
+    ],
+    "sources": [
+      "research/02 #48",
+      "research/06 §(c) process"
+    ]
+  },
+  {
+    "value": "timeline-horizontal",
+    "prefLabel": "Horizontal timeline",
+    "altLabels": [
+      "timeline_horizontal",
+      "timeline"
+    ],
+    "definition": "Dated milestones along a horizontal rail.",
+    "broader": "process",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 3-8"
+    ],
+    "sources": [
+      "research/03 §(a) 35",
+      "research/02 #49"
+    ]
+  },
+  {
+    "value": "timeline-vertical",
+    "prefLabel": "Vertical timeline",
+    "altLabels": [
+      "timeline_vertical"
+    ],
+    "definition": "Dated milestones down a vertical rail.",
+    "broader": "process",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 3-8"
+    ],
+    "sources": [
+      "research/03 §(a) 35",
+      "research/02 #50"
+    ]
+  },
+  {
+    "value": "roadmap-lanes",
+    "prefLabel": "Roadmap lanes",
+    "altLabels": [
+      "roadmap_gantt",
+      "roadmap",
+      "lanes"
+    ],
+    "definition": "Phases across and workstream lanes down, each lane a band of scheduled work.",
+    "broader": "process",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 2-5 lanes x 3-6 phases",
+      "split from the old `roadmap_gantt` term; the task-bar chart is `gantt-chart`"
+    ],
+    "sources": [
+      "research/03 §(a) 36",
+      "research/02 #51"
+    ]
+  },
+  {
+    "value": "pipeline-architecture",
+    "prefLabel": "Pipeline / architecture",
+    "altLabels": [
+      "pipeline_architecture",
+      "architecture",
+      "pipeline"
+    ],
+    "definition": "A system or decision flow of connected nodes.",
+    "broader": "process",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 4-10 nodes"
+    ],
+    "sources": [
+      "research/03 §(a) 40",
+      "research/02 #52"
+    ]
+  },
+  {
+    "value": "flowchart-decisions",
+    "prefLabel": "Flowchart with decisions",
+    "altLabels": [
+      "flowchart"
+    ],
+    "definition": "Nodes and decision diamonds with branching paths.",
+    "broader": "process",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 4-10 nodes"
+    ],
+    "sources": [
+      "research/03 §(a) 40"
+    ]
+  },
+  {
+    "value": "chevron-sequence",
+    "prefLabel": "Chevron sequence",
+    "altLabels": [
+      "chevron sequence",
+      "chevrons"
+    ],
+    "definition": "Interlocking chevrons, one per stage, expressing a generic ordered sequence rather than a named business structure.",
+    "broader": "process",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 3-6",
+      "split from the old `value_chain_chevrons` term: `value-chain` keeps the named business structure, `chevron-sequence` the generic ordered form"
+    ],
+    "sources": [
+      "research/03 §(a) 33",
+      "spec/taxonomy.md §Conflicts resolved"
+    ]
+  },
+  {
+    "value": "maturity-stairs",
+    "prefLabel": "Stair / maturity",
+    "altLabels": [
+      "maturity_stairs",
+      "stairs"
+    ],
+    "definition": "Ascending steps of capability or maturity.",
+    "broader": "process",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 3-5"
+    ],
+    "sources": [
+      "research/03 §(a) 34"
+    ]
+  },
+  {
+    "value": "timeline-three-layer",
+    "prefLabel": "Three-layer timeline",
+    "altLabels": [
+      "timeline_three_layer"
+    ],
+    "definition": "Phases above the rail, milestones on it, risks below.",
+    "broader": "process",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 3-8 milestones"
+    ],
+    "sources": [
+      "research/03 §(a) 35"
+    ]
+  },
+  {
+    "value": "gantt-chart",
+    "prefLabel": "Gantt chart",
+    "altLabels": [
+      "gantt",
+      "gantt chart"
+    ],
+    "definition": "Task rows against a timescale, each task drawn as a bar, with dependencies implied by overlap.",
+    "broader": "process",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 4-12 rows",
+      "split from the old `roadmap_gantt` term: `roadmap-lanes` keeps the phase/lane grid, `gantt-chart` the task-bar chart"
+    ],
+    "sources": [
+      "research/03 §(a) 36",
+      "research/03 §(e) Beautiful.ai Gantt",
+      "spec/taxonomy.md §Family 6 — process"
+    ]
+  },
+  {
+    "value": "kanban-board",
+    "prefLabel": "Kanban / status board",
+    "altLabels": [
+      "kanban_board",
+      "status board"
+    ],
+    "definition": "Columns of cards grouped by state.",
+    "broader": "process",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 3-4 cols x 2-5 cards"
+    ],
+    "sources": [
+      "research/03 §(a) 37"
+    ]
+  },
+  {
+    "value": "calendar-grid",
+    "prefLabel": "Calendar",
+    "altLabels": [
+      "calendar"
+    ],
+    "definition": "A month grid carrying dated entries.",
+    "broader": "process",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 1 month"
+    ],
+    "sources": [
+      "research/03 §(a) 38"
+    ]
+  },
+  {
+    "value": "journey-map",
+    "prefLabel": "Customer journey map",
+    "altLabels": [
+      "journey_map",
+      "journey"
+    ],
+    "definition": "Stages across the slide with experience rows beneath.",
+    "broader": "process",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 4-7 x 2-4"
+    ],
+    "sources": [
+      "research/03 §(a) 39"
+    ]
+  },
+  {
+    "value": "divergent-convergent-flow",
+    "prefLabel": "Divergent / convergent flow",
+    "altLabels": [
+      "divergent_flow"
+    ],
+    "definition": "One input fanning out to several, or several merging to one.",
+    "broader": "process",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 1 to 2-4, or 2-4 to 1"
+    ],
+    "sources": [
+      "research/03 §(a) 41",
+      "research/03 §(e) slide:ology flow"
+    ]
+  },
+  {
+    "value": "countdown-timer",
+    "prefLabel": "Countdown / timer",
+    "altLabels": [
+      "timer",
+      "countdown"
+    ],
+    "definition": "A single countdown value used to time a workshop activity.",
+    "broader": "process",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 1"
+    ],
+    "sources": [
+      "research/03 §(a) 42"
+    ]
+  },
+  {
+    "value": "full-bleed-overlay",
+    "prefLabel": "Full-bleed image + overlay",
+    "altLabels": [
+      "full_bleed_image",
+      "full bleed",
+      "photo"
+    ],
+    "definition": "Edge-to-edge photograph with text overlaid.",
+    "broader": "image_people",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 1 image + 0-2 lines"
+    ],
+    "sources": [
+      "research/06 §(c) full_image",
+      "research/02 #53"
+    ]
+  },
+  {
+    "value": "image-hero",
+    "prefLabel": "Image hero",
+    "altLabels": [
+      "image_hero"
+    ],
+    "definition": "An image band above or below a text band, roughly 60/40.",
+    "broader": "image_people",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 1 image + 1-3 lines"
+    ],
+    "sources": [
+      "research/02 #54"
+    ]
+  },
+  {
+    "value": "image-split",
+    "prefLabel": "Image left / image right split",
+    "altLabels": [
+      "image_split",
+      "image-left",
+      "image-right"
+    ],
+    "definition": "Image on one half of the slide, text on the other.",
+    "broader": "image_people",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 1 image + 1-5"
+    ],
+    "sources": [
+      "research/06 §(c) image_text",
+      "research/02 #55"
+    ]
+  },
+  {
+    "value": "image-points",
+    "prefLabel": "Image + 3-4 points",
+    "altLabels": [
+      "image_points"
+    ],
+    "definition": "One image with a short list of points beside it.",
+    "broader": "image_people",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 1 image + 3-4"
+    ],
+    "sources": [
+      "research/02 #56",
+      "research/03 §(c) level 3"
+    ]
+  },
+  {
+    "value": "image-grid",
+    "prefLabel": "Image grid",
+    "altLabels": [
+      "image_grid",
+      "photo grid"
+    ],
+    "definition": "A regular grid of images.",
+    "broader": "image_people",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 6-12"
+    ],
+    "sources": [
+      "research/02 #57"
+    ]
+  },
+  {
+    "value": "picture-caption",
+    "prefLabel": "Picture with caption",
+    "altLabels": [
+      "picture_caption",
+      "caption only"
+    ],
+    "definition": "One image with a caption block; the caption carries the message.",
+    "broader": "image_people",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 1 image + 1 caption",
+      "merged in: research/02 #58 \"Picture with caption\" and research/03 §(a) 8 \"Caption-only\"; the full-bleed case is `full-bleed-overlay`"
+    ],
+    "sources": [
+      "research/03 §(a) 8",
+      "research/06 §(c) full_image",
+      "research/06 §(a) Google CAPTION_ONLY"
+    ]
+  },
+  {
+    "value": "icon-grid",
+    "prefLabel": "Icon grid",
+    "altLabels": [
+      "icon_grid",
+      "cards",
+      "icon slide"
+    ],
+    "definition": "Icons with short labels arranged in a grid.",
+    "broader": "image_people",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 4-12"
+    ],
+    "sources": [
+      "research/06 §(c) cards_n",
+      "research/02 #59"
+    ]
+  },
+  {
+    "value": "team-grid",
+    "prefLabel": "Team / people grid",
+    "altLabels": [
+      "team_grid",
+      "team"
+    ],
+    "definition": "Headshots with names and roles.",
+    "broader": "image_people",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 3-8"
+    ],
+    "sources": [
+      "research/02 #60",
+      "research/03 §(e) Beautiful.ai Team"
+    ]
+  },
+  {
+    "value": "case-study",
+    "prefLabel": "Case study",
+    "altLabels": [
+      "case_study"
+    ],
+    "definition": "Customer logo with situation, action and result.",
+    "broader": "image_people",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 3-5 blocks"
+    ],
+    "sources": [
+      "research/02 #61"
+    ]
+  },
+  {
+    "value": "stakeholder-map",
+    "prefLabel": "Stakeholder map",
+    "altLabels": [
+      "stakeholder_map"
+    ],
+    "definition": "Actors positioned by influence and interest.",
+    "broader": "image_people",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 4-12 actors"
+    ],
+    "sources": [
+      "research/02 #62"
+    ]
+  },
+  {
+    "value": "device-frame",
+    "prefLabel": "Device frame",
+    "altLabels": [
+      "device_frame",
+      "mockup",
+      "laptop",
+      "desktop"
+    ],
+    "definition": "Product screenshots set inside laptop, desktop or phone frames.",
+    "broader": "image_people",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 1-3 screens"
+    ],
+    "sources": [
+      "research/03 §(a) 43",
+      "research/03 §(e) Pitch device frames"
+    ]
+  },
+  {
+    "value": "logo-wall",
+    "prefLabel": "Logo grid / wall",
+    "altLabels": [
+      "logo_wall",
+      "logo grid"
+    ],
+    "definition": "Customer or partner logos in a grid.",
+    "broader": "image_people",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 6-24"
+    ],
+    "sources": [
+      "research/03 §(a) 44"
+    ]
+  },
+  {
+    "value": "org-chart",
+    "prefLabel": "Org chart",
+    "altLabels": [
+      "org_chart"
+    ],
+    "definition": "A reporting hierarchy.",
+    "broader": "image_people",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 1 root + 2-5 per level, max 3 levels"
+    ],
+    "sources": [
+      "research/03 §(a) 45"
+    ]
+  },
+  {
+    "value": "map-markers",
+    "prefLabel": "Map with markers",
+    "altLabels": [
+      "map_markers",
+      "world map"
+    ],
+    "definition": "A geographic map with plotted markers.",
+    "broader": "image_people",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 1 map + 1-10 markers"
+    ],
+    "sources": [
+      "research/03 §(a) 46",
+      "research/03 §(e) Beautiful.ai World Map"
+    ]
+  },
+  {
+    "value": "photo-gallery",
+    "prefLabel": "Photo 3-up / gallery",
+    "altLabels": [
+      "photo_three_up",
+      "gallery"
+    ],
+    "definition": "Three to six photographs in a row or gallery.",
+    "broader": "image_people",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 3-6"
+    ],
+    "sources": [
+      "research/03 §(a) 47",
+      "research/03 §(e) Keynote Photo-3 Up"
+    ]
+  },
+  {
+    "value": "embed-webview",
+    "prefLabel": "Web / embed view",
+    "altLabels": [
+      "embed_view",
+      "webview",
+      "iframe"
+    ],
+    "definition": "A live web view or embedded frame.",
+    "broader": "image_people",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 1 frame"
+    ],
+    "sources": [
+      "research/03 §(a) 49",
+      "research/03 §(e) Beautiful.ai Webview"
+    ]
+  },
+  {
+    "value": "video-full",
+    "prefLabel": "Full video",
+    "altLabels": [
+      "video_full",
+      "video"
+    ],
+    "definition": "A full-slide video.",
+    "broader": "image_people",
+    "inScheme": "archetype",
+    "examples": [
+      "items: 1"
+    ],
+    "sources": [
+      "research/03 §(a) 50"
+    ]
+  }
+]

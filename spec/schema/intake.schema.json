@@ -1,0 +1,256 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://alderman.ai/canva-slide-layouts/spec/schema/intake.schema.json",
+  "title": "Intake contract frontmatter",
+  "description": "Flat frontmatter of intake/<yyyymmdd>-<slug>.md (Skill 4). Body: the extracted element table with an extra confidence column, then ## Questions.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "created",
+    "source",
+    "source_type",
+    "detected_archetype",
+    "detected_family",
+    "confidence",
+    "canvas_w",
+    "canvas_h",
+    "target_w",
+    "target_h",
+    "fonts_detected",
+    "fonts_native",
+    "license_note",
+    "brand",
+    "status",
+    "open_questions",
+    "layout_id"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[0-9]{8}-[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "yyyymmdd-slug; the filename is intake/<id>.md."
+    },
+    "created": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+      "description": "ISO date. Obsidian Date property."
+    },
+    "source": {
+      "type": "string",
+      "description": "The image path or URL the layout was read from."
+    },
+    "source_type": {
+      "type": "string",
+      "enum": [
+        "image",
+        "url",
+        "canva",
+        "html"
+      ],
+      "description": "How the source was read, which chooses the extraction path (Skill 4).",
+      "$comment": "No vocab file yet; enum is inline pending one. Values from docs/PLAN.md §Skill 4."
+    },
+    "detected_archetype": {
+      "type": "string",
+      "enum": [
+        "title-cover",
+        "intro-title-meta",
+        "agenda-toc",
+        "topic-agenda-tracker",
+        "section-divider",
+        "section-title-description",
+        "divider-question",
+        "executive-summary-3col",
+        "key-takeaway",
+        "appendix-title",
+        "closing-thank-you",
+        "cta-next-steps",
+        "qa-slide",
+        "contact-card",
+        "statement",
+        "question-slide",
+        "quote",
+        "quote-evidence",
+        "title-body",
+        "bullet-list",
+        "numbered-list-panel",
+        "two-column-text",
+        "content-sidebar-callout",
+        "definition",
+        "decisions-needed",
+        "icon-label-row",
+        "word-cloud",
+        "big-number",
+        "stat-row",
+        "kpi-grid",
+        "kpi-dashboard",
+        "stacked-kpi-ledger",
+        "progress-bars",
+        "chart-dominant",
+        "chart-insight-callout",
+        "data-table",
+        "table-insight",
+        "waterfall-bridge",
+        "marimekko",
+        "thermometer-goal",
+        "pictograph-unit-chart",
+        "scatter-xy-plot",
+        "status-table",
+        "roi-calculator",
+        "side-by-side",
+        "three-column",
+        "four-card-grid",
+        "before-after",
+        "pros-cons",
+        "comparison-table",
+        "harvey-ball-scorecard",
+        "swot-grid",
+        "checklist-rag",
+        "pricing-tiers",
+        "venn",
+        "double-list-central-visual",
+        "two-by-two-matrix",
+        "risk-priority-matrix",
+        "pyramid",
+        "funnel",
+        "cycle-loop",
+        "onion-concentric",
+        "value-chain",
+        "driver-tree",
+        "pillar-diagram",
+        "iceberg",
+        "layer-stack",
+        "target-bullseye",
+        "hub-and-spoke",
+        "segment-wheel",
+        "convergence-join",
+        "process-steps-horizontal",
+        "process-steps-vertical",
+        "timeline-horizontal",
+        "timeline-vertical",
+        "roadmap-lanes",
+        "pipeline-architecture",
+        "flowchart-decisions",
+        "chevron-sequence",
+        "maturity-stairs",
+        "timeline-three-layer",
+        "gantt-chart",
+        "kanban-board",
+        "calendar-grid",
+        "journey-map",
+        "divergent-convergent-flow",
+        "countdown-timer",
+        "full-bleed-overlay",
+        "image-hero",
+        "image-split",
+        "image-points",
+        "image-grid",
+        "picture-caption",
+        "icon-grid",
+        "team-grid",
+        "case-study",
+        "stakeholder-map",
+        "device-frame",
+        "logo-wall",
+        "org-chart",
+        "map-markers",
+        "photo-gallery",
+        "embed-webview",
+        "video-full"
+      ],
+      "$comment": "Closed enum. Source of truth: spec/vocab/archetype.json. JSON Schema cannot load the vocab at runtime, so validate.mjs injects the enum from that file; keep this array in sync with it.",
+      "description": "Best-guess archetype from the extraction."
+    },
+    "detected_family": {
+      "type": "string",
+      "enum": [
+        "structural",
+        "text",
+        "numbers",
+        "comparison",
+        "frameworks",
+        "process",
+        "image_people"
+      ],
+      "$comment": "Closed enum. Source of truth: spec/vocab/family.json. JSON Schema cannot load the vocab at runtime, so validate.mjs injects the enum from that file; keep this array in sync with it.",
+      "description": "Family implied by detected_archetype; must equal its broader in archetype.json."
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Extractor confidence in detected_archetype, 0-1. The body element table carries a per-row confidence column."
+    },
+    "canvas_w": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4096,
+      "description": "Source canvas width in px."
+    },
+    "canvas_h": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4096,
+      "description": "Source canvas height in px."
+    },
+    "target_w": {
+      "type": "integer",
+      "const": 1920,
+      "description": "Target canvas width; Canva presentation pages are 1920x1080 (research/09)."
+    },
+    "target_h": {
+      "type": "integer",
+      "const": 1080,
+      "description": "Target canvas height."
+    },
+    "fonts_detected": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Font families read off the source, spelled as spec/fonts.json spells them where recognised."
+    },
+    "fonts_native": {
+      "type": "boolean",
+      "description": "True when every detected family is Canva-native."
+    },
+    "license_note": {
+      "type": "string",
+      "description": "What may be reused from the source. Structure only unless this says otherwise."
+    },
+    "brand": {
+      "type": "string",
+      "enum": [
+        "alderman-ai",
+        "neutral"
+      ],
+      "$comment": "Closed enum. Source of truth: spec/vocab/brand.json. JSON Schema cannot load the vocab at runtime, so validate.mjs injects the enum from that file; keep this array in sync with it.",
+      "description": "Brand the catalogued layout will carry."
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "confirmed",
+        "catalogued",
+        "uploaded"
+      ],
+      "$comment": "Closed enum. Source of truth: spec/vocab/status.json. JSON Schema cannot load the vocab at runtime, so validate.mjs injects the enum from that file; keep this array in sync with it.",
+      "description": "Intake lifecycle. Subset of spec/vocab/status.json with broader intake_status. Conversion runs only at confirmed."
+    },
+    "open_questions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Questions the operator must answer before status can move to confirmed. Mirrored as the body ## Questions list."
+    },
+    "layout_id": {
+      "type": "string",
+      "pattern": "^(L[0-9]{3}|-)$",
+      "description": "Layout id assigned at catalogue time, or \"-\"."
+    }
+  }
+}

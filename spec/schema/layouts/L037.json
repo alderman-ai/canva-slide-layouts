@@ -1,0 +1,9 @@
+{
+  "$id": "L037",
+  "description": "A data table at two-thirds width with a so-what callout panel at one-third. Pick when a table is the evidence for a claim and the read-out must sit beside it.",
+  "requires": { "title": { "min": 1, "max": 1 }, "table": { "min": 1, "max": 1 }, "body": { "min": 1, "max": 1 } },
+  "optional": { "eyebrow": { "min": 0, "max": 1 }, "caption": { "min": 0, "max": 1 }, "shape": { "min": 0, "max": 1 } },
+  "accepts_unit_types": ["claim", "table", "evidence"],
+  "items": { "min": 3, "max": 8 },
+  "chars": { "title": { "min": 8, "max": 40 }, "eyebrow": { "min": 0, "max": 20 }, "body": { "min": 20, "max": 220 }, "caption": { "min": 0, "max": 90 } }
+}

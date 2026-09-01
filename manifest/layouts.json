@@ -1,0 +1,567 @@
+{
+  "generated_at": "2026-09-01T23:18:36.726Z",
+  "source": "layouts/*.md",
+  "count": 3,
+  "layouts": [
+    {
+      "id": "L001",
+      "title": "Title Cover",
+      "family": "structural",
+      "archetype": "title-cover",
+      "variant": "standard",
+      "flow_role": "opener",
+      "content_shape": [
+        "text"
+      ],
+      "density": 1,
+      "info_units": 1,
+      "min_items": 1,
+      "max_items": 3,
+      "text_capacity_chars": 182,
+      "polish_cost": 1,
+      "slots_image": 0,
+      "slots_chart": 0,
+      "slots_table": 0,
+      "fonts": [
+        "Inter"
+      ],
+      "fonts_native": true,
+      "pairing": "neutral-default",
+      "brand": "neutral",
+      "follows_well": [],
+      "precedes_well": [
+        "agenda-toc",
+        "executive-summary-3col",
+        "statement"
+      ],
+      "tags": [
+        "probe",
+        "opener",
+        "cover"
+      ],
+      "status": "draft",
+      "origin": "-",
+      "accepts_schema": "spec/schema/layouts/L001.json",
+      "canva_ops": "build/canva-ops/L001.json",
+      "family_deck": "build/html/families/01-structural.html",
+      "family_page": "1",
+      "canva_locators": [],
+      "file": "layouts/L001-title-cover.md",
+      "element_count": 5,
+      "declared_text_capacity_chars": 182,
+      "accepts": [
+        "claim",
+        "summary",
+        "definition"
+      ],
+      "components": [],
+      "elements": [
+        {
+          "n": 1,
+          "role": "eyebrow",
+          "x": 96,
+          "y": 300,
+          "w": 1200,
+          "h": 30,
+          "font": "Inter",
+          "weight": 500,
+          "size": 24,
+          "lh": 1.2,
+          "align": "left",
+          "maxChars": 24,
+          "binds": "unit.section",
+          "text": "DECK EYEBROW"
+        },
+        {
+          "n": 2,
+          "role": "title",
+          "x": 96,
+          "y": 352,
+          "w": 1440,
+          "h": 260,
+          "font": "Inter",
+          "weight": 700,
+          "size": 128,
+          "lh": 1,
+          "align": "left",
+          "maxChars": 28,
+          "binds": "unit.title",
+          "text": "Deck title in two lines"
+        },
+        {
+          "n": 3,
+          "role": "subtitle",
+          "x": 96,
+          "y": 640,
+          "w": 1200,
+          "h": 140,
+          "font": "Inter",
+          "weight": 400,
+          "size": 48,
+          "lh": 1.15,
+          "align": "left",
+          "maxChars": 70,
+          "binds": "unit.subtitle",
+          "text": "Subtitle that frames the promise of the deck"
+        },
+        {
+          "n": 4,
+          "role": "divider",
+          "x": 96,
+          "y": 912,
+          "w": 200,
+          "h": 4,
+          "font": "",
+          "weight": "",
+          "size": "",
+          "lh": "",
+          "align": "",
+          "maxChars": "",
+          "binds": "",
+          "text": "stroke:#111111"
+        },
+        {
+          "n": 5,
+          "role": "caption",
+          "x": 96,
+          "y": 944,
+          "w": 1200,
+          "h": 32,
+          "font": "Inter",
+          "weight": 400,
+          "size": 24,
+          "lh": 1.3,
+          "align": "left",
+          "maxChars": 60,
+          "binds": "unit.meta",
+          "text": "Presenter · Organisation · Date"
+        }
+      ],
+      "accepts_table": [
+        {
+          "unit_type": "claim",
+          "min": "1",
+          "max": "1",
+          "note": "becomes the title"
+        },
+        {
+          "unit_type": "summary",
+          "min": "0",
+          "max": "1",
+          "note": "becomes the subtitle"
+        },
+        {
+          "unit_type": "definition",
+          "min": "0",
+          "max": "1",
+          "note": "presenter, org, date on the meta line"
+        }
+      ]
+    },
+    {
+      "id": "L037",
+      "title": "Table Insight",
+      "family": "numbers",
+      "archetype": "table-insight",
+      "variant": "standard",
+      "flow_role": "evidence",
+      "content_shape": [
+        "table",
+        "text"
+      ],
+      "density": 4,
+      "info_units": 6,
+      "min_items": 3,
+      "max_items": 8,
+      "text_capacity_chars": 370,
+      "polish_cost": 3,
+      "slots_image": 0,
+      "slots_chart": 0,
+      "slots_table": 1,
+      "fonts": [
+        "Inter"
+      ],
+      "fonts_native": true,
+      "pairing": "neutral-default",
+      "brand": "neutral",
+      "follows_well": [
+        "data-table",
+        "chart-dominant"
+      ],
+      "precedes_well": [
+        "key-takeaway",
+        "cta-next-steps"
+      ],
+      "tags": [
+        "probe",
+        "table",
+        "evidence",
+        "callout"
+      ],
+      "status": "draft",
+      "origin": "-",
+      "accepts_schema": "spec/schema/layouts/L037.json",
+      "canva_ops": "build/canva-ops/L037.json",
+      "family_deck": "build/html/families/03-numbers.html",
+      "family_page": "1",
+      "canva_locators": [],
+      "file": "layouts/L037-table-insight.md",
+      "element_count": 6,
+      "declared_text_capacity_chars": 370,
+      "accepts": [
+        "claim",
+        "table",
+        "evidence"
+      ],
+      "components": [],
+      "elements": [
+        {
+          "n": 1,
+          "role": "title",
+          "x": 96,
+          "y": 96,
+          "w": 1728,
+          "h": 100,
+          "font": "Inter",
+          "weight": 700,
+          "size": 76,
+          "lh": 1.1,
+          "align": "left",
+          "maxChars": 40,
+          "binds": "unit.title",
+          "text": "Action title says what the table proves"
+        },
+        {
+          "n": 2,
+          "role": "table",
+          "x": 96,
+          "y": 240,
+          "w": 1141,
+          "h": 720,
+          "font": "",
+          "weight": "",
+          "size": 28,
+          "lh": "",
+          "align": "",
+          "maxChars": "",
+          "binds": "unit.table",
+          "text": "rows:6 cols:4 header:true"
+        },
+        {
+          "n": 3,
+          "role": "shape",
+          "x": 1269,
+          "y": 240,
+          "w": 555,
+          "h": 720,
+          "font": "",
+          "weight": "",
+          "size": "",
+          "lh": "",
+          "align": "",
+          "maxChars": "",
+          "binds": "",
+          "text": "fill:#F5F5F5 r:16"
+        },
+        {
+          "n": 4,
+          "role": "eyebrow",
+          "x": 1301,
+          "y": 280,
+          "w": 491,
+          "h": 28,
+          "font": "Inter",
+          "weight": 600,
+          "size": 20,
+          "lh": 1.2,
+          "align": "left",
+          "maxChars": 20,
+          "binds": "unit.callout_label",
+          "text": "SO WHAT"
+        },
+        {
+          "n": 5,
+          "role": "body",
+          "x": 1301,
+          "y": 328,
+          "w": 491,
+          "h": 560,
+          "font": "Inter",
+          "weight": 400,
+          "size": 32,
+          "lh": 1.4,
+          "align": "left",
+          "maxChars": 220,
+          "binds": "unit.callout",
+          "text": "The read-out in two or three sentences, pointing at the row that matters."
+        },
+        {
+          "n": 6,
+          "role": "caption",
+          "x": 96,
+          "y": 992,
+          "w": 1141,
+          "h": 30,
+          "font": "Inter",
+          "weight": 400,
+          "size": 22,
+          "lh": 1.3,
+          "align": "left",
+          "maxChars": 90,
+          "binds": "unit.source",
+          "text": "Source: dataset, date, method"
+        }
+      ],
+      "accepts_table": [
+        {
+          "unit_type": "claim",
+          "min": "1",
+          "max": "1",
+          "note": "becomes the action title"
+        },
+        {
+          "unit_type": "table",
+          "min": "1",
+          "max": "1",
+          "note": "3–8 rows, 2–6 columns"
+        },
+        {
+          "unit_type": "evidence",
+          "min": "1",
+          "max": "3",
+          "note": "callout sentences and the source line"
+        }
+      ]
+    },
+    {
+      "id": "L046",
+      "title": "Three Column",
+      "family": "comparison",
+      "archetype": "three-column",
+      "variant": "standard",
+      "flow_role": "body",
+      "content_shape": [
+        "text"
+      ],
+      "density": 3,
+      "info_units": 3,
+      "min_items": 3,
+      "max_items": 3,
+      "text_capacity_chars": 792,
+      "polish_cost": 2,
+      "slots_image": 0,
+      "slots_chart": 0,
+      "slots_table": 0,
+      "fonts": [
+        "Barlow",
+        "JetBrains Mono"
+      ],
+      "fonts_native": false,
+      "pairing": "alderman-ai",
+      "brand": "alderman-ai",
+      "follows_well": [
+        "section-divider",
+        "title-body"
+      ],
+      "precedes_well": [
+        "key-takeaway",
+        "comparison-table"
+      ],
+      "tags": [
+        "probe",
+        "columns",
+        "comparison",
+        "alderman-ai"
+      ],
+      "status": "draft",
+      "origin": "-",
+      "accepts_schema": "spec/schema/layouts/L046.json",
+      "canva_ops": "build/canva-ops/L046.json",
+      "family_deck": "build/html/families/04-comparison.html",
+      "family_page": "1",
+      "canva_locators": [],
+      "file": "layouts/L046-three-column.md",
+      "element_count": 9,
+      "declared_text_capacity_chars": 792,
+      "accepts": [
+        "claim",
+        "comparison",
+        "enumeration",
+        "evidence"
+      ],
+      "components": [],
+      "elements": [
+        {
+          "n": 1,
+          "role": "title",
+          "x": 96,
+          "y": 96,
+          "w": 1728,
+          "h": 100,
+          "font": "Barlow",
+          "weight": 700,
+          "size": 76,
+          "lh": 1.1,
+          "align": "left",
+          "maxChars": 40,
+          "binds": "unit.title",
+          "text": "Action title states the comparison"
+        },
+        {
+          "n": 2,
+          "role": "divider",
+          "x": 96,
+          "y": 216,
+          "w": 1728,
+          "h": 2,
+          "font": "",
+          "weight": "",
+          "size": "",
+          "lh": "",
+          "align": "",
+          "maxChars": "",
+          "binds": "",
+          "text": "stroke:#999999"
+        },
+        {
+          "n": 3,
+          "role": "label",
+          "x": 96,
+          "y": 264,
+          "w": 555,
+          "h": 60,
+          "font": "Barlow",
+          "weight": 600,
+          "size": 40,
+          "lh": 1.15,
+          "align": "left",
+          "maxChars": 24,
+          "binds": "unit.items[0].title",
+          "text": "Column one heading"
+        },
+        {
+          "n": 4,
+          "role": "body",
+          "x": 96,
+          "y": 340,
+          "w": 555,
+          "h": 420,
+          "font": "Barlow",
+          "weight": 400,
+          "size": 32,
+          "lh": 1.4,
+          "align": "left",
+          "maxChars": 200,
+          "binds": "unit.items[0].body",
+          "text": "Column one supporting text, three to five short lines."
+        },
+        {
+          "n": 5,
+          "role": "label",
+          "x": 683,
+          "y": 264,
+          "w": 555,
+          "h": 60,
+          "font": "Barlow",
+          "weight": 600,
+          "size": 40,
+          "lh": 1.15,
+          "align": "left",
+          "maxChars": 24,
+          "binds": "unit.items[1].title",
+          "text": "Column two heading"
+        },
+        {
+          "n": 6,
+          "role": "body",
+          "x": 683,
+          "y": 340,
+          "w": 555,
+          "h": 420,
+          "font": "Barlow",
+          "weight": 400,
+          "size": 32,
+          "lh": 1.4,
+          "align": "left",
+          "maxChars": 200,
+          "binds": "unit.items[1].body",
+          "text": "Column two supporting text, three to five short lines."
+        },
+        {
+          "n": 7,
+          "role": "label",
+          "x": 1269,
+          "y": 264,
+          "w": 555,
+          "h": 60,
+          "font": "Barlow",
+          "weight": 600,
+          "size": 40,
+          "lh": 1.15,
+          "align": "left",
+          "maxChars": 24,
+          "binds": "unit.items[2].title",
+          "text": "Column three heading"
+        },
+        {
+          "n": 8,
+          "role": "body",
+          "x": 1269,
+          "y": 340,
+          "w": 555,
+          "h": 420,
+          "font": "Barlow",
+          "weight": 400,
+          "size": 32,
+          "lh": 1.4,
+          "align": "left",
+          "maxChars": 200,
+          "binds": "unit.items[2].body",
+          "text": "Column three supporting text, three to five short lines."
+        },
+        {
+          "n": 9,
+          "role": "caption",
+          "x": 96,
+          "y": 1000,
+          "w": 1728,
+          "h": 30,
+          "font": "JetBrains Mono",
+          "weight": 400,
+          "size": 22,
+          "lh": 1.3,
+          "align": "left",
+          "maxChars": 80,
+          "binds": "unit.source",
+          "text": "source: where these three come from"
+        }
+      ],
+      "accepts_table": [
+        {
+          "unit_type": "claim",
+          "min": "1",
+          "max": "1",
+          "note": "becomes the action title"
+        },
+        {
+          "unit_type": "comparison",
+          "min": "1",
+          "max": "1",
+          "note": "a comparison unit with exactly three items"
+        },
+        {
+          "unit_type": "enumeration",
+          "min": "0",
+          "max": "1",
+          "note": "alternatively an enumeration of three items"
+        },
+        {
+          "unit_type": "evidence",
+          "min": "0",
+          "max": "1",
+          "note": "source line"
+        }
+      ]
+    }
+  ]
+}

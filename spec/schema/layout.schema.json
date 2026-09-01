@@ -1,0 +1,362 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://alderman.ai/canva-slide-layouts/spec/schema/layout.schema.json",
+  "title": "Layout frontmatter",
+  "description": "Flat frontmatter of a layout hybrid MD in layouts/. Body sections: ## Elements, ## Accepts, ## Fill rules, ## Flow, ## Speaker notes. Element-table columns are documented in spec/schema.md.",
+  "$comment": "Decision 2: flat frontmatter only, scalars and flat lists, no maps. Every layout file carries every key; use \"-\" or [] for empty.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "title",
+    "family",
+    "archetype",
+    "variant",
+    "flow_role",
+    "content_shape",
+    "density",
+    "info_units",
+    "min_items",
+    "max_items",
+    "text_capacity_chars",
+    "polish_cost",
+    "slots_image",
+    "slots_chart",
+    "slots_table",
+    "fonts",
+    "fonts_native",
+    "pairing",
+    "brand",
+    "follows_well",
+    "precedes_well",
+    "tags",
+    "status",
+    "origin",
+    "accepts_schema",
+    "canva_ops",
+    "family_deck",
+    "family_page",
+    "canva_locators"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^L[0-9]{3}$",
+      "description": "Library id. Filename is layouts/<id>-<archetype>.md."
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 60,
+      "$comment": "Free text, no vocab. Read by scripts/build-html.mjs pageLabel() (it becomes the Canva page title) and displayed as the Layout column in bases/layouts.base.",
+      "description": "Human name of the layout, e.g. \"KPI Grid 2x3\". Not an id: the machine-readable class is archetype."
+    },
+    "family": {
+      "type": "string",
+      "enum": [
+        "structural",
+        "text",
+        "numbers",
+        "comparison",
+        "frameworks",
+        "process",
+        "image_people"
+      ],
+      "$comment": "Closed enum. Source of truth: spec/vocab/family.json. JSON Schema cannot load the vocab at runtime, so validate.mjs injects the enum from that file; keep this array in sync with it.",
+      "description": "Top-level grouping; also the Canva family master this layout lives in."
+    },
+    "archetype": {
+      "type": "string",
+      "enum": [
+        "title-cover",
+        "intro-title-meta",
+        "agenda-toc",
+        "topic-agenda-tracker",
+        "section-divider",
+        "section-title-description",
+        "divider-question",
+        "executive-summary-3col",
+        "key-takeaway",
+        "appendix-title",
+        "closing-thank-you",
+        "cta-next-steps",
+        "qa-slide",
+        "contact-card",
+        "statement",
+        "question-slide",
+        "quote",
+        "quote-evidence",
+        "title-body",
+        "bullet-list",
+        "numbered-list-panel",
+        "two-column-text",
+        "content-sidebar-callout",
+        "definition",
+        "decisions-needed",
+        "icon-label-row",
+        "word-cloud",
+        "big-number",
+        "stat-row",
+        "kpi-grid",
+        "kpi-dashboard",
+        "stacked-kpi-ledger",
+        "progress-bars",
+        "chart-dominant",
+        "chart-insight-callout",
+        "data-table",
+        "table-insight",
+        "waterfall-bridge",
+        "marimekko",
+        "thermometer-goal",
+        "pictograph-unit-chart",
+        "scatter-xy-plot",
+        "status-table",
+        "roi-calculator",
+        "side-by-side",
+        "three-column",
+        "four-card-grid",
+        "before-after",
+        "pros-cons",
+        "comparison-table",
+        "harvey-ball-scorecard",
+        "swot-grid",
+        "checklist-rag",
+        "pricing-tiers",
+        "venn",
+        "double-list-central-visual",
+        "two-by-two-matrix",
+        "risk-priority-matrix",
+        "pyramid",
+        "funnel",
+        "cycle-loop",
+        "onion-concentric",
+        "value-chain",
+        "driver-tree",
+        "pillar-diagram",
+        "iceberg",
+        "layer-stack",
+        "target-bullseye",
+        "hub-and-spoke",
+        "segment-wheel",
+        "convergence-join",
+        "process-steps-horizontal",
+        "process-steps-vertical",
+        "timeline-horizontal",
+        "timeline-vertical",
+        "roadmap-lanes",
+        "pipeline-architecture",
+        "flowchart-decisions",
+        "chevron-sequence",
+        "maturity-stairs",
+        "timeline-three-layer",
+        "gantt-chart",
+        "kanban-board",
+        "calendar-grid",
+        "journey-map",
+        "divergent-convergent-flow",
+        "countdown-timer",
+        "full-bleed-overlay",
+        "image-hero",
+        "image-split",
+        "image-points",
+        "image-grid",
+        "picture-caption",
+        "icon-grid",
+        "team-grid",
+        "case-study",
+        "stakeholder-map",
+        "device-frame",
+        "logo-wall",
+        "org-chart",
+        "map-markers",
+        "photo-gallery",
+        "embed-webview",
+        "video-full"
+      ],
+      "$comment": "Closed enum. Source of truth: spec/vocab/archetype.json. JSON Schema cannot load the vocab at runtime, so validate.mjs injects the enum from that file; keep this array in sync with it.",
+      "description": "The layout class. broader in archetype.json must equal this file family."
+    },
+    "variant": {
+      "type": "string",
+      "enum": [
+        "standard",
+        "dense",
+        "sparse"
+      ],
+      "$comment": "Closed enum. Source of truth: spec/vocab/variant.json. JSON Schema cannot load the vocab at runtime, so validate.mjs injects the enum from that file; keep this array in sync with it.",
+      "description": "Cut of the archetype: standard, dense or sparse."
+    },
+    "flow_role": {
+      "type": "string",
+      "enum": [
+        "opener",
+        "bridge",
+        "body",
+        "evidence",
+        "closer"
+      ],
+      "$comment": "Closed enum. Source of truth: spec/vocab/flow_role.json. JSON Schema cannot load the vocab at runtime, so validate.mjs injects the enum from that file; keep this array in sync with it.",
+      "description": "Where this layout sits in a narrative."
+    },
+    "content_shape": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "text",
+          "bullets",
+          "number",
+          "image",
+          "chart",
+          "table",
+          "diagram",
+          "quote"
+        ]
+      },
+      "uniqueItems": true,
+      "$comment": "Closed enum. Source of truth: spec/vocab/content_shape.json. JSON Schema cannot load the vocab at runtime, so validate.mjs injects the enum from that file; keep this array in sync with it.",
+      "description": "Shapes of content this layout can host; a unit binds only if its shape is in this list."
+    },
+    "density": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "Density level this layout is drawn for (research/03 §c).",
+      "$comment": "Levels 1-5 map in order onto spec/vocab/density.json (cinematic, talk, briefing, consulting, slidedoc). The frontmatter key is numeric so Obsidian can sort and filter it as a Number property; validate.mjs resolves the level to the vocab entry."
+    },
+    "info_units": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 12,
+      "description": "Number of distinct information units the layout carries; at most 6 elements per slide (research/03 §c, PLOS rule 7)."
+    },
+    "min_items": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 60,
+      "description": "Minimum count for the repeated role, from the archetype item range (research/03 §a, research/06 §c)."
+    },
+    "max_items": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 60,
+      "description": "Maximum count for the repeated role. Must be >= min_items."
+    },
+    "text_capacity_chars": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Sum of maxChars over every element whose role has broader text_role in spec/vocab/element_role.json. Computed by validate.mjs; a mismatch is an error."
+    },
+    "polish_cost": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "Design effort this layout needs (research/03 §d). The deck polish dial caps it: quick <= 2, standard <= 3, premium any.",
+      "$comment": "Levels 1-5 map in order onto spec/vocab/polish.json (typography_only, type_primitives, chart_or_photo, curated_imagery, bespoke). The frontmatter key is numeric so Obsidian can sort and filter it as a Number property; validate.mjs resolves the level to the vocab entry."
+    },
+    "slots_image": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 30,
+      "description": "Count of picture and media elements."
+    },
+    "slots_chart": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 10,
+      "description": "Count of chart elements."
+    },
+    "slots_table": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 10,
+      "description": "Count of table elements."
+    },
+    "fonts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Font families used, spelled as spec/fonts.json spells them."
+    },
+    "fonts_native": {
+      "type": "boolean",
+      "description": "True when every family in fonts has canva_native \"yes\" in spec/fonts.json."
+    },
+    "pairing": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Named title/body font pairing from spec/pairings.md."
+    },
+    "brand": {
+      "type": "string",
+      "enum": [
+        "alderman-ai",
+        "neutral"
+      ],
+      "$comment": "Closed enum. Source of truth: spec/vocab/brand.json. JSON Schema cannot load the vocab at runtime, so validate.mjs injects the enum from that file; keep this array in sync with it.",
+      "description": "alderman-ai for branded layouts, neutral for anything published to the public repo."
+    },
+    "follows_well": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true,
+      "description": "Layout ids or archetype values that sit well before this one; used by the continuity score in match.mjs."
+    },
+    "precedes_well": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true,
+      "description": "Layout ids or archetype values that sit well after this one."
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Free retrieval keywords. Not vocabulary-controlled; never used by the planner."
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "built",
+        "imported",
+        "verified"
+      ],
+      "$comment": "Closed enum. Source of truth: spec/vocab/status.json. JSON Schema cannot load the vocab at runtime, so validate.mjs injects the enum from that file; keep this array in sync with it.",
+      "description": "Layout lifecycle. Subset of spec/vocab/status.json with broader layout_status."
+    },
+    "origin": {
+      "type": "string",
+      "description": "Where this layout came from: an intake contract, a harvested repo, or \"-\" for hand-authored. Repo-relative POSIX path, or \"-\" when not set."
+    },
+    "accepts_schema": {
+      "type": "string",
+      "description": "Path to the per-layout accepts file, spec/schema/layouts/<id>.json, validated against spec/schema/accepts.template.json. Repo-relative POSIX path, or \"-\" when not set."
+    },
+    "canva_ops": {
+      "type": "string",
+      "description": "Path to the generated build/canva-ops/<id>.json. Repo-relative POSIX path, or \"-\" when not set."
+    },
+    "family_deck": {
+      "type": "string",
+      "description": "Canva design id of the family master holding this layout as a page. Quoted string so PowerShell never coerces it to Int64 (research/06 §e). \"-\" when not uploaded."
+    },
+    "family_page": {
+      "type": "string",
+      "description": "Canva page id of this layout inside family_deck. Quoted string so PowerShell never coerces it to Int64 (research/06 §e). \"-\" when not uploaded."
+    },
+    "canva_locators": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Per-element Canva locator ids (PBxxx-LByyy) in element-table order, written back by index.mjs."
+    }
+  }
+}

@@ -1,0 +1,180 @@
+[
+  {
+    "value": "scqa_pyramid",
+    "prefLabel": "SCQA / pyramid consulting deck",
+    "altLabels": [
+      "minto",
+      "mckinsey",
+      "pyramid"
+    ],
+    "definition": "Situation, complication, question, answer, then pillars of evidence, then recommendation and appendix. Titles alone must carry the argument.",
+    "broader": "",
+    "inScheme": "flow_template",
+    "examples": [
+      "20-60 slides, 30-60 minutes or read as a document",
+      "title -> exec summary -> situation -> complication -> question/agenda -> per pillar (section header + 3-6 action-title evidence slides) -> recommendation/next steps -> appendix",
+      "resolution is 60-70% of the text"
+    ],
+    "sources": [
+      "research/03 §(b) 1"
+    ]
+  },
+  {
+    "value": "sequoia_pitch",
+    "prefLabel": "Sequoia pitch",
+    "altLabels": [
+      "seed pitch"
+    ],
+    "definition": "The Sequoia ten-slide company narrative, optionally extended with traction, go-to-market and the ask.",
+    "broader": "",
+    "inScheme": "flow_template",
+    "examples": [
+      "10 core slides, 12-15 with additions, 20 minutes",
+      "title -> company purpose -> problem -> solution -> why now -> market size -> competition -> product -> business model -> team -> financials"
+    ],
+    "sources": [
+      "research/03 §(b) 2"
+    ]
+  },
+  {
+    "value": "kawasaki_10_20_30",
+    "prefLabel": "Kawasaki 10/20/30",
+    "altLabels": [
+      "10/20/30"
+    ],
+    "definition": "Ten slides, twenty minutes, nothing below 30pt.",
+    "broader": "",
+    "inScheme": "flow_template",
+    "examples": [
+      "10 slides, 20 minutes, minimum 30pt type",
+      "title -> problem -> value proposition -> underlying magic -> business model -> go-to-market -> competition -> team -> financials -> status and use of funds"
+    ],
+    "sources": [
+      "research/03 §(b) 3"
+    ]
+  },
+  {
+    "value": "slidebean_3act",
+    "prefLabel": "Slidebean three-act pitch",
+    "altLabels": [
+      "three act pitch"
+    ],
+    "definition": "A pitch told in three acts: setup, proof of product, proof of business.",
+    "broader": "",
+    "inScheme": "flow_template",
+    "examples": [
+      "15-22 slides",
+      "act 1 cover, traction teaser, problem, market -> act 2 solution, product, how it works, audience, case study, business model, roadmap -> act 3 traction, unit economics, go-to-market, TAM, competition, secret sauce, team, financials, ask"
+    ],
+    "sources": [
+      "research/03 §(b) 4"
+    ]
+  },
+  {
+    "value": "duarte_sparkline",
+    "prefLabel": "Duarte sparkline talk",
+    "altLabels": [
+      "sparkline",
+      "keynote talk"
+    ],
+    "definition": "Alternating \"what is\" and \"what could be\" around a call to adventure, ending in a call to action and new bliss.",
+    "broader": "",
+    "inScheme": "flow_template",
+    "examples": [
+      "18-40 slides, 18-45 minutes, 1-3 slides per minute",
+      "title -> what is -> call to adventure -> 3-5 what is / what could be pairs -> call to action -> new bliss"
+    ],
+    "sources": [
+      "research/03 §(b) 5"
+    ]
+  },
+  {
+    "value": "gagne_teaching",
+    "prefLabel": "Gagne nine events teaching module",
+    "altLabels": [
+      "teaching module",
+      "gagne"
+    ],
+    "definition": "Hook, objectives, recall, concept, worked example, guided case, practice, feedback, check, recap.",
+    "broader": "",
+    "inScheme": "flow_template",
+    "examples": [
+      "10-20 slides per module, 1 slide per 1-2 minutes"
+    ],
+    "sources": [
+      "research/03 §(b) 6"
+    ]
+  },
+  {
+    "value": "status_update",
+    "prefLabel": "Status update",
+    "altLabels": [
+      "project status",
+      "steerco"
+    ],
+    "definition": "Overall status, dimension RAG table, milestones, accomplishments, upcoming, risks, decisions needed.",
+    "broader": "",
+    "inScheme": "flow_template",
+    "examples": [
+      "4-6 slides, under 30 seconds of executive scan per slide",
+      "at most 5-7 workstreams in the RAG table; 2-4 items per accomplishment, upcoming and risk block"
+    ],
+    "sources": [
+      "research/03 §(b) 7"
+    ]
+  },
+  {
+    "value": "workshop",
+    "prefLabel": "Workshop",
+    "altLabels": [
+      "facilitation"
+    ],
+    "definition": "Welcome, objectives, timed agenda, icebreaker, then framing / activity / timer / debrief blocks, ending in takeaways and next steps.",
+    "broader": "",
+    "inScheme": "flow_template",
+    "examples": [
+      "15-30 slides per 2 hours; an activity every 15-20 minutes; at most 3 framing slides per block"
+    ],
+    "sources": [
+      "research/03 §(b) 8"
+    ]
+  },
+  {
+    "value": "slidedoc",
+    "prefLabel": "Executive-summary-first slidedoc",
+    "altLabels": [
+      "read deck",
+      "leave-behind"
+    ],
+    "definition": "An unpresented read-deck: cover, one-page executive summary, contents, then dense topic pages, recommendations and appendix.",
+    "broader": "",
+    "inScheme": "flow_template",
+    "examples": [
+      "10-30 pages, not presented",
+      "100 words per page target, 250 maximum; 2-4 dense text and figure pages per topic"
+    ],
+    "sources": [
+      "research/03 §(b) 9",
+      "research/03 §(c) level 5"
+    ]
+  },
+  {
+    "value": "takahashi_lessig",
+    "prefLabel": "Takahashi / Lessig rapid talk",
+    "altLabels": [
+      "takahashi",
+      "lessig",
+      "rapid fire"
+    ],
+    "definition": "One word, phrase or image per slide, synchronised to speech; no bullets.",
+    "broader": "",
+    "inScheme": "flow_template",
+    "examples": [
+      "60-200 slides, 3-5 slides per minute"
+    ],
+    "sources": [
+      "research/03 §(b) 10",
+      "research/03 §(c) level 1"
+    ]
+  }
+]

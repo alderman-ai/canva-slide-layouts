@@ -1,0 +1,189 @@
+[
+  {
+    "value": "executive",
+    "prefLabel": "Executive",
+    "altLabels": [
+      "exec",
+      "leadership"
+    ],
+    "definition": "Senior leaders inside the organisation who scan rather than read; expects the answer first.",
+    "broader": "",
+    "inScheme": "audience",
+    "examples": [
+      "pairs with delivery_mode consulting and flow_template scqa_pyramid",
+      "under 30 seconds of scan per slide"
+    ],
+    "sources": [
+      "research/03 §(b) 1",
+      "research/03 §(b) 7"
+    ]
+  },
+  {
+    "value": "board",
+    "prefLabel": "Board",
+    "altLabels": [
+      "directors"
+    ],
+    "definition": "A governing board reviewing performance and approving decisions.",
+    "broader": "",
+    "inScheme": "audience",
+    "examples": [
+      "pairs with density 4 and archetype decisions_needed"
+    ],
+    "sources": [
+      "research/03 §(c) level 4",
+      "research/03 §(b) 7"
+    ]
+  },
+  {
+    "value": "investor",
+    "prefLabel": "Investor",
+    "altLabels": [
+      "vc",
+      "lp"
+    ],
+    "definition": "Prospective or existing investors assessing the company.",
+    "broader": "",
+    "inScheme": "audience",
+    "examples": [
+      "pairs with flow_template sequoia_pitch, kawasaki_10_20_30 or slidebean_3act"
+    ],
+    "sources": [
+      "research/03 §(b) 2",
+      "research/03 §(b) 3",
+      "research/03 §(b) 4"
+    ]
+  },
+  {
+    "value": "customer",
+    "prefLabel": "Customer",
+    "altLabels": [
+      "client"
+    ],
+    "definition": "An existing customer or user of the product.",
+    "broader": "",
+    "inScheme": "audience",
+    "examples": [],
+    "sources": [
+      "research/03 §(b) 4 (case study, target audience)"
+    ]
+  },
+  {
+    "value": "prospect",
+    "prefLabel": "Prospect",
+    "altLabels": [
+      "lead"
+    ],
+    "definition": "A potential buyer being sold to.",
+    "broader": "",
+    "inScheme": "audience",
+    "examples": [
+      "pairs with flow_template slidebean_3act"
+    ],
+    "sources": [
+      "research/03 §(b) 4"
+    ]
+  },
+  {
+    "value": "team_internal",
+    "prefLabel": "Internal team",
+    "altLabels": [
+      "staff",
+      "all hands"
+    ],
+    "definition": "Colleagues inside the organisation: all-hands, standing updates, project reviews.",
+    "broader": "",
+    "inScheme": "audience",
+    "examples": [
+      "pairs with flow_template status_update"
+    ],
+    "sources": [
+      "research/03 §(b) 7"
+    ]
+  },
+  {
+    "value": "technical",
+    "prefLabel": "Technical",
+    "altLabels": [
+      "engineering",
+      "research"
+    ],
+    "definition": "Engineers, scientists or analysts who will interrogate the method and the data.",
+    "broader": "",
+    "inScheme": "audience",
+    "examples": [
+      "tolerates figure and chart_data units at density 3-4"
+    ],
+    "sources": [
+      "research/06 §(d) (DOC2PPT/Paper2Poster scientific corpora)"
+    ]
+  },
+  {
+    "value": "students",
+    "prefLabel": "Students / learners",
+    "altLabels": [
+      "learners",
+      "trainees"
+    ],
+    "definition": "People being taught; attention is managed by segmenting and practice.",
+    "broader": "",
+    "inScheme": "audience",
+    "examples": [
+      "pairs with flow_template gagne_teaching and delivery_mode teaching"
+    ],
+    "sources": [
+      "research/03 §(b) 6",
+      "research/03 §(c) (Mayer segmenting)"
+    ]
+  },
+  {
+    "value": "partner",
+    "prefLabel": "Partner",
+    "altLabels": [
+      "alliance",
+      "reseller"
+    ],
+    "definition": "A channel, alliance or supplier organisation.",
+    "broader": "",
+    "inScheme": "audience",
+    "examples": [],
+    "sources": [
+      "research/03 §(b) 4 (go-to-market channels)"
+    ]
+  },
+  {
+    "value": "general_public",
+    "prefLabel": "General public",
+    "altLabels": [
+      "public",
+      "conference"
+    ],
+    "definition": "A non-specialist audience with no obligation to keep listening.",
+    "broader": "",
+    "inScheme": "audience",
+    "examples": [
+      "pairs with flow_template duarte_sparkline and density 1-2"
+    ],
+    "sources": [
+      "research/03 §(c) levels 1-2",
+      "research/03 §(b) 5"
+    ]
+  },
+  {
+    "value": "regulator",
+    "prefLabel": "Regulator",
+    "altLabels": [
+      "auditor",
+      "compliance"
+    ],
+    "definition": "An external body that must be satisfied on the record.",
+    "broader": "",
+    "inScheme": "audience",
+    "examples": [
+      "pairs with delivery_mode read-deck and density 5"
+    ],
+    "sources": [
+      "research/03 §(c) level 5"
+    ]
+  }
+]
