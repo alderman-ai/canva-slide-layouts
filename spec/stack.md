@@ -1,3 +1,5 @@
+> **Decision 17 (2026-09-02):** Chrome automation of Canva is a deferred last resort. The operator has had poor results driving Canva's editor through Claude in Chrome (hundreds of screenshots, tens of hours). Treat every Chrome checklist below as an operator-run procedure; an agent attempts one only when explicitly asked in that session, and no pipeline step may depend on it.
+
 # spec/stack.md — capability matrix, division of labor, handoffs, Chrome checklists
 
 > Status: written in execution step 1 from research only. Everything in the **Claude in Chrome** column and

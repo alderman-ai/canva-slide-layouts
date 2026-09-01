@@ -16,7 +16,7 @@ slots_image: 0
 slots_chart: 0
 slots_table: 0
 fonts: [Barlow, JetBrains Mono]
-fonts_native: false
+fonts_native: true
 pairing: alderman-ai
 brand: alderman-ai
 follows_well: [section-divider, title-body]

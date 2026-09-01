@@ -6,7 +6,8 @@ Routing index for agents and the operator. One line per file: what it is → whe
 
 | File | What | Read when |
 |---|---|---|
-| `CLAUDE.md` | Rules, model policy, boot ritual, read list, commands, status block | Every session start; before any Canva or brand action |
+| `README.md` | Operator-facing entry point: who reads what | First visit to the repo |
+| `CLAUDE.md` | Rules, model policy, boot ritual, read list, confirmed defaults and deferred items, commands, status block | Every session start; before any Canva or brand action |
 | `INDEX.md` | This routing index | Looking for where something lives |
 | `.gitignore` | Blocks vendor design files, `presentations/*`, bundle account state, `node_modules` | Adding a new file type or folder |
 | `.gitattributes` | LF line endings, binary font/image types | Line-ending or diff oddities |

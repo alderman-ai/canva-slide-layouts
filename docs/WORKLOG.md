@@ -39,3 +39,9 @@ Append one dated entry per working session: what was done, what was verified, wh
 - `scripts/build-canva-ops.mjs`: Route C `find_and_replace` replacements now carry `after_ops` (`resize_element {width}` + `format_text {line_height, text_align}`) per S9; the corresponding test was updated to expect `after_ops`.
 - State of the plan: step 0 done, step 1 done, step 2 partly done (P1 yes, P3 no, P8 no-split-at-15, P2 and P7 partial; P4/P5/P6 not run).
 - **Resume here (fresh session)**: run the CLAUDE.md boot ritual; then (a) finish P7 (batch ceiling on `DAHT_-_Qmzs`: 10/25/50 `update_opacity` ops on page 1, cancel), (b) P2 second pass with one probe layout carrying a linear gradient and an inline SVG shape, (c) P5 only if Route D is still wanted (Route A already works), (d) P6 after the first family master exists; then start step 3 (harvest clone-first five from `research/05` into the scratchpad, `ingest-html.mjs`, author layouts family by family with `validate` green), following `docs/PLAN.md` § Execution order.
+
+## 2026-09-02 · Session wrap-up (operator answers)
+
+- Operator answers: S1 deferred (do not act); S10 answered, Barlow and JetBrains Mono accessible in Canva → `spec/fonts.json` both `canva_native: yes`, `L046` now `fonts_native: true`, validate has 0 warnings; Chrome automation deferred as a last resort (Decision 17; poor past experience: hundreds of screenshots, tens of hours); defaults confirmed (Decision 18) with a pointer table added to `CLAUDE.md`; skill names remain provisional.
+- Rebuilt `build/` and `manifest/` after the font change; all checks green; committed and pushed.
+- Session ends here; execution continues in a fresh session from the CLAUDE.md status block and the "Resume here" list above.
