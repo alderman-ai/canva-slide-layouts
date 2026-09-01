@@ -1,6 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import path from 'node:path';
+import fs from 'node:fs';
+import os from 'node:os';
 import { fileURLToPath } from 'node:url';
 import { runValidate, hygieneCheck, injectVocabEnums, VENDOR_EXTENSIONS } from '../validate.mjs';
 
@@ -62,6 +64,14 @@ test('vocab enums are injected into schema properties at load', () => {
 });
 
 test('an empty repo scan is clean', () => {
-  const r = runValidate({ files: [], specDir: SPEC, hygiene: true });
-  assert.equal(r.ok, true);
+  // The real repo now contains layouts, so scan a temporary empty root instead of REPO_ROOT.
+  const emptyRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'csl-empty-'));
+  try {
+    for (const d of ['layouts', 'presentations', 'intake', 'bundles']) fs.mkdirSync(path.join(emptyRoot, d));
+    const r = runValidate({ files: [], root: emptyRoot, specDir: SPEC, hygiene: true });
+    assert.equal(r.ok, true);
+    assert.equal(r.counts.layout, 0);
+  } finally {
+    fs.rmSync(emptyRoot, { recursive: true, force: true });
+  }
 });

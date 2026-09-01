@@ -21,3 +21,4 @@ Append one dated entry per working session: what was done, what was verified, wh
 - Flagged to operator: the site repo has six staged deletions under `public/brand-assets/` (OPEN-QUESTIONS S1).
 - Deviations: none from the plan; model policy followed (all subagents `model: opus`, high effort).
 - Next: **step 2, probe** per `spec/canva-limits.md` section 4 (P1-P8) using the three probe layouts; Route A needs the pushed raw URLs, Route B/C use the ops files, Route D needs a `.dc.html` deck written to a new Claude Design project.
+- Post-commit fix: the `an empty repo scan is clean` test scanned the real layouts against the fixture spec once layouts existed; it now scans a temporary empty root. Suite back to 25/25.
