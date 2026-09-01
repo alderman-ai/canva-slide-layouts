@@ -13,7 +13,7 @@ Each entry: what is unknown, why it matters, how to test it, status. Close an en
 | P5 | Does a hand-authored `.dc.html` deck written by `DesignSync.write_files` render in claude.ai/design and expose "Send to Canva"? | Route D viability | Write a one-slide deck into a **new** regular project (never the DS project), open in claude.ai/design, try Send to Canva | open |
 | P6 | Does `publish-brand-template` work on this account? | Decision 7 fallback trigger | After a family master exists: `create-brand-template-draft` then `publish-brand-template` once; record the error text if refused | open |
 | P7 | What is the practical ops-per-call ceiling and transaction lifetime for `edit-design`? | Sizing Route B/C batches | On the probe design: 10, 25, 50 ops in one call; leave a transaction open 10 minutes then commit | **partly answered**: field names confirmed for 4 ops; `find_and_replace_text` collapses box width to content; ceiling and lifetime untested |
-| P8 | Does `import-design-from-url` auto-split a 15-page family master, and at what size? | Family master sizing | Import a 15-page deck, then a 40-page deck; count resulting designs | open |
+| P8 | Does `import-design-from-url` auto-split a 15-page family master, and at what size? | Family master sizing | Import a 15-page deck, then a 40-page deck; count resulting designs | **answered: no split at 15 pages** (`DAHT_-_Qmzs`); 40-page test pending |
 
 ## Unverified claims carried from research
 

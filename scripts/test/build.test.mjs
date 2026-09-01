@@ -145,9 +145,16 @@ test('build-canva-ops: slides bound to a master get the find_and_replace variant
   const slide = parseHybrid('s01.md', { raw, strict: false });
   const out = opsDocument(slide);
   assert.deepEqual(out.find_and_replace.master, { layout_id: 'L999', family_page: 'PB1' });
-  assert.deepEqual(out.find_and_replace.replacements, [
-    { role_index: 'title:1', find: '', replace: 'Real slide title' },
-  ]);
+  const [rep] = out.find_and_replace.replacements;
+  assert.equal(out.find_and_replace.replacements.length, 1);
+  assert.equal(rep.role_index, 'title:1');
+  assert.equal(rep.find, '');
+  assert.equal(rep.replace, 'Real slide title');
+  // S9: every fill is followed by a width reset and formatting re-assert (spec/canva-limits.md §6)
+  assert.deepEqual(rep.after_ops.map((o) => o.type), ['resize_element', 'format_text']);
+  assert.equal(rep.after_ops[0].width, 1200);
+  assert.equal(rep.after_ops[0].locator_id, '$LOC[title:1]');
+  assert.deepEqual(rep.after_ops[1].formatting, { line_height: 1.1, text_align: 'start' });
 });
 
 test('speaker notes come from the ## Speaker notes section', () => {

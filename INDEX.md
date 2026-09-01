@@ -76,7 +76,7 @@ See `research/README.md` for the per-report routing table. Short form:
 
 | Path | What | Read when |
 |---|---|---|
-| `build/html/`, `build/canva-ops/`, `build/dc/`, `build/previews/` | Generated import HTML (per layout, per family, contact-sheet `index.html`), edit-operation batches, Claude Design `.dc.html` deck, PNG previews (committed; markup and images only) | Reviewing output; Route A/B/D inputs |
+| `build/html/`, `build/canva-ops/`, `build/dc/`, `build/previews/` | Generated import HTML (per layout, per family, contact-sheet `index.html`, and `probe-15.html` used for P8), edit-operation batches, Claude Design `.dc.html` deck, PNG previews (committed; markup and images only) | Reviewing output; Route A/B/D inputs |
 | `manifest/layouts.json`, `manifest/canva-index.json`, `manifest/assets.json`, `manifest/components.json` | Derived caches from frontmatter and Canva dumps | Scripted retrieval; never hand-edit |
 | `assets/` | Gray placeholder images and icons (SVG/PNG) | Asset uploads |
 | `bases/layouts.base`, `bases/decks.base`, `bases/README.md` | Obsidian Bases views: layouts (8 views incl. family board, quick polish, needs font install) and decks/plans | Browsing or picking layouts in Obsidian |

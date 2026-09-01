@@ -31,3 +31,11 @@ Append one dated entry per working session: what was done, what was verified, wh
 - Decision 16 recorded (Route A primary where content may be public). Results in `spec/canva-limits.md` §6; questions updated in `docs/OPEN-QUESTIONS.md`.
 - Not run yet: P4 (needs operator to pick the browser), P5 (new Claude Design project), P6 (needs a family master), P8 (15-page file), P2 gradient/SVG pass, P7 ceiling/lifetime.
 - Next: finish P7/P8 with a multi-page probe file; add `resize_element` after fills in `build-canva-ops.mjs`; then step 3 (library authoring and harvest).
+
+## 2026-09-02 · Handover checkpoint (session ended by operator; execution continues in a fresh session)
+
+- P8 run: `build/html/probe-15.html` (15 pages, committed and pushed) imported as one design `DAHT_-_Qmzs` (15 pages). No auto-split at 15.
+- All Canva transactions opened in this session were **cancelled** (`6772802510490213265`, `2270328783015487126`, `6762669409337356517`); nothing was committed to any probe design. Probe designs left in the account, not in any folder: `DAHT_1qMeZ4`, `DAHT_w99T-8`, `DAHT_-_Qmzs`.
+- `scripts/build-canva-ops.mjs`: Route C `find_and_replace` replacements now carry `after_ops` (`resize_element {width}` + `format_text {line_height, text_align}`) per S9; the corresponding test was updated to expect `after_ops`.
+- State of the plan: step 0 done, step 1 done, step 2 partly done (P1 yes, P3 no, P8 no-split-at-15, P2 and P7 partial; P4/P5/P6 not run).
+- **Resume here (fresh session)**: run the CLAUDE.md boot ritual; then (a) finish P7 (batch ceiling on `DAHT_-_Qmzs`: 10/25/50 `update_opacity` ops on page 1, cancel), (b) P2 second pass with one probe layout carrying a linear gradient and an inline SVG shape, (c) P5 only if Route D is still wanted (Route A already works), (d) P6 after the first family master exists; then start step 3 (harvest clone-first five from `research/05` into the scratchpad, `ingest-html.mjs`, author layouts family by family with `validate` green), following `docs/PLAN.md` § Execution order.

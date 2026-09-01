@@ -58,9 +58,10 @@ node 24.15 · npm 11 · python 3.14 · git 2.54 · gh 2.91 (logged in as `alderm
 
 ## Status block
 
-- **Execution step**: 2 in progress (probe). Done: P1 yes, P3 no, P2 and P7 partly (`spec/canva-limits.md` §6). Remaining: P2 gradient/SVG pass, P4 (operator picks browser), P5 (new Claude Design project), P6 (needs a family master), P7 ceiling/lifetime, P8 (15-page file). Then step 3: library authoring and harvest (clone-first five from `spec/taxonomy.md` § Sources / `research/05`).
-- **Route decision**: Route A primary for public-content decks and masters (Decision 16); Route C for private content, with `resize_element {width}` after each text fill (S9).
-- **Verified**: `research/09`, probe results §6; toolchain green (`npm test` 25/25, `validate` 0 errors, `check-vocab` OK). **Assumed**: remaining items in `docs/OPEN-QUESTIONS.md`.
-- **Public repo**: https://github.com/alderman-ai/canva-slide-layouts (origin), branch `main`. Probe designs in Canva: `DAHT_1qMeZ4`, `DAHT_w99T-8` (not in any folder).
-- **Operator attention**: OPEN-QUESTIONS S1 (site repo dirty tree); S10 (confirm Barlow / JetBrains Mono source in the Canva editor).
+- **Execution step**: 2 partly done (probe). Answered: P1 yes (HTML imports editable, exact geometry, fonts, notes), P3 no HTML export, P8 no auto-split at 15 pages. Partial: P2 (Barlow, JetBrains Mono preserved; gradient/SVG untested), P7 (field names confirmed; ceiling/lifetime untested). Not run: P4 (operator picks browser), P5 (new Claude Design project; optional now), P6 (needs a family master). Details: `spec/canva-limits.md` §6.
+- **Next action**: finish P7 on `DAHT_-_Qmzs`, P2 gradient/SVG pass, then **step 3** (harvest + library authoring) per `docs/PLAN.md` § Execution order and `docs/WORKLOG.md` "Resume here".
+- **Route decision**: Route A primary for masters and public-content decks (Decision 16); Route C for private content with `after_ops` (`resize_element` + `format_text`) after each fill (S9).
+- **Clean state**: no open Canva transactions; working tree clean at the last commit; `npm test` 25/25; `validate` 0 errors; `check-vocab` OK.
+- **Public repo**: https://github.com/alderman-ai/canva-slide-layouts (origin, `main`). Probe designs in Canva (no folder): `DAHT_1qMeZ4`, `DAHT_w99T-8`, `DAHT_-_Qmzs`.
+- **Operator attention**: OPEN-QUESTIONS S1 (site repo dirty tree, staged brand-asset deletions); S10 (confirm in the Canva editor whether Barlow / JetBrains Mono came from the library or the Brand Kit).
 - **Last session**: 2026-09-02, planning + steps 0-2 (partial). See `docs/WORKLOG.md`.

@@ -185,10 +185,25 @@ export function findAndReplaceForSlide(doc, layoutCache = new Map()) {
   for (const entry of roleIndexMap(elementRows(doc).rows)) {
     if (!isTextRole(entry.role)) continue;
     const find = masterByKey.get(entry.key)?.text ?? '';
+    const row = entry.row;
     replacements.push({
       role_index: entry.key,
       find: String(find ?? ''),
       replace: textOf(entry.row),
+      // Probe S9 (spec/canva-limits.md §6): `find_and_replace_text` collapses an imported text box to
+      // the natural width of the new text, so the uploader must follow every replacement with
+      // `resize_element { width }` (text elements: width only) and re-assert wrap-sensitive formatting.
+      after_ops: [
+        { type: 'resize_element', locator_id: `$LOC[${entry.key}]`, width: num(row.w) },
+        {
+          type: 'format_text',
+          locator_id: `$LOC[${entry.key}]`,
+          formatting: {
+            line_height: num(row.lh, 1.4),
+            text_align: ({ left: 'start', right: 'end', center: 'center', start: 'start', end: 'end' })[String(row.align || 'start').trim().toLowerCase()] || 'start',
+          },
+        },
+      ],
     });
   }
   return {
@@ -196,6 +211,8 @@ export function findAndReplaceForSlide(doc, layoutCache = new Map()) {
       layout_id: String(layoutId),
       family_page: fm.family_page ?? master?.frontmatter?.canva_page_id ?? null,
     },
+    // Uploader contract: for each replacement emit find_and_replace_text, then after_ops in order,
+    // resolving `$LOC[role:index]` from the master page's read-design element list.
     replacements,
   };
 }
