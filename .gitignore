@@ -1,0 +1,26 @@
+# Vendor design files are never committed (hard rule; validate also fails on these)
+*.pptx
+*.ppt
+*.potx
+*.ppsx
+*.key
+*.odp
+*.psd
+*.ai
+*.sketch
+*.fig
+*.indd
+
+# Presentation projects hold private context and filled decks; not part of the public library
+presentations/*
+!presentations/README.md
+
+# Per-account Canva state inside exported bundles
+bundles/**/canva/
+
+# Tooling
+node_modules/
+.playwright/
+*.log
+.DS_Store
+Thumbs.db
